@@ -1,0 +1,95 @@
+@import "settings";
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body,html{
+	padding: 0;
+	margin: 0;
+	font-family:"franklin-gothic-urw",sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+section{
+	padding-top: $pb;
+}
+
+
+//Global Styles
+
+
+
+
+// Top Nav
+	@import "nav";
+
+
+// HomePage
+	#titlepage{
+		background-color: $grey;
+		min-height: 100vh;
+		height: 500px;
+		color: $white;
+		position: relative;
+		> div:first-child{
+			@extend .center;
+			display: table;
+			height: 100%;
+			position: relative;
+			z-index: 2
+		}
+		h1{
+			display: table-cell;
+			vertical-align: middle;
+			margin: 0;
+			padding: 0;
+		}
+		.backgroundimage{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: #f0c;
+			background-image: url(/assets/img/pipeing.jpg);
+			background-size: cover;
+			// background-attachment: fixed;
+			filter: blur(5px);
+			-webkit-filter: blur(5px);
+			@include transition(filter, 2s, ease-in-out);
+			@include transition(-webkit-filter, 2s, ease-in-out);			
+		}
+		.backgroundimage.show{
+			filter: blur(0px);
+			-webkit-filter: blur(0px);
+		}
+	}
+
+
+
+// Temp
+
+.slideshow{
+	.slick-list{
+		// @extend .center;
+		// overflow: visible;
+		img{
+			width: 95%;
+			margin: 0 auto;
+		}
+		// .slick-slide{
+
+		// }
+	}
+}
+
+
+
+@import "map";
+@import "piegraph";
+@import "titleslide";
+

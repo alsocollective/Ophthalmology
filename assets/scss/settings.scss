@@ -1,0 +1,73 @@
+
+$small: 480px;
+$medium: 768px;
+$large: 769px;
+$min: min-width;
+$max: max-width;
+
+$variable: #d7d7d7;
+
+$pink: #D71F85;
+$grey: #818A8F;
+$white: #fff;
+
+$width: 90%;
+$indsideWidth: 1000px;
+
+$pb: 150px;
+
+h1,h2,h3{
+	text-transform: uppercase;
+}
+h1{
+	font-size: 7em;
+	line-height: 1.2em;
+}
+h3{
+	font-size: 1.6em;
+}
+a{
+	color: inherit;
+	text-decoration: inherit;
+	display: inline-block;		
+}
+.center{
+	width: $width;
+	max-width: $indsideWidth;
+	margin: 0 auto;	
+}
+
+
+
+
+@mixin at-query ($constraint, $viewport1, $viewport2:null) {
+	@if $constraint == $min {
+		@media screen and ($min: $viewport1) {
+			@content;
+		}
+	} @else if $constraint == $max {
+		@media screen and ($max: $viewport1) {
+			@content;
+		}
+	} @else {
+		@media screen and ($min: $viewport1) and ($max: $viewport2) {
+			@content;
+		}
+	}
+}
+
+@mixin vendorize($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}

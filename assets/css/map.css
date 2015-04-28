@@ -1,0 +1,173 @@
+h1, h2, h3 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 7em;
+  line-height: 1.2em; }
+
+h3 {
+  font-size: 1.6em; }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  display: inline-block; }
+
+.center, #map > div {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+#map {
+  stroke: #818a8f;
+  fill: #818a8f; }
+  #map img {
+    width: 100%; }
+  #map svg {
+    width: 100%; }
+  #map > div {
+    position: relative;
+    background-image: url(/assets/img/map.png);
+    background-size: contain;
+    background-repeat: no-repeat; }
+  #map p {
+    text-align: center;
+    color: #818a8f; }
+  #map #mexico_svg {
+    fill: #d71f85; }
+  #map.mexico #mexico_svg {
+    fill: #cccccc; }
+  #map.mexico p.mexico {
+    color: #cccccc; }
+  #map #usa_svg {
+    fill: #d71f85; }
+  #map.usa #usa_svg {
+    fill: #cccccc; }
+  #map.usa p.usa {
+    color: #cccccc; }
+  #map #chile_svg {
+    fill: #d71f85; }
+  #map.chile #chile_svg {
+    fill: #cccccc; }
+  #map.chile p.chile {
+    color: #cccccc; }
+  #map #saudiarabia_svg {
+    fill: #d71f85; }
+  #map.saudiarabia #saudiarabia_svg {
+    fill: #cccccc; }
+  #map.saudiarabia p.saudiarabia {
+    color: #cccccc; }
+  #map #oman_svg {
+    fill: #d71f85; }
+  #map.oman #oman_svg {
+    fill: #cccccc; }
+  #map.oman p.oman {
+    color: #cccccc; }
+  #map #kuwait_svg {
+    fill: #d71f85; }
+  #map.kuwait #kuwait_svg {
+    fill: #cccccc; }
+  #map.kuwait p.kuwait {
+    color: #cccccc; }
+  #map #pakistan_svg {
+    fill: #d71f85; }
+  #map.pakistan #pakistan_svg {
+    fill: #cccccc; }
+  #map.pakistan p.pakistan {
+    color: #cccccc; }
+  #map #india_svg {
+    fill: #d71f85; }
+  #map.india #india_svg {
+    fill: #cccccc; }
+  #map.india p.india {
+    color: #cccccc; }
+  #map #netherlands_svg {
+    fill: #d71f85; }
+  #map.netherlands #netherlands_svg {
+    fill: #cccccc; }
+  #map.netherlands p.netherlands {
+    color: #cccccc; }
+  #map #switerland_svg {
+    fill: #d71f85; }
+  #map.switerland #switerland_svg {
+    fill: #cccccc; }
+  #map.switerland p.switerland {
+    color: #cccccc; }
+  #map #malaysia_svg {
+    fill: #d71f85; }
+  #map.malaysia #malaysia_svg {
+    fill: #cccccc; }
+  #map.malaysia p.malaysia {
+    color: #cccccc; }
+  #map #philippines_svg {
+    fill: #d71f85; }
+  #map.philippines #philippines_svg {
+    fill: #cccccc; }
+  #map.philippines p.philippines {
+    color: #cccccc; }
+  #map #southkorea_svg {
+    fill: #d71f85; }
+  #map.southkorea #southkorea_svg {
+    fill: #cccccc; }
+  #map.southkorea p.southkorea {
+    color: #cccccc; }
+  #map #australia_svg {
+    fill: #d71f85; }
+  #map.australia #australia_svg {
+    fill: #cccccc; }
+  #map.australia p.australia {
+    color: #cccccc; }
+  #map #newzeland_svg {
+    fill: #d71f85; }
+  #map.newzeland #newzeland_svg {
+    fill: #cccccc; }
+  #map.newzeland p.newzeland {
+    color: #cccccc; }
+  #map #signapor_svg {
+    fill: #d71f85; }
+  #map.signapor #signapor_svg {
+    fill: #cccccc; }
+  #map.signapor p.signapor {
+    color: #cccccc; }
+  #map #sirlanka_svg {
+    fill: #d71f85; }
+  #map.sirlanka #sirlanka_svg {
+    fill: #cccccc; }
+  #map.sirlanka p.sirlanka {
+    color: #cccccc; }
+  #map #nigeria_svg {
+    fill: #d71f85; }
+  #map.nigeria #nigeria_svg {
+    fill: #cccccc; }
+  #map.nigeria p.nigeria {
+    color: #cccccc; }
+  #map #egypt_svg {
+    fill: #d71f85; }
+  #map.egypt #egypt_svg {
+    fill: #cccccc; }
+  #map.egypt p.egypt {
+    color: #cccccc; }
+  #map #ireland_svg {
+    fill: #d71f85; }
+  #map.ireland #ireland_svg {
+    fill: #cccccc; }
+  #map.ireland p.ireland {
+    color: #cccccc; }
+  #map #unitedkingdom_svg {
+    fill: #d71f85; }
+  #map.unitedkingdom #unitedkingdom_svg {
+    fill: #cccccc; }
+  #map.unitedkingdom p.unitedkingdom {
+    color: #cccccc; }
+
+#maplist p {
+  display: inline-block;
+  text-align: left;
+  padding: 1em;
+  margin: 0; }
+
+#mapmessage {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  width: 50%; }

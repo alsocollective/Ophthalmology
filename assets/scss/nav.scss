@@ -1,0 +1,52 @@
+@import "settings";
+
+#nav{
+	>div{
+		width: 100%;
+		display: block;
+		border-bottom: 2px solid $pink;
+		color: $grey;
+		background-color: $white;
+	}
+	nav{
+		@extend .center;			
+		display: block;
+	}
+	a{
+		text-transform: uppercase;
+		padding: 1em;
+	}
+	#logo{
+		display: inline-block;
+		width: 20%;
+		text-align: right;
+		padding-top: 1em;
+		height: 27px;
+		overflow: hidden;
+	}
+	img{
+		width: 100%;
+		max-width: 130px;
+
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		width: 70%;
+	}
+	li{
+		list-style: none;
+		display: inline-block;
+	}
+	&.fixed{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		>div{
+
+		}
+	}
+}
