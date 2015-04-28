@@ -60,8 +60,8 @@ section{
 			// background-attachment: fixed;
 			filter: blur(5px);
 			-webkit-filter: blur(5px);
-			@include transition(filter, 2s, ease-in-out);
-			@include transition(-webkit-filter, 2s, ease-in-out);			
+			// @include transition(filter, 2s, ease-in-out);
+			// @include transition(-webkit-filter, 2s, ease-in-out);			
 		}
 		.backgroundimage.show{
 			filter: blur(0px);
