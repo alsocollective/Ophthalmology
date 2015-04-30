@@ -1,0 +1,129 @@
+h1, h2, h3 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 7em;
+  line-height: 1.2em; }
+
+h3 {
+  font-size: 1.6em; }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  display: inline-block; }
+
+.center, .message > div {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.bolder, .message .left-message .showmore a {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.message > div {
+  position: relative;
+  overflow: visible; }
+.message .imagebreak {
+  height: 80%;
+  height: 80vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background-size: cover;
+  margin-bottom: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assets/img/pipeing.jpg"); }
+.message .title h2 {
+  font-size: 2em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #222222; }
+.message .title h4 {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.75em;
+  color: #d71f85;
+  font-weight: normal; }
+  .message .title h4:before, .message .title h4:after {
+    content: "";
+    width: 10%;
+    height: 3px;
+    background-color: #d71f85;
+    display: block;
+    margin: 1.15em 0 1.5em 0; }
+  .message .title h4:after {
+    margin: 1.5em 0 3em 0; }
+  .message .title h4.nobottombreaker:after, .message .title h4.notopbreaker:before {
+    display: none; }
+.message .blackquote h4 {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.75em;
+  color: #222222;
+  font-weight: bold;
+  padding: 75px 0 0 0; }
+.message .blackquote .author {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 1.2em;
+  padding: 37.5px 0 150px 0; }
+.message .left-message {
+  width: 50%;
+  vertical-align: top;
+  font-size: 1.2em;
+  line-height: 1.5em; }
+  .message .left-message p {
+    margin: 0; }
+  .message .left-message .colapsible {
+    -webkit-transition: height 1s "";
+    -moz-transition: height 1s "";
+    -ms-transition: height 1s "";
+    -o-transition: height 1s "";
+    transition: height 1s "";
+    padding: 0 0 3em 0; }
+  .message .left-message .hidden {
+    height: 0;
+    overflow: hidden; }
+  .message .left-message .showmore a {
+    padding: 1.5em 0 3em 0; }
+  .message .left-message table {
+    margin: 0 0 75px 0; }
+    .message .left-message table th {
+      padding: 2em 0 0 0;
+      text-align: left;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border-bottom: solid 1px #222222; }
+    .message .left-message table tr {
+      vertical-align: top;
+      border-bottom: solid 1px #222222; }
+      .message .left-message table tr td:first-child {
+        font-weight: bold; }
+      .message .left-message table tr:first-child th {
+        padding: 0; }
+.message .right-message {
+  width: 55%;
+  vertical-align: top;
+  position: absolute;
+  right: -15%;
+  top: -5%; }
+  .message .right-message .portrait {
+    border-radius: 100%;
+    overflow: hidden; }
+  .message .right-message .sub-portrait {
+    color: #818a8f;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 0.9em; }
+  .message .right-message img {
+    width: 100%; }
+.message .whoweare .left-message {
+  padding: 37.5px 0 0 0; }
+.message .whoweare .right-message {
+  top: 37.5px; }

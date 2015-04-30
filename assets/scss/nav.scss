@@ -1,52 +1,66 @@
 @import "settings";
 
 #nav{
-	>div{
+	> div{
 		width: 100%;
 		display: block;
-		border-bottom: 2px solid $pink;
-		color: $grey;
+		// border-bottom: 2px solid $pink;
 		background-color: $white;
+		nav{
+			@extend .center;			
+			display: block;
+		}		
 	}
-	nav{
-		@extend .center;			
-		display: block;
-	}
-	a{
-		text-transform: uppercase;
-		padding: 1em;
-	}
+
+
 	#logo{
 		display: inline-block;
 		width: 20%;
 		text-align: right;
-		padding-top: 1em;
+		vertical-align: bottom;
+		margin-bottom: 1em;
 		height: 27px;
 		overflow: hidden;
+		img{
+			width: 130px;
+		}		
 	}
-	img{
-		width: 100%;
-		max-width: 130px;
+	#navleft{
+		display: inline-block;
+		width: 80%;
+		h4{
+			margin: 0;
+			color: $pink;
+			font-weight: normal;
+			padding: 1em 0 0 0;
+		}
+		a{
+			color: $black;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 0.25em 1em 1em 0;
+			&:hover{
+				color: $pink;
+			}
+			&.active{
+				font-weight: bolder;
+			}
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+			li{
+				list-style: none;
+				display: inline-block;
+			}		
+		}
+	}
 
-	}
-	ul{
-		padding: 0;
-		margin: 0;
-		display: inline-block;
-		width: 70%;
-	}
-	li{
-		list-style: none;
-		display: inline-block;
-	}
 	&.fixed{
 		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 99;
 		width: 100%;
-		>div{
-
-		}
 	}
 }

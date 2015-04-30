@@ -15,46 +15,64 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					'assets/css/style.min.css': [
+					'public_html/assets/css/style.min.css': [
 						"assets/css/normalize.min.css",
 						"assets/css/slick.css",
 						"assets/css/style.css",
 					]
-					// 'application/static/css/style.css': ['application/static/css/normalize.min.css', 'application/static/css/jquery.nouislider.css', 'application/static/css/slick.css', 'application/static/css/simple-style.css'],
-					// 'application/static/css/tablet.min.css': 'application/static/css/tablet.css',
-					// 'application/static/css/mobile.min.css': 'application/static/css/mobile.css'
 				}
 			}
 		},
-		// uglify: {
-		// 	js: {
-		// 		files: {
-		// 			// 'application/static/js/main.min.js': [
-		// 			// 	'application/static/js/lib/jquery.min.js',
-		// 			// 	'application/static/js/lib/jquery.nouislider.full.min.js',
-		// 			// 	'application/static/js/lib/jquery-migrate-1.2.1.min.js',
-		// 			// 	'application/static/js/lib/slick.min.js',
-		// 			// 	'application/static/js/lib/modernizr.js',
-		// 			// 	'application/static/js/lib/waypoints.min.js',
-		// 			// 	'application/static/js/main.js',
-		// 			// ]
-		// 		}
-		// 	}
-		// },
+		uglify: {
+			js: {
+				files: {
+					'public_html/assets/js/main.min.js': [
+						'assets/js/lib/jquery.min.js',
+						'assets/js/lib/jquery.waypoints.min.js',
+						'assets/js/lib/skrollr.min.js',
+						'assets/js/lib/slick.min.js',
+						'assets/js/*.js'
+					]
+				}
+			}
+		},
+		includes: {
+			// build: {
+			// 	cwd: 'site',
+			// 	src: ['dev/**/*.html', 'dev/base.html'],
+			// 	dest: 'build/',
+			// 	options: {
+			// 		flatten: true,
+			// 		includePath: 'include',
+			// 		banner: '<!-- Site built using grunt includes! -->\n'
+			// 	}
+			// }
+			files: {
+				src: ['dev/index.html'], // Source files
+				dest: 'public_html', // Destination directory
+				flatten: true,
+				cwd: '.'
+			}
+		},
 		watch: {
 			css: {
 				files: ['**/*.scss'],
 				tasks: ['sass', 'cssmin'] //
 			},
-			// js: {
-			// 	// files: 'application/static/js/main.js',
-			// 	// tasks: ['uglify']
-			// }
+			html: {
+				files: ["dev/**/*.html"],
+				tasks: ["includes"]
+			},
+			js: {
+				files: 'assets/**/*.js',
+				tasks: ['uglify']
+			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-includes');
 	grunt.registerTask('default', ['watch']);
 };

@@ -13,40 +13,55 @@ a {
   text-decoration: inherit;
   display: inline-block; }
 
-.center, #nav nav {
+.center, #nav > div nav {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
 
+.bolder {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 #nav > div {
   width: 100%;
   display: block;
-  border-bottom: 2px solid #d71f85;
-  color: #818a8f;
   background-color: white; }
-#nav nav {
-  display: block; }
-#nav a {
-  text-transform: uppercase;
-  padding: 1em; }
+  #nav > div nav {
+    display: block; }
 #nav #logo {
   display: inline-block;
   width: 20%;
   text-align: right;
-  padding-top: 1em;
+  vertical-align: bottom;
+  margin-bottom: 1em;
   height: 27px;
   overflow: hidden; }
-#nav img {
-  width: 100%;
-  max-width: 130px; }
-#nav ul {
-  padding: 0;
-  margin: 0;
+  #nav #logo img {
+    width: 130px; }
+#nav #navleft {
   display: inline-block;
-  width: 70%; }
-#nav li {
-  list-style: none;
-  display: inline-block; }
+  width: 80%; }
+  #nav #navleft h4 {
+    margin: 0;
+    color: #d71f85;
+    font-weight: normal;
+    padding: 1em 0 0 0; }
+  #nav #navleft a {
+    color: #222222;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.25em 1em 1em 0; }
+    #nav #navleft a:hover {
+      color: #d71f85; }
+    #nav #navleft a.active {
+      font-weight: bolder; }
+  #nav #navleft ul {
+    padding: 0;
+    margin: 0; }
+    #nav #navleft ul li {
+      list-style: none;
+      display: inline-block; }
 #nav.fixed {
   position: fixed;
   top: 0;

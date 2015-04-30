@@ -6,7 +6,7 @@ app.slides = {
 			arrows: true,
 			speed: 300,
 			centerMode: true,
-			centerPadding: '10%',
+			centerPadding: '0%',
 			slidesToShow: 1
 		});
 	}

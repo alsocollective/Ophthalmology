@@ -1,0 +1,145 @@
+@import "settings";
+
+.message{
+	>div{
+		position: relative;
+		overflow: visible;
+		@extend .center;
+	}
+	.imagebreak{
+		height: 80%;
+		height: 80vh;
+		width: 100%;
+		max-width: none;
+		margin: 0;
+		background-size: cover;
+		margin-bottom: $pb*2;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("/assets/img/pipeing.jpg");
+	}
+	.title{
+		h2{
+			font-size: 2em;
+			font-weight: bolder;
+			text-transform: uppercase;
+			color: $black;
+		}
+		h4{
+			width: 75%;
+			margin: 0 auto;
+			font-size: 1.75em;
+			color: $pink;
+			font-weight: normal;
+
+			&:before,&:after{
+				content: "";
+				width: 10%;
+				height: 3px;
+				background-color: $pink;
+				display: block;
+				margin: 1.15em 0 1.5em 0;
+			}
+			&:after{
+				margin: 1.5em 0 3em 0;
+			}
+			&.nobottombreaker:after, &.notopbreaker:before{
+				display: none;
+			}
+		}
+	}
+
+	.blackquote{
+		h4{
+			width: 75%;
+			margin: 0 auto;
+			font-size: 1.75em;
+			color: $black;
+			font-weight: bold;
+			padding: $pb 0 0 0;
+		}
+		.author{
+			display: block;
+			width: 75%;
+			margin: 0 auto;
+			text-align: right;
+			font-size: $fs;
+			padding: $pb/2 0 $pb*2 0;
+		}
+	}
+
+	.left-message{
+		width: 50%;
+		vertical-align: top;
+		font-size: 1.2em;
+		line-height: 1.5em;
+		p{
+			margin: 0;
+		}
+		.colapsible{
+			@include transition(height,1s,"");
+			padding: 0 0 3em 0;
+		}
+		.hidden{
+			height: 0;
+			overflow: hidden;
+		}
+		.showmore{
+			a{
+				padding: 1.5em 0 3em 0;
+				@extend .bolder;
+			}
+		}
+		table{
+			margin: 0 0 $pb 0;
+			th{
+				padding: 2em 0 0 0;
+				text-align: left;
+				text-transform: uppercase;
+				white-space: nowrap;
+				border-bottom: solid 1px $black;
+			}
+			tr{
+				vertical-align: top;
+				border-bottom: solid 1px $black;
+				td:first-child{
+					font-weight: bold;
+				}
+				&:first-child{
+					th{
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.right-message{
+		width: 55%;
+		vertical-align: top;
+		position: absolute;
+		right: -15%;
+		top: -5%;
+		.portrait{
+			border-radius: 100%;
+			overflow: hidden;
+		}
+		.sub-portrait{
+			color: $grey;
+			text-align: center;
+			padding-top: 2em;
+			font-size: 0.9em;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.whoweare{
+		.left-message{
+			padding: $pb/2 0 0 0;
+		}
+		.right-message{
+			top: $pb/2;
+		}
+	}	
+}

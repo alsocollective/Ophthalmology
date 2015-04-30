@@ -2,9 +2,11 @@ var app = {
 	init: function() {
 		app.nav.init();
 		app.map.init();
-		app.blur.init();
+		// app.blur.init();
 		app.slides.init();
 		app.scroll.init();
+		app.message.init();
+		app.piegraph.init();
 	},
 	detectMobile: function() {
 		// check the useragent this is a bit problematic... but hey...

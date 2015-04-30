@@ -13,6 +13,7 @@ body,html{
 	-ms-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	color: $black;
 }
 section{
 	padding-top: $pb;
@@ -20,7 +21,9 @@ section{
 
 
 //Global Styles
-
+	#wrapper{
+		overflow-x: hidden;
+	}
 
 
 
@@ -29,25 +32,43 @@ section{
 
 
 // HomePage
-	#titlepage{
+	.imageslide{
 		background-color: $grey;
 		min-height: 100vh;
 		height: 500px;
-		color: $white;
+		color: $pink;
 		position: relative;
-		> div:first-child{
+		.title{
 			@extend .center;
 			display: table;
 			height: 100%;
 			position: relative;
-			z-index: 2
+			z-index: 2;
+			> div{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+			h1{
+				margin: 0;
+				padding: 0;
+				font-size: 11em;
+				line-height: 1em;
+			}
+			h2{
+				margin: 0;
+				font-size: 6em;
+				&:before{
+					content: "";
+					display: block;
+					width: 25%;
+					height: 0.05em;
+					background-color: $pink;
+					margin: $pb*0.80 auto $pb*0.85 auto;
+				}
+			}		
 		}
-		h1{
-			display: table-cell;
-			vertical-align: middle;
-			margin: 0;
-			padding: 0;
-		}
+		
 		.backgroundimage{
 			position: absolute;
 			top: 0;
@@ -70,26 +91,51 @@ section{
 	}
 
 
+	.goals{
+		font-size: $fs;
+		h4{
+			@extend .bolder;
+			text-align: center;
+			padding-top: $pb;
+		}
+		>div{
+			@extend .center;
+			padding: 3em 0 $pb 0;
+			> div{
+				display: inline-block;
+				width: 33%;
+				vertical-align: top;
+				.image{
+					width: 80%;
+					margin: 0 auto;
+					border-radius: 100%;
+					overflow: hidden;
+					img{
+						width: 100%;
+					}	
+				}
+				.text{
+					width: 90%;
+					padding: 3em 0 0 0;
+					text-align: center;
+					line-height: 1.4em;
+					margin: 0 auto;
+				}
+				
+			}
+		}
+	}
+
 
 // Temp
 
-.slideshow{
-	.slick-list{
-		// @extend .center;
-		// overflow: visible;
-		img{
-			width: 95%;
-			margin: 0 auto;
-		}
-		// .slick-slide{
 
-		// }
-	}
-}
 
 
 
 @import "map";
 @import "piegraph";
 @import "titleslide";
-
+@import "message-slide";
+@import "researchprograms";
+@import "slideshow";

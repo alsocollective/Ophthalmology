@@ -4,12 +4,12 @@ app.nav = {
 		nav: null
 	},
 	init: function() {
-		app.nav.SET.parent = $("#nav");
+		app.nav.SET.target = $("#wrapper > section:first");
 		app.nav.SET.nav = $("#nav > div");
 		app.nav.setParentHeight();
 		$(window).resize(app.nav.setParentHeight);
 	},
 	setParentHeight: function() {
-		app.nav.SET.parent.height(app.nav.SET.nav.outerHeight())
+		app.nav.SET.target.css("margin-top", app.nav.SET.nav.outerHeight());
 	}
 };

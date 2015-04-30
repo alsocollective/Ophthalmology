@@ -1,0 +1,46 @@
+@import "settings";
+
+#slideshowcontainer{
+	background-color: $lightpink;
+}
+
+.slideshow-title{
+	@extend .center;
+	font-size: $fs;
+
+	h2 {
+		font-size: 2em;
+		font-weight: bolder;
+		text-transform: uppercase;
+		color: $black;
+		margin-bottom: $pb/2;
+	}
+}
+
+.slideshow{
+	font-size: $fs;
+	button {
+		position: absolute;		
+		top: 0;		
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		border: none;
+		color: transparent;
+		&:focus{
+			outline:none;
+		}
+	}
+	.slick-prev{
+		right: 90%;
+	}
+	.slick-next{
+		left: 90%;
+	}
+	.slick-list{
+		overflow: visible;
+		img{
+			width: 90%;
+		}
+	}
+}
