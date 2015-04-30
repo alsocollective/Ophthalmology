@@ -37,19 +37,12 @@ module.exports = function(grunt) {
 			}
 		},
 		includes: {
-			// build: {
-			// 	cwd: 'site',
-			// 	src: ['dev/**/*.html', 'dev/base.html'],
-			// 	dest: 'build/',
-			// 	options: {
-			// 		flatten: true,
-			// 		includePath: 'include',
-			// 		banner: '<!-- Site built using grunt includes! -->\n'
-			// 	}
-			// }
+			// reference 
+			// https://github.com/vanetix/grunt-includes 
+			// for details
 			files: {
-				src: ['dev/index.html'], // Source files
-				dest: 'public_html', // Destination directory
+				src: ['dev/index.html'],
+				dest: 'public_html',
 				flatten: true,
 				cwd: '.'
 			}

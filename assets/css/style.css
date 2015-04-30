@@ -37,9 +37,6 @@ body, html {
   font-smoothing: antialiased;
   color: #222222; }
 
-section {
-  padding-top: 75px; }
-
 #wrapper {
   overflow-x: hidden; }
 
