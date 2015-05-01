@@ -4,8 +4,8 @@
 	> div{
 		width: 100%;
 		display: block;
-		// border-bottom: 2px solid $pink;
 		background-color: $white;
+		font-size: 0.8em;
 		nav{
 			@extend .center;			
 			display: block;

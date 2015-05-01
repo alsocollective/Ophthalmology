@@ -1,0 +1,32 @@
+@import "settings";
+
+#education{
+
+	.title{
+		h4{
+			color: $pink;
+			&:after{
+				height: 3px;
+				background-color: $pink;
+			}
+		}
+	}
+
+	.thrids{
+		text-align: center;
+		background-color: $lightpink;
+		max-width: none;
+		width: 100%;
+		.number{
+			font-weight: bolder;
+			font-size: 2em;
+		}
+		> div{
+			@extend .center;	
+		}
+		p{
+			color: $grey;
+			text-align: center;
+		}
+	}
+}

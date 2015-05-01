@@ -16,25 +16,10 @@ $black: #222;
 
 $width: 90%;
 $indsideWidth: 1000px;
-
+$min-width:500px;
 $pb: 75px;
 $fs: 1.2em; //font size
 
-h1,h2,h3{
-	text-transform: uppercase;
-}
-h1{
-	font-size: 7em;
-	line-height: 1.2em;
-}
-h3{
-	font-size: 1.6em;
-}
-a{
-	color: inherit;
-	text-decoration: inherit;
-	display: inline-block;		
-}
 .center{
 	width: $width;
 	max-width: $indsideWidth;

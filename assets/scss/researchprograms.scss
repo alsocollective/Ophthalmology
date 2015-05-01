@@ -31,50 +31,44 @@
 	}
 }
 
-.message{
-	h2{
-		font-size: 2em;
-		font-weight: bolder;
-		text-transform: uppercase;
-		color: $black;
-		margin-bottom: $pb/4;
-	}
-	.thrids{
-		text-align: center;
-		background-color: $lightpink;
-		max-width: none;
-		width: 100%;
+
+
+.thrids{
+	text-align: center;
+	background-color: $lightpink;
+	max-width: none;
+	width: 100%;
+	> div{
+		@extend .center;
 		> div{
-			@extend .center;
-			> div{
-				width: 33%;
-				display: inline-block;
-				vertical-align: top;
-				padding: $pb 0;
-			}
-			.number{
-				width: 100px;
-				height: 100px;
-				margin: 0 auto;
-				display: table;
-				background-color: $pink;
-				border-radius: 100%;
-				margin-bottom: $pb/2;
-				span{
-					display: table-cell;
-					vertical-align: middle;
-					color: #fff;
-					font-weight: bolder;
-					font-size: 3em;
-				}
-			}
-			p{
-				width: 80%;
-				margin: 0 auto;
+			width: 33%;
+			display: inline-block;
+			vertical-align: top;
+			padding: $pb 0;
+		}
+		.number{
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			display: table;
+			background-color: $pink;
+			border-radius: 100%;
+			margin-bottom: $pb/2;
+			span{
+				display: table-cell;
+				vertical-align: middle;
+				color: #fff;
+				font-weight: bolder;
+				font-size: 3em;
 			}
 		}
-	}	
-}
+		p{
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+}	
+
 
 
 .pie{
