@@ -13,8 +13,9 @@ body,html{
 	font-size: $fs;
 }
 
-@import "global";
-@import "nav";
-@import "about";
-@import "research";
-@import "education";
+@import "01_global";
+@import "02_nav";
+@import "03_about";
+@import "04_research";
+@import "05_education";
+@import "06_clinical";

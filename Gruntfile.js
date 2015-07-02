@@ -36,6 +36,21 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		imagemin: {
+			jpg: {
+				options: {
+					progressive: true,
+					optimizationLevel: 7
+				},
+				files: [{
+					expand: true,
+					// cwd: 'project-directory/img/',
+					src: ['assets/pic/*.jpg'],
+					dest: 'public_html',
+					ext: '.jpg'
+				}]
+			}
+		},
 		includes: {
 			// reference 
 			// https://github.com/vanetix/grunt-includes 
@@ -59,6 +74,10 @@ module.exports = function(grunt) {
 			js: {
 				files: 'assets/**/*.js',
 				tasks: ['uglify']
+			},
+			img: {
+				files: 'assets/pic/**/*.jpg',
+				tasks: ['imagemin']
 			}
 		}
 	});
@@ -67,5 +86,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-includes');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.registerTask('default', ['watch']);
 };

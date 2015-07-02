@@ -1,4 +1,4 @@
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div {
+.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -20,7 +20,7 @@ body, html {
   color: #222222;
   font-size: 1.2em; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div {
+.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -123,7 +123,8 @@ th {
   height: 500px;
   background-repeat: none;
   background-size: cover;
-  border-radius: 100%; }
+  border-radius: 100%;
+  margin: 0 auto; }
 
 .quote {
   width: 50%;
@@ -160,7 +161,40 @@ th {
     vertical-align: top;
     padding: 75px 0; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div {
+.gradient {
+  background: white;
+  background: -moz-linear-gradient(top, white 0%, #e0a3c8 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(100%, #e0a3c8));
+  background: -webkit-linear-gradient(top, white 0%, #e0a3c8 100%);
+  background: -o-linear-gradient(top, white 0%, #e0a3c8 100%);
+  background: -ms-linear-gradient(top, white 0%, #e0a3c8 100%);
+  background: linear-gradient(to bottom, white 0%, #e0a3c8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0a3c8', GradientType=0 ); }
+
+.tightcenter > div {
+  width: 55%;
+  margin: 0 auto; }
+
+.hide {
+  display: none; }
+
+ul.selectionlist {
+  text-align: center;
+  padding: 0;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center; }
+  ul.selectionlist li {
+    display: inline-block; }
+  ul.selectionlist a {
+    direction: inline-block;
+    padding: 0.25em 0.75em;
+    color: #818a8f; }
+    ul.selectionlist a.active, ul.selectionlist a:hover {
+      color: #222222;
+      text-decoration: underline; }
+
+.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -217,7 +251,7 @@ th {
   z-index: 99;
   width: 100%; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div {
+.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -326,7 +360,7 @@ th {
     #about table tr:first-child th {
       padding: 0; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div {
+.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -341,23 +375,6 @@ th {
   #research .title h4:after {
     height: 3px;
     background-color: #d71f85; }
-#research .researchprograms ul {
-  padding: 0;
-  width: 95%;
-  margin: 0 auto;
-  text-align: center; }
-  #research .researchprograms ul li {
-    list-style: none;
-    display: inline-block;
-    color: #818a8f; }
-  #research .researchprograms ul a {
-    display: inline-block;
-    padding: 0.25em 1em; }
-    #research .researchprograms ul a.active, #research .researchprograms ul a:hover {
-      color: #222222;
-      text-decoration: underline; }
-    #research .researchprograms ul a.active {
-      font-weight: bold; }
 #research #piegraph .pie li {
   list-style: initial;
   margin-left: 1em; }
@@ -400,9 +417,6 @@ th {
   text-align: center; }
 #research .otherthree h2 {
   padding-top: 37.5px; }
-#research .otherthree > div {
-  width: 55%;
-  margin: 0 auto; }
 #research #slideshowcontainer {
   background-color: #f2c7df; }
 #research .slideshow-title h2 {
@@ -428,7 +442,7 @@ th {
     #research .slideshow .slick-list img {
       width: 90%; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div {
+.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -454,3 +468,189 @@ th {
   #education .thrids p {
     color: #818a8f;
     text-align: center; }
+#education #map {
+  position: relative; }
+  #education #map #mapmessage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; }
+  #education #map svg {
+    background-image: url(/assets/img/map.png);
+    background-size: cover; }
+  #education #map #maplist p {
+    display: inline-block;
+    padding: 0.25em 0.5em; }
+  #education #map p {
+    text-align: center;
+    color: #818a8f; }
+  #education #map #mexico_svg {
+    fill: #d71f85; }
+  #education #map.mexico #mexico_svg {
+    fill: #cccccc; }
+  #education #map.mexico p.mexico {
+    color: #d71f85; }
+  #education #map #usa_svg {
+    fill: #d71f85; }
+  #education #map.usa #usa_svg {
+    fill: #cccccc; }
+  #education #map.usa p.usa {
+    color: #d71f85; }
+  #education #map #chile_svg {
+    fill: #d71f85; }
+  #education #map.chile #chile_svg {
+    fill: #cccccc; }
+  #education #map.chile p.chile {
+    color: #d71f85; }
+  #education #map #saudiarabia_svg {
+    fill: #d71f85; }
+  #education #map.saudiarabia #saudiarabia_svg {
+    fill: #cccccc; }
+  #education #map.saudiarabia p.saudiarabia {
+    color: #d71f85; }
+  #education #map #oman_svg {
+    fill: #d71f85; }
+  #education #map.oman #oman_svg {
+    fill: #cccccc; }
+  #education #map.oman p.oman {
+    color: #d71f85; }
+  #education #map #kuwait_svg {
+    fill: #d71f85; }
+  #education #map.kuwait #kuwait_svg {
+    fill: #cccccc; }
+  #education #map.kuwait p.kuwait {
+    color: #d71f85; }
+  #education #map #pakistan_svg {
+    fill: #d71f85; }
+  #education #map.pakistan #pakistan_svg {
+    fill: #cccccc; }
+  #education #map.pakistan p.pakistan {
+    color: #d71f85; }
+  #education #map #india_svg {
+    fill: #d71f85; }
+  #education #map.india #india_svg {
+    fill: #cccccc; }
+  #education #map.india p.india {
+    color: #d71f85; }
+  #education #map #netherlands_svg {
+    fill: #d71f85; }
+  #education #map.netherlands #netherlands_svg {
+    fill: #cccccc; }
+  #education #map.netherlands p.netherlands {
+    color: #d71f85; }
+  #education #map #switerland_svg {
+    fill: #d71f85; }
+  #education #map.switerland #switerland_svg {
+    fill: #cccccc; }
+  #education #map.switerland p.switerland {
+    color: #d71f85; }
+  #education #map #malaysia_svg {
+    fill: #d71f85; }
+  #education #map.malaysia #malaysia_svg {
+    fill: #cccccc; }
+  #education #map.malaysia p.malaysia {
+    color: #d71f85; }
+  #education #map #philippines_svg {
+    fill: #d71f85; }
+  #education #map.philippines #philippines_svg {
+    fill: #cccccc; }
+  #education #map.philippines p.philippines {
+    color: #d71f85; }
+  #education #map #southkorea_svg {
+    fill: #d71f85; }
+  #education #map.southkorea #southkorea_svg {
+    fill: #cccccc; }
+  #education #map.southkorea p.southkorea {
+    color: #d71f85; }
+  #education #map #australia_svg {
+    fill: #d71f85; }
+  #education #map.australia #australia_svg {
+    fill: #cccccc; }
+  #education #map.australia p.australia {
+    color: #d71f85; }
+  #education #map #newzeland_svg {
+    fill: #d71f85; }
+  #education #map.newzeland #newzeland_svg {
+    fill: #cccccc; }
+  #education #map.newzeland p.newzeland {
+    color: #d71f85; }
+  #education #map #signapor_svg {
+    fill: #d71f85; }
+  #education #map.signapor #signapor_svg {
+    fill: #cccccc; }
+  #education #map.signapor p.signapor {
+    color: #d71f85; }
+  #education #map #sirlanka_svg {
+    fill: #d71f85; }
+  #education #map.sirlanka #sirlanka_svg {
+    fill: #cccccc; }
+  #education #map.sirlanka p.sirlanka {
+    color: #d71f85; }
+  #education #map #nigeria_svg {
+    fill: #d71f85; }
+  #education #map.nigeria #nigeria_svg {
+    fill: #cccccc; }
+  #education #map.nigeria p.nigeria {
+    color: #d71f85; }
+  #education #map #egypt_svg {
+    fill: #d71f85; }
+  #education #map.egypt #egypt_svg {
+    fill: #cccccc; }
+  #education #map.egypt p.egypt {
+    color: #d71f85; }
+  #education #map #ireland_svg {
+    fill: #d71f85; }
+  #education #map.ireland #ireland_svg {
+    fill: #cccccc; }
+  #education #map.ireland p.ireland {
+    color: #d71f85; }
+  #education #map #unitedkingdom_svg {
+    fill: #d71f85; }
+  #education #map.unitedkingdom #unitedkingdom_svg {
+    fill: #cccccc; }
+  #education #map.unitedkingdom p.unitedkingdom {
+    color: #d71f85; }
+#education .halfs > div {
+  display: inline-block;
+  width: 40%;
+  padding: 5% 5%;
+  vertical-align: top; }
+  #education .halfs > div h5 {
+    color: #818a8f; }
+  #education .halfs > div h3, #education .halfs > div h5 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: normal; }
+#education .centercircle {
+  text-align: center; }
+  #education .centercircle a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #fff;
+    border-radius: 100%;
+    height: 250px;
+    width: 250px; }
+    #education .centercircle a > span {
+      display: table;
+      width: 80%;
+      height: 100%;
+      margin: 0 auto; }
+      #education .centercircle a > span > span {
+        display: table-cell;
+        vertical-align: middle; }
+
+.casestudy {
+  background-color: #d71f85;
+  color: white; }
+  .casestudy h2 {
+    color: white;
+    text-align: left; }
+
+#clinical .title h4 {
+  color: #d71f85; }
+  #clinical .title h4:after {
+    height: 3px;
+    background-color: #d71f85; }
