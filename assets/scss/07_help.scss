@@ -1,0 +1,13 @@
+#help{
+
+	blockquote{
+		&::before,&::after{
+			content: none;
+		}
+
+		&:last-child{
+			color: $black;
+		}
+	}
+	@extend .gradient;
+}
