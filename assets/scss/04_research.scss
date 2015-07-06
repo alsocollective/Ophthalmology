@@ -1,0 +1,138 @@
+@import "settings";
+
+#research{
+
+
+	.title{
+		h4{
+			color: $pink;
+			&:after{
+				height: 3px;
+				background-color: $pink;
+			}
+		}
+	}
+
+	.researchprograms{
+		@extend .center;
+	}
+
+	#piegraph{
+		.pie{
+			@extend .center;
+
+			li{
+				list-style: initial;
+				margin-left: 1em;
+			}
+
+			svg{
+				width: 75%;
+				display: block;
+				margin: 0 auto;
+				#path1{
+					fill:#ccc;
+				}
+				#path2{
+					fill:#aaa;
+				}
+				#path3{
+					fill:#999;
+				}					
+			}
+			&.active0{
+				#path1,#path2,#path3,li:first-child{
+					fill:$pink !important;
+					color: $pink !important;
+				}
+			}
+			&.active1{
+				#path2,li:nth-child(2){
+					fill:$pink !important;
+					color: $pink !important;
+				}
+			}
+			&.active2{
+				#path3,li:last-child{
+					fill:$pink !important;
+					color: $pink !important;
+				}
+			}				
+		}
+
+		.thrids{
+			> div{
+				.number{
+					width: 100px;
+					height: 100px;
+					margin: 0 auto;
+					display: table;
+					background-color: $pink;
+					border-radius: 100%;
+					margin-bottom: $pb/2;
+					span{
+						display: table-cell;
+						vertical-align: middle;
+						color: #fff;
+						font-weight: bolder;
+						font-size: 3em;
+					}
+				}
+				p{
+					width: 80%;
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+		}		
+	}
+	.telemed{
+		@extend .center;
+	}
+
+	.otherthree{
+		h2{
+			padding-top: $pb/2;
+		}
+	}
+
+	#slideshowcontainer{
+		background-color: $lightpink;
+	}
+
+	.slideshow-title{
+		@extend .center;
+
+		h2 {
+			margin-bottom: $pb/2;
+		}
+	}
+
+	.slideshow{
+		position: relative;
+		button {
+			position: absolute;		
+			top: 0;		
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			border: none;
+			color: transparent;
+			&:focus{
+				outline:none;
+			}
+		}
+		.slick-prev{
+			right: 90%;
+		}
+		.slick-next{
+			left: 90%;
+		}
+		.slick-list{
+			overflow: visible;
+			img{
+				width: 90%;
+			}
+		}
+	}	
+}

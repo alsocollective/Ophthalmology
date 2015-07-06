@@ -1,0 +1,27 @@
+.casestudy{
+	background-color: $pink; 
+	color: $white;
+	h2{
+		color: $white;
+		@extend .center;
+		text-align: left;
+		// font-size: 1em;
+	}
+}
+
+#clinical{
+
+
+	.title h4{
+		color: $pink;
+		&:after {
+			height: 3px;
+			background-color: $pink;
+		}
+	}
+
+	#clinicallist{
+
+	}
+
+}

@@ -1,0 +1,120 @@
+@import "settings";
+
+$countries: mexico usa chile saudiarabia oman kuwait pakistan india netherlands switerland malaysia philippines southkorea australia newzeland signapor sirlanka nigeria egypt ireland unitedkingdom;
+
+@mixin country($country, $text, $fill) {
+	&.#{$country}{
+		##{$country}_svg{
+			fill: $fill;
+		}
+		p.#{$country}{
+			// font-weight: bolder;
+			color: $text;
+		}
+	}
+}
+
+#education{
+
+	.title{
+		h4{
+			color: $pink;
+			&:after{
+				height: 3px;
+				background-color: $pink;
+			}
+		}
+	}
+
+	.thrids{
+		text-align: center;
+		background-color: $lightpink;
+		max-width: none;
+		width: 100%;
+		.number{
+			font-weight: bolder;
+			font-size: 2em;
+		}
+		> div{
+			@extend .center;	
+		}
+		p{
+			color: $grey;
+			text-align: center;
+		}
+	}
+
+	#map{
+		@extend .center;
+		position: relative;
+		#mapmessage{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+		}
+		svg{
+			background-image:url(/assets/img/map.png);
+			background-size: cover;
+		}
+		#maplist{
+			p{
+				display: inline-block;
+				padding: 0.25em 0.5em;
+			}
+		}
+		
+		p{
+			text-align: center;
+			color: $grey;
+		}
+
+		@each $i in $countries{
+			##{$i}_svg{
+				fill: $pink;
+			}
+			@include country(#{$i}, $pink, #ccc);
+		}			
+	}
+	.halfs{
+		@extend .center;
+		>div{
+			display: inline-block;
+			width: 40%;
+			padding: 5% 5%;
+			vertical-align: top;
+			h5{
+				color: $grey;
+			}
+			h3,h5{
+				text-align: center;
+				text-transform: capitalize;
+				font-weight: normal;
+			}
+		}
+	}
+	.centercircle{
+		text-align: center;
+		a{
+			display: inline-block;
+			color: inherit;
+			text-decoration: none;
+			text-align: center;
+			font-weight: bolder;
+			background-color: #fff;
+			border-radius: 100%;
+			height: 250px;
+			width: 250px;
+			> span{
+				display: table;
+				width: 80%;
+				height: 100%;
+				margin: 0 auto;
+				> span{
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
