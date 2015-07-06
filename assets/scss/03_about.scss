@@ -76,45 +76,79 @@
 		}
 	}
 
-	.hidden{
-		overflow: hidden;
-		height: 0;
+	.half:nth-child(2){
+		text-align: center;
+		span{
+			font-size: 0.8rem;
+			color: $grey;
+		}		
+	}
+	.portait{
+		border-radius: 100%;
+		width: 25rem;
+		height: 25rem;
+		background-size: cover;
+		background-position: center;
+		margin: 0 auto;
+	}
+
+
+	.doublecoloum{
+		@include vendorize(column-count, 2);
 	}
 
 	.goals{
-
-		>div{
-			@extend .center;
-			padding: $pb/3 0 $pb 0;
-			> div{
-				display: inline-block;
-				width: 33%;
-				vertical-align: top;
-				.image{
-					width: 80%;
-					margin: 0 auto;
-					border-radius: 100%;
-					overflow: hidden;
-					img{
-						width: 100%;
-					}	
-				}
-				.text{
-					width: 90%;
-					padding: $pb/3 0 0 0;
-					text-align: center;
-					line-height: 1.4em;
-					margin: 0 auto;
-				}
-				
-			}
+		.portait{
+			border-radius: 100%;
+			width: 15rem;
+			height: 15rem;
+			background-size: cover;
+			background-position: center;
+			margin: 0 auto;
+		}
+		li{
+			text-align: center;
 		}
 	}
+	// .hidden{
+	// 	overflow: hidden;
+	// 	height: 0;
+	// }
+
+	// .goals{
+
+	// 	>div{
+	// 		@extend .center;
+	// 		padding: $pb/3 0 $pb 0;
+	// 		> div{
+	// 			display: inline-block;
+	// 			width: 33%;
+	// 			vertical-align: top;
+	// 			.image{
+	// 				width: 80%;
+	// 				margin: 0 auto;
+	// 				border-radius: 100%;
+	// 				overflow: hidden;
+	// 				img{
+	// 					width: 100%;
+	// 				}	
+	// 			}
+	// 			.text{
+	// 				width: 90%;
+	// 				padding: $pb/3 0 0 0;
+	// 				text-align: center;
+	// 				line-height: 1.4em;
+	// 				margin: 0 auto;
+	// 			}
+				
+	// 		}
+	// 	}
+	// }
 
 	table{
-		margin: 0 0 $pb 0;
+		max-width: 60%;
 		th{
-			padding: 2em 0 0 0;
+			padding: 2rem 0 0 0;
 			text-align: left;
 			text-transform: uppercase;
 			white-space: nowrap;
@@ -123,8 +157,12 @@
 		tr{
 			vertical-align: top;
 			border-bottom: solid 1px $black;
+			td{
+				vertical-align: middle;
+			}
 			td:first-child{
 				font-weight: bold;
+				padding-right: 2rem;
 			}
 			&:first-child{
 				th{

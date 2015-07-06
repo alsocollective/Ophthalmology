@@ -18,7 +18,7 @@ $width: 90%;
 $indsideWidth: 1000px;
 $min-width:500px;
 $pb: 75px;
-$fs: 1.2em; //font size
+$fs: 1.1rem; //font size
 
 .center{
 	width: $width;
@@ -32,7 +32,21 @@ $fs: 1.2em; //font size
 }
 
 
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
 
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
 
 @mixin at-query ($constraint, $viewport1, $viewport2:null) {
 	@if $constraint == $min {

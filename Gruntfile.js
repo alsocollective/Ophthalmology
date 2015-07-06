@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 			// https://github.com/vanetix/grunt-includes 
 			// for details
 			files: {
-				src: ['dev/index.html'],
+				src: ['html/*.html'],
 				dest: 'public_html',
 				flatten: true,
 				cwd: '.'
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 				tasks: ['sass', 'cssmin'] //
 			},
 			html: {
-				files: ["dev/**/*.html"],
+				files: ["html/**/*.html"],
 				tasks: ["includes"]
 			},
 			js: {

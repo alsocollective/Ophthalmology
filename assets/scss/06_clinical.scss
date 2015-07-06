@@ -23,5 +23,31 @@
 	#clinicallist{
 
 	}
+	.thirds{
+		img{
+			max-width: 100%;
+			border-radius: 100%;
+		}
+	}
 
+	> div:last-child{
+		background-color: $pink;
+		color: $white;
+		p{
+			color: $white;
+		}
+	}
+}
+
+
+h5{
+	font-size: 1rem;
+	font-weight: normal;
+	text-align: center;	
+	color: $darkgrey;
+	span{
+		color: $black;
+		font-weight: bolder;
+		display: block;
+	}
 }

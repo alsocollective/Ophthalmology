@@ -1,4 +1,4 @@
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
+.center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -18,9 +18,9 @@ body, html {
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #222222;
-  font-size: 1.2em; }
+  font-size: 1.1rem; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
+.center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -47,15 +47,19 @@ h1 {
   h1 span {
     font-size: 0.5em;
     display: block; }
-    h1 span:before {
+    h1 span::before {
       content: "";
       display: block; }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.7rem;
   font-weight: bolder;
   color: #222222;
-  margin-bottom: 18.75px; }
+  width: 90%;
+  max-width: 1000px; }
+
+h3 {
+  font-size: 1.2rem; }
 
 h4 {
   text-align: center;
@@ -69,15 +73,22 @@ th {
 
 #wrapper {
   overflow-x: hidden; }
+  #wrapper section > h3 {
+    text-align: center; }
+  #wrapper section > h2 {
+    margin: 0 auto 1rem auto; }
 
-.title h4 {
-  width: 75%;
-  margin: 0 auto;
-  text-align: left; }
-  .title h4:before, .title h4:after {
-    content: "";
-    display: block;
-    width: 25%; }
+.white {
+  color: white; }
+
+.black {
+  color: #222222; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.caseinitial {
+  text-transform: inherit; }
 
 .titlepage {
   width: 100%;
@@ -96,72 +107,55 @@ th {
     height: 105%;
     position: relative;
     left: -2.5%;
-    bottom: 2.5%;
-    background-size: cover;
-    background-position: center; }
+    bottom: 2.5%; }
 
-.sectiontitle h1, .sectiontitle h2 {
-  text-align: center; }
-.sectiontitle h2 {
-  color: #d71f85;
-  font-size: 4em; }
-  .sectiontitle h2:before {
-    content: "";
-    display: block;
-    width: 25%;
-    margin: 0 auto;
-    background-color: #d71f85;
-    height: 6px; }
-
-.left, .right {
-  width: 50%;
-  display: inline-block;
-  vertical-align: top; }
-
-.portrait {
-  width: 500px;
-  height: 500px;
-  background-repeat: none;
-  background-size: cover;
-  border-radius: 100%;
-  margin: 0 auto; }
-
-.quote {
-  width: 50%;
-  max-width: 1000px;
-  min-width: 500px;
-  margin: 0 auto; }
-  .quote h4 {
-    text-align: left; }
-  .quote span {
-    display: block;
-    text-align: right; }
-
-.sub-portrait {
-  font-size: 0.8em;
-  color: #818a8f;
-  padding-top: 18.75px;
-  text-align: center; }
-
-.imagebreak {
+.backgroundimage {
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 80%;
-  height: 80vh; }
+  padding: 5rem 0; }
+  .backgroundimage h2 {
+    margin: 0 auto 1rem auto; }
 
-.thrids {
-  text-align: center;
-  background-color: #f2c7df;
-  max-width: none;
-  width: 100%; }
-  .thrids > div > div {
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 75px 0; }
+.tightmid {
+  width: 40%;
+  max-width: 600px;
+  margin: 0 auto; }
 
-.gradient {
+blockquote {
+  padding: 0;
+  margin: 0;
+  color: #d71f85;
+  font-size: 1.5rem;
+  max-width: 900px;
+  width: 75%;
+  margin: 0 auto;
+  position: relative; }
+  blockquote span {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bolder; }
+  blockquote::after, blockquote::before {
+    display: block;
+    width: 5rem;
+    margin: 1rem 0;
+    border-bottom: 3px solid #d71f85; }
+  blockquote:after {
+    content: " "; }
+  blockquote.white::before, blockquote.white::after {
+    border-bottom-color: white; }
+
+h2 + blockquote::before {
+  content: " "; }
+
+.left, .right, .half {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5%; }
+
+.gradient, #help {
   background: white;
   background: -moz-linear-gradient(top, white 0%, #e0a3c8 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(100%, #e0a3c8));
@@ -171,30 +165,10 @@ th {
   background: linear-gradient(to bottom, white 0%, #e0a3c8 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0a3c8', GradientType=0 ); }
 
-.tightcenter > div {
-  width: 55%;
-  margin: 0 auto; }
-
 .hide {
   display: none; }
 
-ul.selectionlist {
-  text-align: center;
-  padding: 0;
-  width: 95%;
-  margin: 0 auto;
-  text-align: center; }
-  ul.selectionlist li {
-    display: inline-block; }
-  ul.selectionlist a {
-    direction: inline-block;
-    padding: 0.25em 0.75em;
-    color: #818a8f; }
-    ul.selectionlist a.active, ul.selectionlist a:hover {
-      color: #222222;
-      text-decoration: underline; }
-
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
+.center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -251,7 +225,7 @@ ul.selectionlist {
   z-index: 99;
   width: 100%; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
+.center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -322,32 +296,37 @@ ul.selectionlist {
         background-position-y: -290px;
         background-attachment: fixed;
         background-image: url("/assets/img/child.jpg"); }
-#about .hidden {
-  overflow: hidden;
-  height: 0; }
-#about .goals > div {
-  padding: 25px 0 75px 0; }
-  #about .goals > div > div {
-    display: inline-block;
-    width: 33%;
-    vertical-align: top; }
-    #about .goals > div > div .image {
-      width: 80%;
-      margin: 0 auto;
-      border-radius: 100%;
-      overflow: hidden; }
-      #about .goals > div > div .image img {
-        width: 100%; }
-    #about .goals > div > div .text {
-      width: 90%;
-      padding: 25px 0 0 0;
-      text-align: center;
-      line-height: 1.4em;
-      margin: 0 auto; }
+#about .half:nth-child(2) {
+  text-align: center; }
+  #about .half:nth-child(2) span {
+    font-size: 0.8rem;
+    color: #818a8f; }
+#about .portait {
+  border-radius: 100%;
+  width: 25rem;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto; }
+#about .doublecoloum {
+  -webkit-column-count: 2;
+  -ms-column-count: 2;
+  -moz-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2; }
+#about .goals .portait {
+  border-radius: 100%;
+  width: 15rem;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto; }
+#about .goals li {
+  text-align: center; }
 #about table {
-  margin: 0 0 75px 0; }
+  max-width: 60%; }
   #about table th {
-    padding: 2em 0 0 0;
+    padding: 2rem 0 0 0;
     text-align: left;
     text-transform: uppercase;
     white-space: nowrap;
@@ -355,12 +334,15 @@ ul.selectionlist {
   #about table tr {
     vertical-align: top;
     border-bottom: solid 1px #222222; }
+    #about table tr td {
+      vertical-align: middle; }
     #about table tr td:first-child {
-      font-weight: bold; }
+      font-weight: bold;
+      padding-right: 2rem; }
     #about table tr:first-child th {
       padding: 0; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
+.center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -370,79 +352,49 @@ ul.selectionlist {
   font-weight: bold;
   text-transform: uppercase; }
 
-#research .title h4 {
-  color: #d71f85; }
-  #research .title h4:after {
-    height: 3px;
-    background-color: #d71f85; }
-#research #piegraph .pie li {
-  list-style: initial;
-  margin-left: 1em; }
-#research #piegraph .pie svg {
-  width: 75%;
-  display: block;
+.thirds {
+  max-width: 1000px;
+  width: 90%;
   margin: 0 auto; }
-  #research #piegraph .pie svg #path1 {
-    fill: #ccc; }
-  #research #piegraph .pie svg #path2 {
-    fill: #aaa; }
-  #research #piegraph .pie svg #path3 {
-    fill: #999; }
-#research #piegraph .pie.active0 #path1, #research #piegraph .pie.active0 #path2, #research #piegraph .pie.active0 #path3, #research #piegraph .pie.active0 li:first-child {
-  fill: #d71f85 !important;
-  color: #d71f85 !important; }
-#research #piegraph .pie.active1 #path2, #research #piegraph .pie.active1 li:nth-child(2) {
-  fill: #d71f85 !important;
-  color: #d71f85 !important; }
-#research #piegraph .pie.active2 #path3, #research #piegraph .pie.active2 li:last-child {
-  fill: #d71f85 !important;
-  color: #d71f85 !important; }
-#research #piegraph .thrids > div .number {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  display: table;
-  background-color: #d71f85;
-  border-radius: 100%;
-  margin-bottom: 37.5px; }
-  #research #piegraph .thrids > div .number span {
-    display: table-cell;
-    vertical-align: middle;
+  .thirds > li {
+    width: 30%;
+    margin: 0 0;
+    display: inline-block;
+    vertical-align: top; }
+    .thirds > li:nth-child(3n-1) {
+      margin: 0 3%; }
+
+.counter li {
+  counter-increment: step-counter; }
+  .counter li::before {
+    content: counter(step-counter);
+    display: inline-block;
+    vertical-align: top;
+    -webkit-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #d71f85;
+    height: 1.6rem;
+    width: 2rem;
+    padding-top: .4em;
     color: #fff;
     font-weight: bolder;
-    font-size: 3em; }
-#research #piegraph .thrids > div p {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center; }
-#research .otherthree h2 {
-  padding-top: 37.5px; }
-#research #slideshowcontainer {
-  background-color: #f2c7df; }
-#research .slideshow-title h2 {
-  margin-bottom: 37.5px; }
-#research .slideshow {
-  position: relative; }
-  #research .slideshow button {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    color: transparent; }
-    #research .slideshow button:focus {
-      outline: none; }
-  #research .slideshow .slick-prev {
-    right: 90%; }
-  #research .slideshow .slick-next {
-    left: 90%; }
-  #research .slideshow .slick-list {
-    overflow: visible; }
-    #research .slideshow .slick-list img {
-      width: 90%; }
+    font-size: .95rem;
+    text-align: center;
+    margin: -0.5rem 1rem; }
+  .counter li p {
+    display: inline-block;
+    width: 70%; }
 
-.center, .title, .thrids > div, #nav > div nav, #about #titlepage #titlepage-text, #about .goals > div, #research .researchprograms, #research #piegraph .pie, #research .telemed, #research .slideshow-title, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
+.greyed {
+  background-color: #555555;
+  color: white; }
+  .greyed h2 {
+    color: white; }
+
+.center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
@@ -451,6 +403,40 @@ ul.selectionlist {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase; }
+
+.presentpeople {
+  background-color: #f2c7df;
+  padding: 2rem; }
+  .presentpeople h3 {
+    text-align: center; }
+  .presentpeople p {
+    text-align: center;
+    color: #555555;
+    font-size: 0.9rem; }
+  .presentpeople .h2 {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222222; }
+  .presentpeople li {
+    padding: 1rem 0; }
+  .presentpeople ul {
+    padding: 1rem 0 0 0; }
+
+.halflist li {
+  width: 30%;
+  margin: 0 10%;
+  text-align: center;
+  display: inline-block;
+  padding: 2rem 0; }
+.halflist span {
+  font-size: 1.3rem; }
+.halflist p {
+  text-align: center;
+  margin: 0 auto;
+  color: #555555;
+  font-size: 0.9rem; }
 
 #education .title h4 {
   color: #d71f85; }
@@ -654,3 +640,26 @@ ul.selectionlist {
   #clinical .title h4:after {
     height: 3px;
     background-color: #d71f85; }
+#clinical .thirds img {
+  max-width: 100%;
+  border-radius: 100%; }
+#clinical > div:last-child {
+  background-color: #d71f85;
+  color: white; }
+  #clinical > div:last-child p {
+    color: white; }
+
+h5 {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  color: #555555; }
+  h5 span {
+    color: #222222;
+    font-weight: bolder;
+    display: block; }
+
+#help blockquote::before, #help blockquote::after {
+  content: none; }
+#help blockquote:last-child {
+  color: #222222; }
