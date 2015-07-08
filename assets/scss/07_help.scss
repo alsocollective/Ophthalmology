@@ -5,9 +5,21 @@
 			content: none;
 		}
 
-		&:last-child{
+		&:last-of-type{
 			color: $black;
 		}
 	}
 	@extend .gradient;
+}
+
+#help_machine{
+	padding: 0;
+	height: 500px;
+	height: 60vh;
+}
+
+#help_childcare{
+	padding: 0;
+	height: 500px;
+	height: 90vh;	
 }

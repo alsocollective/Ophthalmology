@@ -1,6 +1,8 @@
 @import "settings";
 
-$countries: mexico usa chile saudiarabia oman kuwait pakistan india netherlands switerland malaysia philippines southkorea australia newzeland signapor sirlanka nigeria egypt ireland unitedkingdom;
+
+
+$countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signapor newzeland australia southkorea philippines malaysia switerland netherlands india pakistan kuwait oman saudiarabia canada colombia guyana germany iran israel;
 
 @mixin country($country, $text, $fill) {
 	&.#{$country}{
@@ -121,6 +123,8 @@ $countries: mexico usa chile saudiarabia oman kuwait pakistan india netherlands 
 		@each $i in $countries{
 			##{$i}_svg{
 				fill: $pink;
+				stroke: #fff;
+				stroke-width: 6px;
 			}
 			@include country(#{$i}, $pink, #ccc);
 		}			

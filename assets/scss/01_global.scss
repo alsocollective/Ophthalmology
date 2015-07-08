@@ -17,14 +17,30 @@ h1,h2,h3{
 h1{
 	color: $pink;
 	font-size: 7em;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 	span{
 		font-size: 0.5em;
 		display: block;
+		max-width: 80%;
+		margin: 0 auto;
 		&::before{
-			content: "";
+			content: " ";
 			display: block;
+			width: 2.5em;
+			border-bottom: 3px solid $pink;
+			margin: 0 auto;
 		}
 	}
+}
+.sectiontitle .center{
+	display: table;
+	height: 100%;
+}
+
+#titlepage h1{
+	
 }
 
 h2{
@@ -168,23 +184,46 @@ th{
 		}
 	}
 
-// .sectiontitle{
-// 	h1,h2{
-// 		text-align: center;
-// 	}
-// 	h2{
-// 		color: $pink;
-// 		font-size: 4em;
-// 		&:before{
-// 			content: "";
-// 			display: block;
-// 			width: 25%;
-// 			margin: 0 auto;
-// 			background-color: $pink;
-// 			height: 6px;
-// 		}
-// 	}
-// }
+.donate_container{
+	margin: 0 auto;
+	text-align: center;
+	> span{
+		width: 50%;
+		text-align: center;
+		display: inline-block;
+	}
+	p{
+		text-align: center;
+		a{
+			text-decoration: underline;
+		}
+	}
+	span > a {
+		// display: inline-block;
+		display: inline-table;
+		width:12em;
+		height:12em;
+		@include vendorize(border-radius, 100%);
+		background-color: $white;
+		vertical-align: top;
+		h2{
+			width: 100%;
+			text-align: center;
+			line-height: 1em;
+		}
+		> span{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+
+			> span{
+				color: $darkgrey;
+				font-size: 0.8rem;
+				display: block;
+			}
+		}
+	}
+}
 
 .left,.right,.half{
 	width: 45%;
@@ -193,55 +232,6 @@ th{
 	margin-right: 5%;
 }
 
-// .portrait{
-// 	width: 500px;
-// 	height: 500px;
-// 	background-repeat: none;
-// 	background-size: cover;
-// 	border-radius: 100%;
-// 	margin: 0 auto;
-// }
-// .quote{
-// 	width: 50%;
-// 	max-width: $indsideWidth;
-// 	min-width: $min-width;
-// 	margin: 0 auto;
-// 	h4{
-// 		text-align: left;
-// 	}
-// 	span{
-// 		display: block;
-// 		text-align: right;
-// 	}
-// }
-// .sub-portrait{
-// 	font-size: 0.8em;
-// 	color: $grey;
-// 	padding-top: $pb/4;
-// 	text-align: center;
-// }
-// .imagebreak{
-// 	background-size: cover;
-// 	background-position: center;
-// 	width: 100%;
-// 	height: 80%;
-// 	height: 80vh;
-// }
-// .thrids{
-// 	text-align: center;
-// 	background-color: $lightpink;
-// 	max-width: none;
-// 	width: 100%;
-// 	> div{
-// 		@extend .center;	
-// 		> div{
-// 			width: 33%;
-// 			display: inline-block;
-// 			vertical-align: top;
-// 			padding: $pb 0;
-// 		}			
-// 	}
-// }
 .gradient{
 	// reference
 	// http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28top\%2C\%20rgba\%28255\%2C255\%2C255\%2C1\%29\%200\%25\%2C\%20rgba\%28242\%2C168\%2C209\%2C1\%29\%2049\%25\%2C\%20rgba\%28237\%2C130\%2C189\%2C1\%29\%20100\%25\%29\%3B'

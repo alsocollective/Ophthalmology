@@ -43,13 +43,25 @@ h1, h2, h3 {
 
 h1 {
   color: #d71f85;
-  font-size: 7em; }
+  font-size: 7em;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
   h1 span {
     font-size: 0.5em;
-    display: block; }
+    display: block;
+    max-width: 80%;
+    margin: 0 auto; }
     h1 span::before {
-      content: "";
-      display: block; }
+      content: " ";
+      display: block;
+      width: 2.5em;
+      border-bottom: 3px solid #d71f85;
+      margin: 0 auto; }
+
+.sectiontitle .center, .sectiontitle #nav > div nav, #nav > div .sectiontitle nav, .sectiontitle #about #titlepage #titlepage-text, #about #titlepage .sectiontitle #titlepage-text, .sectiontitle #education .thrids > div, #education .sectiontitle .thrids > div, .sectiontitle #education #map, #education .sectiontitle #map, .sectiontitle #education .halfs, #education .sectiontitle .halfs, .sectiontitle .casestudy h2, .casestudy .sectiontitle h2 {
+  display: table;
+  height: 100%; }
 
 h2 {
   font-size: 1.7rem;
@@ -148,6 +160,41 @@ blockquote {
 
 h2 + blockquote::before {
   content: " "; }
+
+.donate_container {
+  margin: 0 auto;
+  text-align: center; }
+  .donate_container > span {
+    width: 50%;
+    text-align: center;
+    display: inline-block; }
+  .donate_container p {
+    text-align: center; }
+    .donate_container p a {
+      text-decoration: underline; }
+  .donate_container span > a {
+    display: inline-table;
+    width: 12em;
+    height: 12em;
+    -webkit-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    background-color: white;
+    vertical-align: top; }
+    .donate_container span > a h2 {
+      width: 100%;
+      text-align: center;
+      line-height: 1em; }
+    .donate_container span > a > span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+      .donate_container span > a > span > span {
+        color: #555555;
+        font-size: 0.8rem;
+        display: block; }
 
 .left, .right, .half {
   width: 45%;
@@ -471,130 +518,220 @@ h2 + blockquote::before {
     text-align: center;
     color: #818a8f; }
   #education #map #mexico_svg {
-    fill: #d71f85; }
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
   #education #map.mexico #mexico_svg {
     fill: #cccccc; }
   #education #map.mexico p.mexico {
     color: #d71f85; }
+  #education #map #unitedkingdom_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.unitedkingdom #unitedkingdom_svg {
+    fill: #cccccc; }
+  #education #map.unitedkingdom p.unitedkingdom {
+    color: #d71f85; }
+  #education #map #ireland_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.ireland #ireland_svg {
+    fill: #cccccc; }
+  #education #map.ireland p.ireland {
+    color: #d71f85; }
+  #education #map #egypt_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.egypt #egypt_svg {
+    fill: #cccccc; }
+  #education #map.egypt p.egypt {
+    color: #d71f85; }
+  #education #map #nigeria_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.nigeria #nigeria_svg {
+    fill: #cccccc; }
+  #education #map.nigeria p.nigeria {
+    color: #d71f85; }
   #education #map #usa_svg {
-    fill: #d71f85; }
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
   #education #map.usa #usa_svg {
     fill: #cccccc; }
   #education #map.usa p.usa {
     color: #d71f85; }
   #education #map #chile_svg {
-    fill: #d71f85; }
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
   #education #map.chile #chile_svg {
     fill: #cccccc; }
   #education #map.chile p.chile {
     color: #d71f85; }
-  #education #map #saudiarabia_svg {
-    fill: #d71f85; }
-  #education #map.saudiarabia #saudiarabia_svg {
-    fill: #cccccc; }
-  #education #map.saudiarabia p.saudiarabia {
-    color: #d71f85; }
-  #education #map #oman_svg {
-    fill: #d71f85; }
-  #education #map.oman #oman_svg {
-    fill: #cccccc; }
-  #education #map.oman p.oman {
-    color: #d71f85; }
-  #education #map #kuwait_svg {
-    fill: #d71f85; }
-  #education #map.kuwait #kuwait_svg {
-    fill: #cccccc; }
-  #education #map.kuwait p.kuwait {
-    color: #d71f85; }
-  #education #map #pakistan_svg {
-    fill: #d71f85; }
-  #education #map.pakistan #pakistan_svg {
-    fill: #cccccc; }
-  #education #map.pakistan p.pakistan {
-    color: #d71f85; }
-  #education #map #india_svg {
-    fill: #d71f85; }
-  #education #map.india #india_svg {
-    fill: #cccccc; }
-  #education #map.india p.india {
-    color: #d71f85; }
-  #education #map #netherlands_svg {
-    fill: #d71f85; }
-  #education #map.netherlands #netherlands_svg {
-    fill: #cccccc; }
-  #education #map.netherlands p.netherlands {
-    color: #d71f85; }
-  #education #map #switerland_svg {
-    fill: #d71f85; }
-  #education #map.switerland #switerland_svg {
-    fill: #cccccc; }
-  #education #map.switerland p.switerland {
-    color: #d71f85; }
-  #education #map #malaysia_svg {
-    fill: #d71f85; }
-  #education #map.malaysia #malaysia_svg {
-    fill: #cccccc; }
-  #education #map.malaysia p.malaysia {
-    color: #d71f85; }
-  #education #map #philippines_svg {
-    fill: #d71f85; }
-  #education #map.philippines #philippines_svg {
-    fill: #cccccc; }
-  #education #map.philippines p.philippines {
-    color: #d71f85; }
-  #education #map #southkorea_svg {
-    fill: #d71f85; }
-  #education #map.southkorea #southkorea_svg {
-    fill: #cccccc; }
-  #education #map.southkorea p.southkorea {
-    color: #d71f85; }
-  #education #map #australia_svg {
-    fill: #d71f85; }
-  #education #map.australia #australia_svg {
-    fill: #cccccc; }
-  #education #map.australia p.australia {
-    color: #d71f85; }
-  #education #map #newzeland_svg {
-    fill: #d71f85; }
-  #education #map.newzeland #newzeland_svg {
-    fill: #cccccc; }
-  #education #map.newzeland p.newzeland {
-    color: #d71f85; }
-  #education #map #signapor_svg {
-    fill: #d71f85; }
-  #education #map.signapor #signapor_svg {
-    fill: #cccccc; }
-  #education #map.signapor p.signapor {
-    color: #d71f85; }
   #education #map #sirlanka_svg {
-    fill: #d71f85; }
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
   #education #map.sirlanka #sirlanka_svg {
     fill: #cccccc; }
   #education #map.sirlanka p.sirlanka {
     color: #d71f85; }
-  #education #map #nigeria_svg {
-    fill: #d71f85; }
-  #education #map.nigeria #nigeria_svg {
+  #education #map #signapor_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.signapor #signapor_svg {
     fill: #cccccc; }
-  #education #map.nigeria p.nigeria {
+  #education #map.signapor p.signapor {
     color: #d71f85; }
-  #education #map #egypt_svg {
-    fill: #d71f85; }
-  #education #map.egypt #egypt_svg {
+  #education #map #newzeland_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.newzeland #newzeland_svg {
     fill: #cccccc; }
-  #education #map.egypt p.egypt {
+  #education #map.newzeland p.newzeland {
     color: #d71f85; }
-  #education #map #ireland_svg {
-    fill: #d71f85; }
-  #education #map.ireland #ireland_svg {
+  #education #map #australia_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.australia #australia_svg {
     fill: #cccccc; }
-  #education #map.ireland p.ireland {
+  #education #map.australia p.australia {
     color: #d71f85; }
-  #education #map #unitedkingdom_svg {
-    fill: #d71f85; }
-  #education #map.unitedkingdom #unitedkingdom_svg {
+  #education #map #southkorea_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.southkorea #southkorea_svg {
     fill: #cccccc; }
-  #education #map.unitedkingdom p.unitedkingdom {
+  #education #map.southkorea p.southkorea {
+    color: #d71f85; }
+  #education #map #philippines_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.philippines #philippines_svg {
+    fill: #cccccc; }
+  #education #map.philippines p.philippines {
+    color: #d71f85; }
+  #education #map #malaysia_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.malaysia #malaysia_svg {
+    fill: #cccccc; }
+  #education #map.malaysia p.malaysia {
+    color: #d71f85; }
+  #education #map #switerland_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.switerland #switerland_svg {
+    fill: #cccccc; }
+  #education #map.switerland p.switerland {
+    color: #d71f85; }
+  #education #map #netherlands_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.netherlands #netherlands_svg {
+    fill: #cccccc; }
+  #education #map.netherlands p.netherlands {
+    color: #d71f85; }
+  #education #map #india_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.india #india_svg {
+    fill: #cccccc; }
+  #education #map.india p.india {
+    color: #d71f85; }
+  #education #map #pakistan_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.pakistan #pakistan_svg {
+    fill: #cccccc; }
+  #education #map.pakistan p.pakistan {
+    color: #d71f85; }
+  #education #map #kuwait_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.kuwait #kuwait_svg {
+    fill: #cccccc; }
+  #education #map.kuwait p.kuwait {
+    color: #d71f85; }
+  #education #map #oman_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.oman #oman_svg {
+    fill: #cccccc; }
+  #education #map.oman p.oman {
+    color: #d71f85; }
+  #education #map #saudiarabia_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.saudiarabia #saudiarabia_svg {
+    fill: #cccccc; }
+  #education #map.saudiarabia p.saudiarabia {
+    color: #d71f85; }
+  #education #map #canada_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.canada #canada_svg {
+    fill: #cccccc; }
+  #education #map.canada p.canada {
+    color: #d71f85; }
+  #education #map #colombia_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.colombia #colombia_svg {
+    fill: #cccccc; }
+  #education #map.colombia p.colombia {
+    color: #d71f85; }
+  #education #map #guyana_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.guyana #guyana_svg {
+    fill: #cccccc; }
+  #education #map.guyana p.guyana {
+    color: #d71f85; }
+  #education #map #germany_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.germany #germany_svg {
+    fill: #cccccc; }
+  #education #map.germany p.germany {
+    color: #d71f85; }
+  #education #map #iran_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.iran #iran_svg {
+    fill: #cccccc; }
+  #education #map.iran p.iran {
+    color: #d71f85; }
+  #education #map #israel_svg {
+    fill: #d71f85;
+    stroke: #fff;
+    stroke-width: 6px; }
+  #education #map.israel #israel_svg {
+    fill: #cccccc; }
+  #education #map.israel p.israel {
     color: #d71f85; }
 #education .halfs > div {
   display: inline-block;
@@ -661,5 +798,15 @@ h5 {
 
 #help blockquote::before, #help blockquote::after {
   content: none; }
-#help blockquote:last-child {
+#help blockquote:last-of-type {
   color: #222222; }
+
+#help_machine {
+  padding: 0;
+  height: 500px;
+  height: 60vh; }
+
+#help_childcare {
+  padding: 0;
+  height: 500px;
+  height: 90vh; }
