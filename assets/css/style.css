@@ -84,7 +84,8 @@ th {
   white-space: nowrap; }
 
 p {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  line-height: 1.35em; }
 
 #wrapper {
   overflow-x: hidden; }
@@ -110,7 +111,8 @@ p {
   height: 80%;
   height: 80vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  margin-bottom: 5rem; }
   .titlepage .sectiontitle {
     position: absolute;
     left: 0;
@@ -127,10 +129,12 @@ p {
 .backgroundimage {
   background-size: cover;
   background-position: center;
-  padding: 5rem 0;
+  padding: 9rem 0;
   margin: 5rem 0; }
   .backgroundimage h2 {
     margin: 0 auto 1rem auto; }
+  .backgroundimage blockquote {
+    margin-bottom: 0; }
 
 .tightmid {
   width: 40%;
@@ -169,13 +173,16 @@ h2 + blockquote::before {
 
 .donate_container {
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  margin-top: 9rem; }
   .donate_container > span {
     width: 50%;
     text-align: center;
     display: inline-block; }
   .donate_container p {
-    text-align: center; }
+    text-align: center;
+    padding: 6rem 0 3rem 0;
+    margin-bottom: 0; }
     .donate_container p a {
       text-decoration: underline; }
   .donate_container span > a {
@@ -217,9 +224,14 @@ h2 + blockquote::before {
   background: -ms-linear-gradient(top, white 0%, #e0a3c8 100%);
   background: linear-gradient(to bottom, white 0%, #e0a3c8 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0a3c8', GradientType=0 ); }
+  .gradient h2, #help h2 {
+    margin: 0 auto 1rem auto; }
 
 .hide {
   display: none; }
+
+.slides:focus, .slides:active, .slick-list:focus, .slick-list:active, .slick-track:focus, .slick-track:active {
+  outline: 0; }
 
 .center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
@@ -353,6 +365,15 @@ h2 + blockquote::before {
         background-position-y: -290px;
         background-attachment: fixed;
         background-image: url("/assets/pic/child-original.jpg"); }
+#about .half span a {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-style: 0.85em;
+  display: inline-block; }
+  #about .half span a::before {
+    content: ">";
+    display: inline-block;
+    padding-right: 0.5rem; }
 #about .half:nth-child(2) {
   text-align: center; }
   #about .half:nth-child(2) span {
@@ -380,6 +401,14 @@ h2 + blockquote::before {
   margin: 0 auto; }
 #about .goals li {
   text-align: center; }
+  #about .goals li p {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 2rem; }
+#about .goals h3 {
+  text-align: center;
+  margin-bottom: 4rem; }
 #about table {
   max-width: 60%; }
   #about table th {
@@ -450,6 +479,42 @@ h2 + blockquote::before {
   color: white; }
   .greyed h2 {
     color: white; }
+
+#research > h3 {
+  margin-bottom: 1rem; }
+#research .slides {
+  margin-bottom: 5rem; }
+#research .slide > div {
+  padding-top: 1rem; }
+#research .slide h2 {
+  margin: 0 auto 1rem; }
+#research .slide h3 {
+  text-align: center; }
+#research .pink-backgorund {
+  background-color: #f2c7df; }
+  #research .pink-backgorund h3 {
+    padding: 2.5rem 0 2.5rem 0; }
+#research .slideshow {
+  position: relative; }
+  #research .slideshow button {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: transparent; }
+    #research .slideshow button:focus {
+      outline: none; }
+  #research .slideshow .slick-prev {
+    right: 90%; }
+  #research .slideshow .slick-next {
+    left: 90%; }
+  #research .slideshow .slick-list {
+    overflow: visible; }
+    #research .slideshow .slick-list img {
+      width: 70%;
+      display: block; }
 
 .center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
