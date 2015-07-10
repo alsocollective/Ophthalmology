@@ -124,7 +124,8 @@ p {
     height: 105%;
     position: relative;
     left: -2.5%;
-    bottom: 2.5%; }
+    bottom: 2.5%;
+    margin-top: 0; }
 
 .backgroundimage {
   background-size: cover;
@@ -233,6 +234,16 @@ h2 + blockquote::before {
 .slides:focus, .slides:active, .slick-list:focus, .slick-list:active, .slick-track:focus, .slick-track:active {
   outline: 0; }
 
+span.readmore a {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-style: 0.85em;
+  display: inline-block; }
+  span.readmore a::before {
+    content: ">";
+    display: inline-block;
+    padding-right: 0.5rem; }
+
 .center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
   max-width: 1000px;
@@ -267,7 +278,8 @@ h2 + blockquote::before {
     margin: 0;
     color: #d71f85;
     font-weight: normal;
-    padding: 1em 0 0 0; }
+    padding: 1em 0 0 0;
+    text-align: left; }
   #nav #navleft a {
     color: #222222;
     text-transform: uppercase;
@@ -365,15 +377,6 @@ h2 + blockquote::before {
         background-position-y: -290px;
         background-attachment: fixed;
         background-image: url("/assets/pic/child-original.jpg"); }
-#about .half span a {
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-style: 0.85em;
-  display: inline-block; }
-  #about .half span a::before {
-    content: ">";
-    display: inline-block;
-    padding-right: 0.5rem; }
 #about .half:nth-child(2) {
   text-align: center; }
   #about .half:nth-child(2) span {
@@ -528,6 +531,7 @@ h2 + blockquote::before {
 
 .presentpeople {
   background-color: #f2c7df;
+  margin-bottom: -5rem;
   padding: 2rem; }
   .presentpeople h3 {
     text-align: center; }
@@ -860,6 +864,14 @@ h2 + blockquote::before {
   color: white; }
   #clinical > div:last-child p {
     color: white; }
+#clinical blockquote.white {
+  margin-bottom: 2rem; }
+  #clinical blockquote.white::after {
+    content: none; }
+#clinical .center_like_blockquote {
+  max-width: 900px;
+  width: 75%;
+  margin: 0 auto; }
 
 h5 {
   font-size: 1rem;

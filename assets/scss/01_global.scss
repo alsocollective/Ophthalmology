@@ -118,6 +118,7 @@ p{
 		position: relative;
 		left: -2.5%;
 		bottom: 2.5%;
+		margin-top: 0;
 	}
 }
 
@@ -268,6 +269,18 @@ p{
 	}
 }
 
+
+span.readmore a{
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-style: 0.85em;
+	display: inline-block;
+	&::before{
+		content: ">";
+		display: inline-block;
+		padding-right: 0.5rem;
+	}
+}
 // ul.selectionlist{
 // 	text-align: center;
 // 	padding: 0;

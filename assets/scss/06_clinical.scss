@@ -37,6 +37,23 @@
 			color: $white;
 		}
 	}
+
+	blockquote.white{
+		margin-bottom: 2rem;
+		&::after{
+			content:none;
+		}
+	}
+	.center_like_blockquote{
+		max-width: 900px;
+		width: 75%;
+		margin: 0 auto;
+		// @extend blockquote;
+		// margin: 0 auto;
+		// span{
+		// 	color: $white;
+		// }
+	}
 }
 
 
