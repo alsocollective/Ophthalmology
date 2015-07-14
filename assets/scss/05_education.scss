@@ -1,5 +1,17 @@
 @import "settings";
 
+#image_classroom{
+	background-image:url(/assets/pic/classroom-large-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/classroom-large-r@2x.jpg);
+	}
+}
+#image_education2{
+	background-image:url(/assets/pic/education2-large-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/education2-large-r@2x.jpg);
+	}
+}	
 
 
 $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signapor newzeland australia southkorea philippines malaysia switerland netherlands india pakistan kuwait oman saudiarabia canada colombia guyana germany iran israel;

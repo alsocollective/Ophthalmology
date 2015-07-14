@@ -79,3 +79,9 @@ $fs: 1.1rem; //font size
 	-o-transition: $transition-property $transition-time $method;
 	transition: $transition-property $transition-time $method;
 }
+
+@mixin retina () {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		@content;
+	}
+}

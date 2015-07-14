@@ -89,9 +89,9 @@ p {
 
 #wrapper {
   overflow-x: hidden; }
-  #wrapper section > h3 {
+  #wrapper section > h3, #wrapper section .whitebackground > h3 {
     text-align: center; }
-  #wrapper section > h2 {
+  #wrapper section > h2, #wrapper section .whitebackground > h2 {
     margin: 0 auto 1rem auto; }
 
 .white {
@@ -106,10 +106,15 @@ p {
 .caseinitial {
   text-transform: inherit; }
 
+.whitebackground {
+  background-color: white;
+  position: relative;
+  padding-top: 4rem; }
+
 .titlepage {
   width: 100%;
   height: 80%;
-  height: 80vh;
+  height: 130vh;
   overflow: hidden;
   position: relative;
   margin-bottom: 5rem; }
@@ -117,15 +122,17 @@ p {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0; }
+    height: 80vh;
+    top: 0; }
   .titlepage .backgroundimage {
     width: 105%;
-    height: 105%;
-    position: relative;
+    height: 85vh;
+    position: fixed;
+    top: 72px;
     left: -2.5%;
     bottom: 2.5%;
-    margin-top: 0; }
+    margin-top: 0;
+    padding: 0; }
 
 .backgroundimage {
   background-size: cover;
@@ -141,6 +148,9 @@ p {
   width: 40%;
   max-width: 600px;
   margin: 0 auto; }
+
+p.tightmid {
+  margin-bottom: 2rem; }
 
 blockquote {
   padding: 0;
@@ -312,6 +322,36 @@ span.readmore a {
   font-weight: bold;
   text-transform: uppercase; }
 
+#image_mission_statment {
+  background-image: url(/assets/pic/mission_statment-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_mission_statment {
+      background-image: url(/assets/pic/mission_statment-large-r@2x.jpg); } }
+
+#image_who_we_are {
+  background-image: url(/assets/pic/who_we_are-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_who_we_are {
+      background-image: url(/assets/pic/who_we_are-large-r@2x.jpg); } }
+
+#image_eyeexam {
+  background-image: url(/assets/pic/eyeexam-medium-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_eyeexam {
+      background-image: url(/assets/pic/eyeexam-medium-r@2x.jpg); } }
+
+#image_pipeing {
+  background-image: url(/assets/pic/pipeing-medium-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_pipeing {
+      background-image: url(/assets/pic/pipeing-medium-r@2x.jpg); } }
+
+#image_teaching {
+  background-image: url(/assets/pic/teaching-medium-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_teaching {
+      background-image: url(/assets/pic/teaching-medium-r@2x.jpg); } }
+
 #about #titlepage {
   height: 90%;
   height: 90vh;
@@ -376,7 +416,10 @@ span.readmore a {
         background-position: center right;
         background-position-y: -290px;
         background-attachment: fixed;
-        background-image: url("/assets/pic/child-original.jpg"); }
+        background-image: url("/assets/pic/child-original-o@1x.jpg"); }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+          #about #titlepage #titlepage-image > div > div {
+            background-image: url(/assets/pic/child-original-r@2x.jpg); } }
 #about .half:nth-child(2) {
   text-align: center; }
   #about .half:nth-child(2) span {
@@ -440,6 +483,12 @@ span.readmore a {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase; }
+
+#imagepiping {
+  background-image: url(/assets/pic/pipeing-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #imagepiping {
+      background-image: url(/assets/pic/pipeing-large-r@2x.jpg); } }
 
 .thirds {
   max-width: 1000px;
@@ -528,6 +577,18 @@ span.readmore a {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase; }
+
+#image_classroom {
+  background-image: url(/assets/pic/classroom-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_classroom {
+      background-image: url(/assets/pic/classroom-large-r@2x.jpg); } }
+
+#image_education2 {
+  background-image: url(/assets/pic/education2-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_education2 {
+      background-image: url(/assets/pic/education2-large-r@2x.jpg); } }
 
 .presentpeople {
   background-color: #f2c7df;
@@ -844,6 +905,18 @@ span.readmore a {
         display: table-cell;
         vertical-align: middle; }
 
+#image_opperation {
+  background-image: url(/assets/pic/opperation-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_opperation {
+      background-image: url(/assets/pic/opperation-large-r@2x.jpg); } }
+
+#image_eyeexam2 {
+  background-image: url(/assets/pic/eyeexam2-large-o@1x.jpg); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #image_eyeexam2 {
+      background-image: url(/assets/pic/eyeexam2-large-r@2x.jpg); } }
+
 .casestudy {
   background-color: #d71f85;
   color: white; }
@@ -859,10 +932,10 @@ span.readmore a {
 #clinical .thirds img {
   max-width: 100%;
   border-radius: 100%; }
-#clinical > div:last-child {
+#clinical .whitebackground > div:last-child {
   background-color: #d71f85;
   color: white; }
-  #clinical > div:last-child p {
+  #clinical .whitebackground > div:last-child p {
     color: white; }
 #clinical blockquote.white {
   margin-bottom: 2rem; }

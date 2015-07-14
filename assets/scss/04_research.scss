@@ -1,4 +1,11 @@
 @import "settings";
+#imagepiping{
+	background-image:url(/assets/pic/pipeing-large-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/pipeing-large-r@2x.jpg);
+	}
+}
+
 
 .thirds{
 	max-width: $indsideWidth;

@@ -41,34 +41,59 @@ module.exports = function(grunt) {
 
 
 		responsive_images: {
-			options: {
-				engine: 'gm',
-				newFilesOnly: true, //Remove for production level deployment
-				sizes: [{
-					name: 'small',
-					width: 320
-				}, {
-					name: 'medium',
-					width: 640
-				}, {
-					name: 'large',
-					width: 1024
-					// suffix: "_ret", //There could be better suffixes. Also, implement the responsive html now.
-				}, {
-					name: 'huge',
-					width: 1280
-				}, {
-					name: 'original',
-					width: "100%"
-				}],
-			},
-			target: {
+			first: {
+				options: {
+					engine: 'gm',
+					newFilesOnly: true,
+					upscale: false,
+					sizes: [{
+						name: 'tiny',
+						width: 640
+					}, {
+						name: 'small',
+						width: 1280
+					}, {
+						name: 'medium',
+						width: 2048,
+					}, {
+						name: 'large',
+						width: 4096,
+					}, {
+						name: 'original',
+						width: "100%",
+					}],
+				},
 				files: [{
 					expand: true,
 					src: ['**.{jpg,gif,png}'],
 					cwd: 'assets/pic/',
+					dest: 'assets/temp/'
+				}]
+
+			},
+			second: {
+				options: {
+					engine: 'gm',
+					newFilesOnly: true,
+					upscale: false,
+					sizes: [{
+						name: 'o',
+						width: '50%',
+						suffix: "@1x",
+					}, {
+						name: 'r',
+						width: '100%',
+						suffix: "@2x",
+					}],
+				},
+
+				files: [{
+					expand: true,
+					src: ['**.{jpg,gif,png}'],
+					cwd: 'assets/temp/',
 					dest: 'public_html/assets/pic/'
 				}]
+
 			}
 		},
 
@@ -137,7 +162,7 @@ module.exports = function(grunt) {
 			},
 			img: {
 				files: 'assets/pic/**/*.jpg',
-				tasks: ['responsive_images', 'imagemin']
+				tasks: ['responsive_images:first', 'responsive_images:second', 'imagemin']
 			}
 		}
 	});

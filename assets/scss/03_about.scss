@@ -1,4 +1,34 @@
 @import "settings";
+#image_mission_statment{
+	background-image:url(/assets/pic/mission_statment-large-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/mission_statment-large-r@2x.jpg);
+	}
+}
+#image_who_we_are{
+	background-image:url(/assets/pic/who_we_are-large-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/who_we_are-large-r@2x.jpg);
+	}
+}
+#image_eyeexam{
+	background-image:url(/assets/pic/eyeexam-medium-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/eyeexam-medium-r@2x.jpg);
+	}
+}
+#image_pipeing{
+	background-image:url(/assets/pic/pipeing-medium-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/pipeing-medium-r@2x.jpg);
+	}
+}
+#image_teaching{
+	background-image:url(/assets/pic/teaching-medium-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/teaching-medium-r@2x.jpg);
+	}
+}
 #about{
 	#titlepage{
 		height: 90%;
@@ -67,7 +97,10 @@
 					background-position: center right;
 					background-position-y: -290px;
 					background-attachment: fixed;
-					background-image: url("/assets/pic/child-original.jpg");
+					background-image: url("/assets/pic/child-original-o@1x.jpg");
+					@include retina() {
+						background-image:url(/assets/pic/child-original-r@2x.jpg);
+					}
 				}
 			}
 		}
