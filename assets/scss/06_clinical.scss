@@ -52,6 +52,7 @@
 	}
 
 	blockquote.white{
+		margin-bottom: R2P(2);
 		margin-bottom: 2rem;
 		&::after{
 			content:none;
@@ -71,6 +72,7 @@
 
 
 h5{
+	font-size: R2P(1);
 	font-size: 1rem;
 	font-weight: normal;
 	text-align: center;	

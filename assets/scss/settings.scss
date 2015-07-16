@@ -32,15 +32,24 @@ $fs: 1.1rem; //font size
 }
 
 
-@function calculateRem($size) {
-	$remSize: $size / 16px;
-	@return $remSize * 1rem;
+@function R2P($size) {
+	$pxSize: $size * 16;
+	@return $pxSize + px;
 }
 
-@mixin font-size($size) {
-	font-size: $size;
-	font-size: calculateRem($size);
-}
+// @function calculateRem($size) {
+// 	$remSize: $size / 16px;
+// 	@return ($remSize * 1rem);
+// }
+
+// @mixin font-size($size) {
+// 	font-size: $size;
+// 	font-size: calculateRem($size);
+// }
+
+// .type{
+// 	@include font-size(2rem)
+// }
 
 @mixin opacity($opacity) {
 	opacity: $opacity;

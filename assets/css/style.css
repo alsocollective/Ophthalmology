@@ -64,6 +64,7 @@ h1 {
   height: 100%; }
 
 h2 {
+  font-size: 27.2px;
   font-size: 1.7rem;
   font-weight: bolder;
   color: #222222;
@@ -71,6 +72,7 @@ h2 {
   max-width: 1000px; }
 
 h3 {
+  font-size: 19.2px;
   font-size: 1.2rem; }
 
 h4 {
@@ -84,6 +86,7 @@ th {
   white-space: nowrap; }
 
 p {
+  margin-bottom: 32px;
   margin-bottom: 2rem;
   line-height: 1.35em; }
 
@@ -92,7 +95,10 @@ p {
   #wrapper section > h3, #wrapper section .whitebackground > h3 {
     text-align: center; }
   #wrapper section > h2, #wrapper section .whitebackground > h2 {
+    margin: 0 auto 16px auto;
     margin: 0 auto 1rem auto; }
+  #wrapper section {
+    overflow: hidden; }
 
 .white {
   color: white; }
@@ -109,23 +115,29 @@ p {
 .whitebackground {
   background-color: white;
   position: relative;
+  padding-top: 64px;
   padding-top: 4rem; }
 
 .titlepage {
   width: 100%;
   height: 80%;
+  min-height: 500px;
   height: 130vh;
   overflow: hidden;
   position: relative;
+  margin-bottom: 80px;
   margin-bottom: 5rem; }
   .titlepage .sectiontitle {
     position: absolute;
     left: 0;
     right: 0;
+    min-height: 400px;
     height: 80vh;
     top: 0; }
   .titlepage .backgroundimage {
     width: 105%;
+    height: 105%;
+    min-height: 400px;
     height: 85vh;
     position: fixed;
     top: 72px;
@@ -137,9 +149,14 @@ p {
 .backgroundimage {
   background-size: cover;
   background-position: center;
+  background-color: #222222;
+  padding: 144px 0;
   padding: 9rem 0;
-  margin: 5rem 0; }
+  margin: 80px 0;
+  margin: 5rem 0;
+  z-index: -1; }
   .backgroundimage h2 {
+    margin: 0 auto 16px auto;
     margin: 0 auto 1rem auto; }
   .backgroundimage blockquote {
     margin-bottom: 0; }
@@ -150,19 +167,23 @@ p {
   margin: 0 auto; }
 
 p.tightmid {
+  margin-bottom: 32px;
   margin-bottom: 2rem; }
 
 blockquote {
   padding: 0;
   margin: 0;
   color: #d71f85;
+  font-size: 24px;
   font-size: 1.5rem;
   max-width: 900px;
   width: 75%;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 80px;
   margin-bottom: 5rem; }
   blockquote span {
+    font-size: 12.8px;
     font-size: 0.8rem;
     position: absolute;
     bottom: 0;
@@ -170,10 +191,13 @@ blockquote {
     font-weight: bolder; }
   blockquote::after, blockquote::before {
     display: block;
+    width: 80px;
     width: 5rem;
+    margin: 24px 0 32px 0;
     margin: 1.5rem 0 2rem 0;
     border-bottom: 3px solid #d71f85; }
   blockquote:after {
+    margin: 32px 0 24px 0;
     margin: 2rem 0 1.5rem 0;
     content: " "; }
   blockquote.white::before, blockquote.white::after {
@@ -185,6 +209,7 @@ h2 + blockquote::before {
 .donate_container {
   margin: 0 auto;
   text-align: center;
+  margin-top: 144px;
   margin-top: 9rem; }
   .donate_container > span {
     width: 50%;
@@ -192,13 +217,16 @@ h2 + blockquote::before {
     display: inline-block; }
   .donate_container p {
     text-align: center;
+    padding: 96px 0 48px 0;
     padding: 6rem 0 3rem 0;
     margin-bottom: 0; }
     .donate_container p a {
       text-decoration: underline; }
   .donate_container span > a {
     display: inline-table;
+    width: 192px;
     width: 12em;
+    height: 192px;
     height: 12em;
     -webkit-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -210,6 +238,7 @@ h2 + blockquote::before {
     .donate_container span > a h2 {
       width: 100%;
       text-align: center;
+      line-height: 16px;
       line-height: 1em; }
     .donate_container span > a > span {
       display: table-cell;
@@ -217,6 +246,7 @@ h2 + blockquote::before {
       text-align: center; }
       .donate_container span > a > span > span {
         color: #555555;
+        font-size: 12.8px;
         font-size: 0.8rem;
         display: block; }
 
@@ -236,6 +266,7 @@ h2 + blockquote::before {
   background: linear-gradient(to bottom, white 0%, #e0a3c8 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0a3c8', GradientType=0 ); }
   .gradient h2, #help h2 {
+    margin: 0 auto 16px auto;
     margin: 0 auto 1rem auto; }
 
 .hide {
@@ -247,11 +278,13 @@ h2 + blockquote::before {
 span.readmore a {
   text-transform: uppercase;
   font-weight: bolder;
+  font-style: 13.6px;
   font-style: 0.85em;
   display: inline-block; }
   span.readmore a::before {
     content: ">";
     display: inline-block;
+    padding-right: 8px;
     padding-right: 0.5rem; }
 
 .center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
@@ -268,6 +301,7 @@ span.readmore a {
   width: 100%;
   display: block;
   background-color: white;
+  font-size: 12.8px;
   font-size: 0.8em; }
   #nav > div nav {
     display: block; }
@@ -276,6 +310,7 @@ span.readmore a {
   width: 20%;
   text-align: right;
   vertical-align: bottom;
+  margin-bottom: 16px;
   margin-bottom: 1em;
   height: 27px;
   overflow: hidden; }
@@ -288,12 +323,14 @@ span.readmore a {
     margin: 0;
     color: #d71f85;
     font-weight: normal;
+    padding: 16px 0 0 0;
     padding: 1em 0 0 0;
     text-align: left; }
   #nav #navleft a {
     color: #222222;
     text-transform: uppercase;
     display: inline-block;
+    padding: 4px 16px 16px 0;
     padding: 0.25em 1em 1em 0; }
     #nav #navleft a:hover {
       color: #d71f85; }
@@ -354,6 +391,7 @@ span.readmore a {
 
 #about #titlepage {
   height: 90%;
+  min-height: 500px;
   height: 90vh;
   position: relative;
   -webkit-text-shadow: 0px 30px 5px black;
@@ -373,6 +411,7 @@ span.readmore a {
     position: relative;
     z-index: 2; }
     #about #titlepage #titlepage-text h1 {
+      font-size: 40px;
       font-size: 2.5em;
       color: white;
       text-align: left; }
@@ -423,11 +462,14 @@ span.readmore a {
 #about .half:nth-child(2) {
   text-align: center; }
   #about .half:nth-child(2) span {
+    font-size: 12.8px;
     font-size: 0.8rem;
     color: #818a8f; }
 #about .portait {
   border-radius: 100%;
+  width: 400px;
   width: 25rem;
+  height: 400px;
   height: 25rem;
   background-size: cover;
   background-position: center;
@@ -440,7 +482,9 @@ span.readmore a {
   column-count: 2; }
 #about .goals .portait {
   border-radius: 100%;
+  width: 240px;
   width: 15rem;
+  height: 240px;
   height: 15rem;
   background-size: cover;
   background-position: center;
@@ -451,13 +495,16 @@ span.readmore a {
     width: 90%;
     text-align: center;
     margin: 0 auto;
+    padding-top: 32px;
     padding-top: 2rem; }
 #about .goals h3 {
   text-align: center;
+  margin-bottom: 64px;
   margin-bottom: 4rem; }
 #about table {
   max-width: 60%; }
   #about table th {
+    padding: 32px 0 0 0;
     padding: 2rem 0 0 0;
     text-align: left;
     text-transform: uppercase;
@@ -470,6 +517,7 @@ span.readmore a {
       vertical-align: middle; }
     #about table tr td:first-child {
       font-weight: bold;
+      padding-right: 32px;
       padding-right: 2rem; }
     #about table tr:first-child th {
       padding: 0; }
@@ -514,13 +562,18 @@ span.readmore a {
     -o-border-radius: 100%;
     border-radius: 100%;
     background-color: #d71f85;
+    height: 25.6px;
     height: 1.6rem;
+    width: 32px;
     width: 2rem;
+    padding-top: 6.4px;
     padding-top: .4em;
     color: #fff;
     font-weight: bolder;
+    font-size: 15.2px;
     font-size: .95rem;
     text-align: center;
+    margin: -8px 16px;
     margin: -0.5rem 1rem; }
   .counter li p {
     display: inline-block;
@@ -533,18 +586,23 @@ span.readmore a {
     color: white; }
 
 #research > h3 {
+  margin-bottom: 16px;
   margin-bottom: 1rem; }
 #research .slides {
+  margin-bottom: 80px;
   margin-bottom: 5rem; }
 #research .slide > div {
+  padding-top: 16px;
   padding-top: 1rem; }
 #research .slide h2 {
+  margin: 0 auto 16px;
   margin: 0 auto 1rem; }
 #research .slide h3 {
   text-align: center; }
 #research .pink-backgorund {
   background-color: #f2c7df; }
   #research .pink-backgorund h3 {
+    padding: 40px 0 40px 0;
     padding: 2.5rem 0 2.5rem 0; }
 #research .slideshow {
   position: relative; }
@@ -563,10 +621,13 @@ span.readmore a {
   #research .slideshow .slick-next {
     left: 90%; }
   #research .slideshow .slick-list {
-    overflow: visible; }
+    overflow: hidden; }
     #research .slideshow .slick-list img {
       width: 70%;
       display: block; }
+
+.slick-list {
+  overflow: hidden; }
 
 .center, #nav > div nav, #about #titlepage #titlepage-text, #education .thrids > div, #education #map, #education .halfs, .casestudy h2 {
   width: 90%;
@@ -592,23 +653,29 @@ span.readmore a {
 
 .presentpeople {
   background-color: #f2c7df;
+  margin-bottom: -80px;
   margin-bottom: -5rem;
+  padding: 32px;
   padding: 2rem; }
   .presentpeople h3 {
     text-align: center; }
   .presentpeople p {
     text-align: center;
     color: #555555;
+    font-size: 14.4px;
     font-size: 0.9rem; }
   .presentpeople .h2 {
     text-align: center;
     display: block;
     font-weight: bold;
+    font-size: 19.2px;
     font-size: 1.2rem;
     color: #222222; }
   .presentpeople li {
+    padding: 16px 0;
     padding: 1rem 0; }
   .presentpeople ul {
+    padding: 16px 0 0 0;
     padding: 1rem 0 0 0; }
 
 .halflist li {
@@ -616,13 +683,16 @@ span.readmore a {
   margin: 0 10%;
   text-align: center;
   display: inline-block;
+  padding: 32px 0;
   padding: 2rem 0; }
 .halflist span {
+  font-size: 20.8px;
   font-size: 1.3rem; }
 .halflist p {
   text-align: center;
   margin: 0 auto;
   color: #555555;
+  font-size: 14.4px;
   font-size: 0.9rem; }
 
 #education .title h4 {
@@ -637,6 +707,7 @@ span.readmore a {
   width: 100%; }
   #education .thrids .number {
     font-weight: bolder;
+    font-size: 32px;
     font-size: 2em; }
   #education .thrids p {
     color: #818a8f;
@@ -650,7 +721,15 @@ span.readmore a {
     width: 50%; }
   #education #map svg {
     background-image: url(/assets/img/map.png);
-    background-size: cover; }
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    min-height: 50vh;
+    max-width: 100%; }
   #education #map #maplist p {
     display: inline-block;
     padding: 0.25em 0.5em; }
@@ -938,6 +1017,7 @@ span.readmore a {
   #clinical .whitebackground > div:last-child p {
     color: white; }
 #clinical blockquote.white {
+  margin-bottom: 32px;
   margin-bottom: 2rem; }
   #clinical blockquote.white::after {
     content: none; }
@@ -947,6 +1027,7 @@ span.readmore a {
   margin: 0 auto; }
 
 h5 {
+  font-size: 16px;
   font-size: 1rem;
   font-weight: normal;
   text-align: center;

@@ -40,6 +40,7 @@ h1{
 }
 
 h2{
+	font-size: R2P(1.7);
 	font-size: 1.7rem;
 	font-weight: bolder;
 	color: $black;
@@ -49,6 +50,7 @@ h2{
 
 
 h3{
+	font-size: R2P(1.2);
 	font-size: 1.2rem;
 }
 
@@ -66,6 +68,7 @@ th{
 }
 
 p{
+	margin-bottom: R2P(2);
 	margin-bottom: 2rem;
 	line-height: 1.35em;
 }
@@ -76,7 +79,11 @@ p{
 		text-align: center;
 	}
 	section > h2, section .whitebackground > h2{
+		margin: 0 auto R2P(1) auto;
 		margin: 0 auto 1rem auto;
+	}
+	section{
+		overflow: hidden;
 	}
 }
 
@@ -95,6 +102,7 @@ p{
 .whitebackground{
 	background-color: $white;
 	position: relative;
+	padding-top: R2P(4);	
 	padding-top: 4rem;
 }
 
@@ -102,20 +110,24 @@ p{
 .titlepage{
 	width: 100%;
 	height: 80%;
+	min-height: 500px;
 	height: 130vh;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: R2P(5);
 	margin-bottom: 5rem;
 	.sectiontitle{
 		position: absolute;
 		left: 0;
 		right: 0;
+		min-height: 400px;
 		height: 80vh;
 		top: 0;
 	}
 	.backgroundimage{
 		width: 105%;
-		// height: 105%;
+		height: 105%;
+		min-height: 400px;
 		height: 85vh;
 		position: fixed;
 		top: 72px;
@@ -129,9 +141,14 @@ p{
 .backgroundimage{
 	background-size: cover;
 	background-position: center;
+	background-color: $black;
+	padding: R2P(9) 0;
 	padding: 9rem 0;
+	margin: R2P(5) 0;
 	margin: 5rem 0;
+	z-index: -1;
 	h2{
+		margin: 0 auto R2P(1) auto;
 		margin: 0 auto 1rem auto;
 	}
 	blockquote{
@@ -145,6 +162,7 @@ p{
 	margin: 0 auto;
 }
 p.tightmid{
+	margin-bottom: R2P(2);
 	margin-bottom: 2rem;
 }
 
@@ -153,14 +171,17 @@ p.tightmid{
 		padding: 0;
 		margin: 0;
 		color: $pink;
+		font-size: R2P(1.5);
 		font-size: 1.5rem;
 		max-width: $indsideWidth*.9;
 		width: 75%;
 		margin: 0 auto;
 		position: relative;
+		margin-bottom: R2P(5);
 		margin-bottom: 5rem;
 
 		span{
+			font-size: R2P(0.8);
 			font-size: 0.8rem;
 			position: absolute;
 			bottom: 0;
@@ -170,11 +191,14 @@ p.tightmid{
 
 		&::after,&::before{
 			display: block;
+			width: R2P(5);
 			width: 5rem;
+			margin: R2P(1.5) 0 R2P(2) 0;
 			margin: 1.5rem 0 2rem 0;
 			border-bottom: 3px solid $pink; 	
 		}
 		&:after{
+			margin: R2P(2) 0 R2P(1.5) 0;
 			margin: 2rem 0 1.5rem 0;
 			content: " ";
 		}
@@ -194,6 +218,7 @@ p.tightmid{
 .donate_container{
 	margin: 0 auto;
 	text-align: center;
+	margin-top: R2P(9);
 	margin-top: 9rem;
 	> span{
 		width: 50%;
@@ -202,6 +227,7 @@ p.tightmid{
 	}
 	p{
 		text-align: center;
+		padding: R2P(6) 0 R2P(3) 0;
 		padding: 6rem 0 3rem 0;
 		margin-bottom: 0;
 		a{
@@ -211,7 +237,9 @@ p.tightmid{
 	span > a {
 		// display: inline-block;
 		display: inline-table;
+		width:R2P(12);
 		width:12em;
+		height:R2P(12);
 		height:12em;
 		@include vendorize(border-radius, 100%);
 		background-color: $white;
@@ -219,6 +247,7 @@ p.tightmid{
 		h2{
 			width: 100%;
 			text-align: center;
+			line-height: R2P(1);
 			line-height: 1em;
 		}
 		> span{
@@ -228,6 +257,7 @@ p.tightmid{
 
 			> span{
 				color: $darkgrey;
+				font-size: R2P(0.8);
 				font-size: 0.8rem;
 				display: block;
 			}
@@ -256,6 +286,7 @@ p.tightmid{
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(224,163,200,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0a3c8', GradientType=0 );
 	h2{
+		margin: 0 auto R2P(1) auto;
 		margin: 0 auto 1rem auto;
 	}
 }
@@ -280,11 +311,13 @@ p.tightmid{
 span.readmore a{
 	text-transform: uppercase;
 	font-weight: bolder;
+	font-style: R2P(0.85);
 	font-style: 0.85em;
 	display: inline-block;
 	&::before{
 		content: ">";
 		display: inline-block;
+		padding-right: R2P(0.5);
 		padding-right: 0.5rem;
 	}
 }

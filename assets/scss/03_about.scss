@@ -32,6 +32,7 @@
 #about{
 	#titlepage{
 		height: 90%;
+		min-height: 500px;
 		height: 90vh;
 		position: relative;
 
@@ -47,6 +48,7 @@
 			position: relative;
 			z-index: 2;
 			h1{
+				font-size: R2P(2.5);
 				font-size: 2.5em;
 				color: $white;
 				text-align: left;
@@ -110,13 +112,16 @@
 	.half:nth-child(2){
 		text-align: center;
 		span{
+			font-size: R2P(0.8);
 			font-size: 0.8rem;
 			color: $grey;
 		}		
 	}
 	.portait{
 		border-radius: 100%;
+		width: R2P(25);
 		width: 25rem;
+		height: R2P(25);
 		height: 25rem;
 		background-size: cover;
 		background-position: center;
@@ -131,7 +136,9 @@
 	.goals{
 		.portait{
 			border-radius: 100%;
+			width: R2P(15);
 			width: 15rem;
+			height: R2P(15);
 			height: 15rem;
 			background-size: cover;
 			background-position: center;
@@ -143,11 +150,13 @@
 				width: 90%;
 				text-align: center;
 				margin: 0 auto;
+				padding-top: R2P(2);
 				padding-top: 2rem;
 			}			
 		}
 		h3{	
 			text-align: center;
+			margin-bottom: R2P(4);
 			margin-bottom: 4rem;
 		}
 	}
@@ -189,6 +198,7 @@
 	table{
 		max-width: 60%;
 		th{
+			padding: R2P(2) 0 0 0;
 			padding: 2rem 0 0 0;
 			text-align: left;
 			text-transform: uppercase;
@@ -203,6 +213,7 @@
 			}
 			td:first-child{
 				font-weight: bold;
+				padding-right: R2P(2);
 				padding-right: 2rem;
 			}
 			&:first-child{
