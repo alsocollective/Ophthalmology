@@ -28,12 +28,15 @@ h1{
 		display: block;
 		max-width: 80%;
 		margin: 0 auto;
+		letter-spacing: 0.025em;
 		&::before{
 			content: " ";
 			display: block;
 			width: 2.5em;
 			border-bottom: 3px solid $pink;
 			margin: 0 auto;
+			padding-bottom: .4em;
+			margin-bottom: .4em;
 		}
 	}
 }
@@ -145,17 +148,21 @@ p{
 	background-size: cover;
 	background-position: center;
 	background-color: $black;
-	padding: R2P(9) 0;
-	padding: 9rem 0;
 	margin: R2P(5) 0;
 	margin: 5rem 0;
-	z-index: -1;
+	z-index: 0;
 	h2{
 		margin: 0 auto R2P(1) auto;
 		margin: 0 auto 1rem auto;
 	}
 	blockquote{
 		margin-bottom: 0;
+	}
+	>div{
+		background-color: rgba(0,0,0,0.5);
+		padding: R2P(9) 0;
+		padding: 9rem 0;
+
 	}
 }
 

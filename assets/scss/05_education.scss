@@ -1,15 +1,15 @@
 @import "settings";
 
 #image_classroom{
-	background-image:url(/assets/pic/classroom-large-o@1x.jpg);
+	background-image:url(/assets/pic/3_education_1-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/classroom-large-r@2x.jpg);
+		background-image:url(/assets/pic/3_education_1-large-r@2x.jpg);
 	}
 }
 #image_education2{
-	background-image:url(/assets/pic/education2-large-o@1x.jpg);
+	background-image:url(/assets/pic/3_education_2-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/education2-large-r@2x.jpg);
+		background-image:url(/assets/pic/3_education_2-large-r@2x.jpg);
 	}
 }	
 

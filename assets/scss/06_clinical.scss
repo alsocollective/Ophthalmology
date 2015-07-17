@@ -1,13 +1,16 @@
 #image_opperation{
-	background-image:url(/assets/pic/opperation-large-o@1x.jpg);
+	background-image:url(/assets/pic/4_clinical_1-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/opperation-large-r@2x.jpg);
+		background-image:url(/assets/pic/4_clinical_1-large-r@2x.jpg);
 	}
 }
 #image_eyeexam2{
-	background-image:url(/assets/pic/eyeexam2-large-o@1x.jpg);
+	padding: 0;
+	height: 500px;
+	height: 60vh;
+	background-image:url(/assets/pic/4_clinical_2-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/eyeexam2-large-r@2x.jpg);
+		background-image:url(/assets/pic/4_clinical_2-large-r@2x.jpg);
 	}
 }
 

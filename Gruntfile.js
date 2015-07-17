@@ -162,7 +162,7 @@ module.exports = function(grunt) {
 			},
 			img: {
 				files: 'assets/pic/**/*.jpg',
-				tasks: ['responsive_images:first', 'responsive_images:second', 'imagemin']
+				tasks: ['responsive_images:first', 'responsive_images:second']//, 'imagemin']
 			}
 		}
 	});

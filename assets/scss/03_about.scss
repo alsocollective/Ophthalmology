@@ -1,32 +1,38 @@
 @import "settings";
-#image_mission_statment{
-	background-image:url(/assets/pic/mission_statment-large-o@1x.jpg);
+#image_portrait{
+	background-image:url(/assets/pic/1_about_1-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/mission_statment-large-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_1-large-r@2x.jpg);
+	}
+}
+#image_mission_statment{
+	background-image:url(/assets/pic/1_about_3-large-o@1x.jpg);
+	@include retina() {
+		background-image:url(/assets/pic/1_about_3-large-r@2x.jpg);
 	}
 }
 #image_who_we_are{
-	background-image:url(/assets/pic/who_we_are-large-o@1x.jpg);
+	background-image:url(/assets/pic/1_about_7-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/who_we_are-large-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_7-large-r@2x.jpg);
 	}
 }
 #image_eyeexam{
-	background-image:url(/assets/pic/eyeexam-medium-o@1x.jpg);
+	background-image:url(/assets/pic/1_about_4-small-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/eyeexam-medium-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_4-small-r@2x.jpg);
 	}
 }
 #image_pipeing{
-	background-image:url(/assets/pic/pipeing-medium-o@1x.jpg);
+	background-image:url(/assets/pic/1_about_5-small-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/pipeing-medium-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_5-small-r@2x.jpg);
 	}
 }
 #image_teaching{
-	background-image:url(/assets/pic/teaching-medium-o@1x.jpg);
+	background-image:url(/assets/pic/1_about_6-small-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/teaching-medium-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_6-small-r@2x.jpg);
 	}
 }
 #about{

@@ -1,8 +1,8 @@
 @import "settings";
 #imagepiping{
-	background-image:url(/assets/pic/pipeing-large-o@1x.jpg);
+	background-image:url(/assets/pic/2_research_1-large-o@1x.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/pipeing-large-r@2x.jpg);
+		background-image:url(/assets/pic/2_research_1-large-r@2x.jpg);
 	}
 }
 
@@ -87,6 +87,8 @@
 		h3{
 			padding: R2P(2.5) 0 R2P(2.5) 0;
 			padding: 2.5rem 0 2.5rem 0;
+			letter-spacing: 0;
+			font-family: franklin-gothic-urw;
 		}
 	}
 
@@ -113,7 +115,7 @@
 		.slick-list{
 			overflow: hidden;
 			img{
-				width: 70%;
+				width: 100%;
 				display: block;
 				// margin: 0 auto;
 			}
