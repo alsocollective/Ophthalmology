@@ -61,6 +61,18 @@
 	}
 }
 #research{
+	svg{
+		max-width: 100%;
+		height: auto;
+	}
+	#telemedicine{
+		width: 100%;
+		height: auto;
+		background-color: #000;
+		@include vendorize(border-radius,100%);
+		background-image: url(../img/clinical.jpg);
+		background-size: cover;
+	}
 	>h3{
 		margin-bottom: R2P(1);
 		margin-bottom: 1rem;
