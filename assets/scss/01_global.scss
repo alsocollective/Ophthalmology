@@ -18,11 +18,13 @@ h1,h2,h3{
 
 
 h1{
-	color: $pink;
+	color: $pink80;
 	font-size: 7em;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
+	@include vendorize(text-shadow, 0 0 30px rgba(0, 0, 0, .3));
+	
 	span{
 		font-size: 0.5em;
 		display: block;
@@ -33,7 +35,7 @@ h1{
 			content: " ";
 			display: block;
 			width: 2.5em;
-			border-bottom: 3px solid $pink;
+			border-bottom: 3px solid $pink80;
 			margin: 0 auto;
 			padding-bottom: .4em;
 			margin-bottom: .4em;
