@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,a,ul,li,p{
 
 h1,h2,h3{
 	text-transform: uppercase;
-	font-family: franklin-gothic-urw-cond;
+	font-family: franklin-gothic-urw-cond, sans-serif;
 	letter-spacing: .075em;
 	
 }
@@ -93,6 +93,11 @@ p{
 	}
 }
 
+.subtitle{
+	font-size: R2P(0.8);
+	font-size: 0.8rem;
+	color: $grey;
+}
 .white{
 	color: $white;
 }

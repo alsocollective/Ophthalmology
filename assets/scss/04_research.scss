@@ -78,7 +78,13 @@
 			margin: 0 auto R2P(1);
 			margin: 0 auto 1rem;
 		}
+		div > div > h2, li > h2{
+			margin: 0 0 R2P(1) 0;
+			margin: 0 0 1rem 0;
+		}
 		h3{
+			padding-top: R2P(2.9);
+			padding-top: 2.9rem;
 			text-align: center;
 		}
 	}
@@ -97,20 +103,21 @@
 		button {
 			position: absolute;		
 			top: 0;		
-			width: 100%;
+			width: 14%;
 			height: 100%;
 			background: transparent;
 			border: none;
 			color: transparent;
+			padding: 0;
 			&:focus{
 				outline:none;
 			}
 		}
 		.slick-prev{
-			right: 90%;
+			left: 0;
 		}
 		.slick-next{
-			left: 90%;
+			right: 0;
 		}
 		.slick-list{
 			overflow: hidden;
@@ -120,7 +127,66 @@
 				// margin: 0 auto;
 			}
 		}
-	}	
+	}
+	#research_programs{
+		text-align: center;
+		padding: 0.5rem 0 1rem 0;
+		li{
+			display: inline-block;
+			padding: R2P(0.25) R2P(0.5);
+			padding: 0.25rem 0.5rem;
+		}
+		h4{
+			font-size: R2P(0.8);
+			font-size: 0.8rem;
+		}
+		a.active{
+			border-bottom: 2px solid $black;		
+		}
+	}
+	#neurovision{
+		position: relative;
+		span{
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			border-radius: 100%;
+			background-color: $white;
+			&.active{
+				background-color: $pink;
+			}
+			&#section1 {
+				top: 37%;
+				left: 62%;
+			}
+			&#section2 {
+				top: 51%;
+				left: 49%;
+			}
+			&#section3 {
+				top: 69%;
+				left: 35%;
+			}
+			&#section4 {
+				top: 37%;
+				left: 29%;
+			}
+		}
+		
+		img {
+			width: 100%
+		}
+	}
+	#neurovision_text{
+		span{
+			color: $white;
+			display: none;
+			text-align: center;
+			&.active{
+				display: block;
+			}
+		}
+	}
 }
 
 .slick-list{

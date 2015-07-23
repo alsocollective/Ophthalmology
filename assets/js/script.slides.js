@@ -6,7 +6,7 @@ app.slides = {
 			arrows: true,
 			speed: 300,
 			centerMode: true,
-			centerPadding: '0%',
+			centerPadding: '10%',
 			slidesToShow: 1
 		});
 		$('.slides').slick({
