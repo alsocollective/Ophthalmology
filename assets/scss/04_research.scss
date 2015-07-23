@@ -64,6 +64,7 @@
 	>h3{
 		margin-bottom: R2P(1);
 		margin-bottom: 1rem;
+		margin-top: 1rem;
 	}
 	.slides{
 		margin-bottom: R2P(5);
@@ -100,6 +101,9 @@
 
 	.slideshow{
 		position: relative;
+		p{
+			padding-top: 1rem;
+		}
 		button {
 			position: absolute;		
 			top: 0;		

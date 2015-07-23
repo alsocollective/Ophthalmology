@@ -24,15 +24,15 @@
 	}
 }
 #image_pipeing{
-	background-image:url(/assets/pic/1_about_5-small-o@1x.jpg);
+	background-image:url(/assets/pic/1_about_5_cropped.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/1_about_5-small-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_5_cropped.jpg);
 	}
 }
 #image_teaching{
-	background-image:url(/assets/pic/1_about_6-small-o@1x.jpg);
+	background-image:url(/assets/pic/1_about_6_cropped.jpg);
 	@include retina() {
-		background-image:url(/assets/pic/1_about_6-small-r@2x.jpg);
+		background-image:url(/assets/pic/1_about_6_cropped.jpg);
 	}
 }
 #about{

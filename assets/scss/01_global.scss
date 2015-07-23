@@ -261,6 +261,10 @@ p.tightmid{
 		@include vendorize(border-radius, 100%);
 		background-color: $white;
 		vertical-align: top;
+		@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.2));
+		&:hover{
+			@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.8));
+		}
 		h2{
 			width: 100%;
 			text-align: center;
@@ -279,6 +283,9 @@ p.tightmid{
 				display: block;
 			}
 		}
+	}
+	#secondbutton > a{
+		background: $black20;
 	}
 }
 
