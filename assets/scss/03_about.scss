@@ -203,9 +203,13 @@
 	// 	}
 	// }
 
+	h3{
+		padding-bottom: 5px;
+	}
 	table{
 		max-width: 60%;
 		display: inline-table;
+		font-size: .9rem;
 		th{
 			padding: R2P(2) 0 0 0;
 			padding: 2rem 0 0 0;
@@ -219,6 +223,7 @@
 			border-bottom: solid 1px $black;
 			td{
 				vertical-align: middle;
+				padding: 3px;
 			}
 			td:first-child{
 				font-weight: bold;

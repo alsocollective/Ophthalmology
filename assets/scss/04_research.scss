@@ -61,9 +61,20 @@
 	}
 }
 #research{
+	h2{
+		text-align:center;
+	}
 	svg{
 		max-width: 100%;
 		height: auto;
+	}
+	
+	#telemedicine{
+		width: 100%;
+		height: auto;
+		@include vendorize(border-radius,100%);
+		background-image: url(../img/clinical.jpg);
+		background-size: cover;
 	}
 	>h3{
 		margin-bottom: R2P(1);
@@ -79,15 +90,15 @@
 			padding-top: R2P(1);
 			padding-top: 1rem;
 		}
-		h2{
+		h3{
 			margin: 0 auto R2P(1);
 			margin: 0 auto 1rem;
 		}
-		div > div > h2, li > h2{
+		div > div > h3, li > h3{
 			margin: 0 0 R2P(1) 0;
 			margin: 0 0 1rem 0;
 		}
-		h3{
+		h4{
 			padding-top: R2P(2.9);
 			padding-top: 2.9rem;
 			text-align: center;
@@ -145,11 +156,17 @@
 			padding: 0.25rem 0.5rem;
 		}
 		h4{
-			font-size: R2P(0.8);
-			font-size: 0.8rem;
+			font-size: R2P(0.9);
+			font-size: 0.9rem;
+			text-transform: capitalize;
+			font-weight: normal;
+			a:hover{
+				color: $pink;
+			}
 		}
 		a.active{
-			border-bottom: 2px solid $black;		
+			color: $black;
+			font-weight: bold;		
 		}
 	}
 	#neurovision{
