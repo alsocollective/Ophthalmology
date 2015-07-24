@@ -80,6 +80,7 @@ app.research = {
 	init: function(){
 		app.research.nurovision.init();
 		app.research.piegraph.init();
+		app.research.telemed.init();
 		$("#research_programs a").click(app.research.researchClick);
 		$('.slideshow').slick({
 			dots: false,
@@ -115,29 +116,94 @@ app.research = {
 
 	nurovision:{
 		init:function(){
-			app.research.nurovision.targets = $("#neurovision span");
-			app.research.nurovision.targets.mouseover(app.research.nurovision.mouseOver);
-			app.research.nurovision.targets.click(app.research.nurovision.mouseOver);			
-		},
-		mouseOver: function(){
-			app.research.targets.removeClass("active");
-			$("#neurovision_text span").removeClass("active");
-			$(this).toggleClass("active");
-			$("#"+this.id+"_text").addClass("active");
-		}
-	},
-
-	piegraph:{
-		init:function(){
-			app.research.piegraph.targets = $("#piegraph path");
-			app.research.piegraph.table = $("#piegraph tr")
-			app.research.piegraph.targets.mouseover(app.research.piegraph.mouseOver);
+			// app.research.nurovision.pie = $("#neurovision");
+			app.research.nurovision.span = $("#neurovision span");
+			app.research.nurovision.text = $("#neurovision_text tr");
+			
+			app.research.nurovision.span.mouseover(app.research.nurovision.mouseOver);
+			app.research.nurovision.text.mouseover(app.research.nurovision.mouseOver);
 		},
 		mouseOver:function(event){
 			event.preventDefault();
-			app.research.piegraph.targets.removeClass("active");
-			console.log(this.id);
-			$(this).addClass("active");
+
+			app.research.nurovision.span.removeClass();
+			app.research.nurovision.text.removeClass();
+
+			if(this.id){
+				var id = this.id
+				if (id.substring(id.length-5, id.length) == "_text"){
+					id=id.substring(0,id.length-5);
+				}
+				$("#neurovision #"+id+"").addClass("active");
+				$("#neurovision_text #"+id+"_text").addClass("active");
+			}
+			// if(this.id){
+			// 	var id = this.id
+			// 	if (id.substring(id.length-4, id.length) == "_svg"){
+			// 		id=id.substring(0,id.length-4);
+			// 	}
+			// 	app.research.nurovision.pie[0].className = "";
+			// 	app.research.nurovision.pie.addClass(id);
+			// } else {
+			// 	app.research.nurovision.pie[0].className = "";
+			// }
+			return false;
+		}		
+		// init:function(){
+		// 	app.research.nurovision.targets = $("#neurovision span");
+		// 	app.research.nurovision.targets.mouseover(app.research.nurovision.mouseOver).click(app.research.nurovision.mouseOver);			
+		// },
+		// mouseOver: function(){
+		// 	app.research.nurovision.targets.removeClass("active");
+		// 	$("#neurovision_text span").removeClass("active");
+		// 	$(this).toggleClass("active");
+		// 	$("#"+this.id+"_text").addClass("active");
+		// }
+	},
+
+	piegraph:{
+		makeClear:null,
+		pie:null,
+		init:function(){
+			app.research.piegraph.pie = $("#piegraph");
+			$("#piegraph tr").mouseover(app.research.piegraph.mouseOver);
+			$("#piegraph path").mouseover(app.research.piegraph.mouseOver);
+		},
+		mouseOver:function(event){
+			event.preventDefault();
+			if(this.id){
+				var id = this.id
+				if (id.substring(id.length-4, id.length) == "_svg"){
+					id=id.substring(0,id.length-4);
+				}
+				app.research.piegraph.pie[0].className = "";
+				app.research.piegraph.pie.addClass(id);
+			} else {
+				app.research.piegraph.pie[0].className = "";
+			}
+			return false;
+		}
+	},
+
+	telemed:{
+		main:null,
+		init:function(){
+			app.research.telemed.main = $("#telemedicine");
+			$("#telemedicine tr").mouseover(app.research.telemed.mouseOver);
+			$("#telemedicine path").mouseover(app.research.telemed.mouseOver);
+		},
+		mouseOver:function(event){
+			event.preventDefault();
+			if(this.id){
+				var id = this.id
+				if (id.substring(id.length-4, id.length) == "_svg"){
+					id=id.substring(0,id.length-4);
+				}
+				app.research.telemed.main[0].className = "";
+				app.research.telemed.main.addClass(id);
+			} else {
+				app.research.telemed.main[0].className = "";
+			}
 			return false;
 		}
 	}
