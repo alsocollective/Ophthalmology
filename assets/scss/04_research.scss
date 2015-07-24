@@ -68,7 +68,6 @@
 	#telemedicine{
 		width: 100%;
 		height: auto;
-		background-color: #000;
 		@include vendorize(border-radius,100%);
 		background-image: url(../img/clinical.jpg);
 		background-size: cover;
@@ -204,6 +203,27 @@
 		}
 	}
 }
+
+#low_income_death_svg{
+	fill: $pink80;
+}
+#low_income_survivors_svg{
+	fill: $pink60;
+}
+#high_income_death_svg{
+	fill: $pink40;
+    stroke: $pink40;
+    stroke-width: 7px;
+}
+#high_income_survivors_svg{
+	fill: $pink20;
+}
+
+// #low_income_death_svg,#low_income_survivors_svg,#high_income_death_svg,#high_income_survivors_svg{
+// }
+// #high_income_death_svg{
+// 	stroke: $grey;
+// }
 
 .slick-list{
 	overflow: hidden;

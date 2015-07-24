@@ -78,9 +78,8 @@ app.about = {
 
 app.research = {
 	init: function(){
-		app.research.targets = $("#neurovision span");
-		app.research.targets.mouseover(app.research.mouseOver);
-		app.research.targets.click(app.research.mouseOver);
+		app.research.nurovision.init();
+		app.research.piegraph.init();
 		$("#research_programs a").click(app.research.researchClick);
 		$('.slideshow').slick({
 			dots: false,
@@ -103,12 +102,6 @@ app.research = {
 		});
 		app.research.slides.on('beforeChange',app.research.afterChange)	
 	},
-	mouseOver: function(){
-		app.research.targets.removeClass("active");
-		$("#neurovision_text span").removeClass("active");
-		$(this).toggleClass("active");
-		$("#"+this.id+"_text").addClass("active");
-	},
 	researchClick: function(event){
 		event.preventDefault();
 		var page = parseInt(this.href.split("_")[1]);
@@ -118,6 +111,35 @@ app.research = {
 	afterChange: function(event, slick, currentSlide, nextSlide){
 		$("#research_programs .active").removeClass("active");
 		$('a[href$="#page_'+nextSlide+'"]').addClass("active");
+	},
+
+	nurovision:{
+		init:function(){
+			app.research.nurovision.targets = $("#neurovision span");
+			app.research.nurovision.targets.mouseover(app.research.nurovision.mouseOver);
+			app.research.nurovision.targets.click(app.research.nurovision.mouseOver);			
+		},
+		mouseOver: function(){
+			app.research.targets.removeClass("active");
+			$("#neurovision_text span").removeClass("active");
+			$(this).toggleClass("active");
+			$("#"+this.id+"_text").addClass("active");
+		}
+	},
+
+	piegraph:{
+		init:function(){
+			app.research.piegraph.targets = $("#piegraph path");
+			app.research.piegraph.table = $("#piegraph tr")
+			app.research.piegraph.targets.mouseover(app.research.piegraph.mouseOver);
+		},
+		mouseOver:function(event){
+			event.preventDefault();
+			app.research.piegraph.targets.removeClass("active");
+			console.log(this.id);
+			$(this).addClass("active");
+			return false;
+		}
 	}
 
 }
