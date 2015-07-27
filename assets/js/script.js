@@ -20,7 +20,9 @@ var app = {
 			app.education.init();
 		}
 
-		app.scroll.init();
+		if(!$(".touch").length){
+			app.scroll.init();
+		}
 	},
 	detectMobile: function() {
 		// check the useragent this is a bit problematic... but hey...

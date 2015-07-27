@@ -44,11 +44,28 @@
 		li{
 			padding: 1.25rem 0;
 			text-align: center;
+			position: relative;
+			p{
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 5%;
+				width: 90%;
+				min-height: 90%;
+				background-color: rgba(0,0,0,0.7);
+				color: $white;
+				z-index: 2;
+			}
+			&:hover{
+				p{
+					display: block;
+				}
+			}
 		}
 		img{
 			max-width: 90%;
 			border-radius: 100%;
-
 		}
 	}
 

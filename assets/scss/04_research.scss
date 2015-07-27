@@ -19,6 +19,16 @@
 		&:nth-child(3n-1){
 			margin: 0 3%;
 		}
+		@include at-query ($max, $inbetween) {
+			width: 47.5%;
+			&:nth-child(2n){
+				margin: 0 0 0 2%;
+			}
+			&:nth-child(2n-1){
+				margin: 0 2% 0 0;
+			}
+
+		}
 	}
 }
 
@@ -72,9 +82,9 @@
 	#telemedicine{
 		width: 100%;
 		height: auto;
-		@include vendorize(border-radius,100%);
-		background-image: url(../img/clinical.jpg);
-		background-size: cover;
+		// @include vendorize(border-radius,100%);
+		// background-image: url(../img/clinical.jpg);
+		// background-size: cover;
 	}
 	>h3{
 		margin-bottom: R2P(1);
@@ -84,6 +94,7 @@
 	.slides{
 		margin-bottom: R2P(5);
 		margin-bottom: 5rem;
+		background-color: #eee;
 	}
 	.slide {
 		>div{
@@ -93,14 +104,16 @@
 		h3{
 			margin: 0 auto R2P(1);
 			margin: 0 auto 1rem;
+			text-align: center;
+			padding: 3rem 0 2rem 0;
 		}
 		div > div > h3, li > h3{
 			margin: 0 0 R2P(1) 0;
 			margin: 0 0 1rem 0;
 		}
 		h4{
-			padding-top: R2P(2.9);
-			padding-top: 2.9rem;
+			padding: R2P(2.9);
+			padding: 2.9rem;
 			text-align: center;
 		}
 	}
@@ -145,6 +158,10 @@
 				display: block;
 				// margin: 0 auto;
 			}
+		}
+		.center{
+			margin: 0px;
+			max-width: 100%;
 		}
 	}
 	#research_programs{
@@ -270,7 +287,7 @@
 	height: auto;
 	svg{
 		@include vendorize(border-radius,100%);
-		background-image: url(../img/clinical.jpg);
+		// background-image: url(../img/clinical.jpg);
 		background-size: cover;
 		max-width: 100%;
 		height: auto;
@@ -281,6 +298,11 @@
 	}
 	path{
 		fill:$pink;
+	}
+	#mapimage{
+		stroke:transparent;
+		fill: url(#img1);
+		background-size: cover;
 	}
 
 	$telemeddata: toronto hamilton kitchener barrie sudbury timmins;

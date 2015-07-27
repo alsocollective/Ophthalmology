@@ -92,6 +92,12 @@ p{
 	}
 	section{
 		overflow: hidden;
+		> div{
+			margin-top: 80px;
+			@include at-query ($max, $large) {
+				margin-top: 0;
+			}
+		}
 	}
 }
 
@@ -129,6 +135,12 @@ p{
 	position: relative;
 	margin-bottom: R2P(5);
 	margin-bottom: 5rem;
+
+	@include at-query ($max, $large) {
+		height: 70vh;
+		margin-bottom: 0;
+	}
+
 	.sectiontitle{
 		position: absolute;
 		left: 0;
@@ -148,6 +160,12 @@ p{
 		bottom: 2.5%;
 		margin-top: 0;
 		padding: 0;
+		@include at-query ($max, $large) {
+			position: absolute;
+			height: 100%;
+			margin: 0;
+			top: 0;
+		}
 	}
 }
 
@@ -177,6 +195,9 @@ p{
 	width: 40%;
 	max-width: 600px;
 	margin: 0 auto;
+	@include at-query ($max, $large) {
+		width: 80%;
+	}
 }
 p.tightmid{
 	margin-bottom: R2P(2);
@@ -344,6 +365,10 @@ span.readmore a{
 		padding-right: R2P(0.5);
 		padding-right: 0.5rem;
 	}
+}
+
+.nodashafter::after{
+	content: none;
 }
 // ul.selectionlist{
 // 	text-align: center;
