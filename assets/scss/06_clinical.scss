@@ -82,6 +82,10 @@
 		margin-bottom: -2rem;
 		width: 60%;
 		min-width: 320px;
+		@include at-query ($max, $medium) {
+			width: 100%;
+			min-width: inherit;
+		}
 	}
 	blockquote.white{
 		margin-bottom: R2P(2);
@@ -94,6 +98,9 @@
 		max-width: 900px;
 		width: 75%;
 		margin: 0 auto;
+		@include at-query ($max, $medium) {
+			width: 95%;
+		}
 		// @extend blockquote;
 		// margin: 0 auto;
 		// span{

@@ -25,6 +25,10 @@ h1{
 	text-align: center;
 	@include vendorize(text-shadow, 0 0 30px rgba(0, 0, 0, .3));
 	
+	@include at-query ($max, $medium) {
+		font-size: 3rem;
+	}
+
 	span{
 		font-size: 0.5em;
 		display: block;
@@ -105,6 +109,9 @@ p{
 	font-size: R2P(0.8);
 	font-size: 0.8rem;
 	color: $grey;
+	@include at-query ($max, $medium) {
+		padding-bottom: 1.5rem;
+	}
 }
 .white{
 	color: $white;
@@ -179,6 +186,9 @@ p{
 	h2{
 		margin: 0 auto R2P(1) auto;
 		margin: 0 auto 1rem auto;
+		@include at-query ($max, $medium) {
+			width: 95%;
+		}
 	}
 	blockquote{
 		margin-bottom: 0;
@@ -187,7 +197,9 @@ p{
 		background-color: rgba(0,0,0,0.5);
 		padding: R2P(9) 0;
 		padding: 9rem 0;
-
+		@include at-query ($max, $medium) {
+			padding: 3rem 0;
+		}
 	}
 }
 
@@ -217,7 +229,9 @@ p.tightmid{
 		position: relative;
 		margin-bottom: R2P(5);
 		margin-bottom: 5rem;
-
+		@include at-query ($max, $medium) {
+			width: 95%;
+		}
 		span{
 			font-size: R2P(0.8);
 			font-size: 0.8rem;
@@ -258,15 +272,25 @@ p.tightmid{
 	text-align: center;
 	margin-top: R2P(9);
 	margin-top: 9rem;
+	@include at-query ($max, $medium) {
+		margin-top: 5rem;
+	}
 	> span{
 		width: 50%;
 		text-align: center;
 		display: inline-block;
+		@include at-query ($max, $medium) {
+			width: 100%;
+			padding-bottom: 2rem;
+		}
 	}
 	p{
 		text-align: center;
 		padding: R2P(6) 0 R2P(3) 0;
 		padding: 6rem 0 3rem 0;
+		@include at-query ($max, $medium) {
+			padding-top: 0;
+		}
 		margin-bottom: 0;
 		a{
 			text-decoration: underline;
@@ -307,6 +331,9 @@ p.tightmid{
 	}
 	#secondbutton > a{
 		background: $black20;
+		@include at-query ($max, $medium) {
+			padding-bottom: 0;
+		}
 	}
 }
 
@@ -317,6 +344,15 @@ p.tightmid{
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 5%;
+	@include at-query ($max, $medium) {
+		width: 100%;
+		margin: 0;
+	}
+}
+@include at-query ($max, $medium) {
+	.half + .half{
+		padding-bottom: 2rem;
+	}
 }
 
 .gradient{

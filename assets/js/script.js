@@ -20,9 +20,11 @@ var app = {
 			app.education.init();
 		}
 
-		if(!$(".touch").length){
+		if (!$(".touch").length){
 			app.scroll.init();
 		}
+
+		
 	},
 	detectMobile: function() {
 		// check the useragent this is a bit problematic... but hey...
@@ -83,26 +85,28 @@ app.research = {
 		app.research.nurovision.init();
 		app.research.piegraph.init();
 		app.research.telemed.init();
-		$("#research_programs a").click(app.research.researchClick);
-		$('.slideshow').slick({
-			dots: false,
-			infinite: false,
-			arrows: true,
-			speed: 300,
-			centerMode: true,
-			centerPadding: '10%',
-			slidesToShow: 1
-		});
-		app.research.slides = $('.slides').slick({
-			dots: false,
-			infinite: false,
-			arrows: false,
-			speed: 300,
-			centerMode: true,
-			centerPadding: '0%',
-			slidesToShow: 1,
-			adaptiveHeight:true
-		});
+		if ($(document.body).outerWidth() > 768){
+			$("#research_programs a").click(app.research.researchClick);
+			$('.slideshow').slick({
+				dots: false,
+				infinite: false,
+				arrows: true,
+				speed: 300,
+				centerMode: true,
+				centerPadding: '10%',
+				slidesToShow: 1
+			});
+			app.research.slides = $('.slides').slick({
+				dots: false,
+				infinite: false,
+				arrows: false,
+				speed: 300,
+				centerMode: true,
+				centerPadding: '0%',
+				slidesToShow: 1,
+				adaptiveHeight:true
+			});
+		}
 		app.research.slides.on('beforeChange',app.research.afterChange)	
 	},
 	researchClick: function(event){
@@ -128,8 +132,8 @@ app.research = {
 		mouseOver:function(event){
 			event.preventDefault();
 
-			app.research.nurovision.span.removeClass();
-			app.research.nurovision.text.removeClass();
+			app.research.nurovision.span.removeClass("active");
+			app.research.nurovision.text.removeClass("active");
 
 			if(this.id){
 				var id = this.id
