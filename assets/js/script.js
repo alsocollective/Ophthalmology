@@ -231,7 +231,7 @@ app.education = {
 	init: function() {
 		var para = "p.sirlanka,p.mexico,p.usa,p.chile,p.saudiarabia,p.oman,p.kuwait,p.pakistan,p.india,p.netherlands,p.switerland,p.malaysia,p.philippines,p.southkorea,p.australia,p.newzeland,p.signapor,p.sirlanka,p.nigeria,p.egypt,p.ireland,p.unitedkingdom",
 			map = "#mexico_svg,#unitedkingdom_svg,#ireland_svg,#egypt_svg,#nigeria_svg,#usa_svg,#chile_svg,#sirlanka_svg,#signapor_svg,#newzeland_svg,#australia_svg,#southkorea_svg,#philippines_svg,#malaysia_svg,#switerland_svg,#netherlands_svg,#india_svg,#pakistan_svg,#kuwait_svg,#oman_svg,#saudiarabia_svg,#canada_svg,#colombia_svg,#guyana_svg,#germany_svg,#iran_svg,#israel_svg";
-			app.education.mapmessage = $("#mapmessage h3");
+			app.education.mapmessage = $("#mapmessage h3 span");
 			app.education.mapmessage_default = app.education.mapmessage.html();
 		$(map).click(app.education.countryclick).mouseover(app.education.countryclick); //.mouseout(app.map.nocountry)
 		// $(para).click(app.map.countryclick).mouseover(app.map.countryclick);
@@ -252,14 +252,29 @@ app.education = {
 		if(count > 1){
 			res = " Alumni";
 		}
-		app.education.mapmessage[0].innerHTML = country + ": "+count+ res;
+
+		app.education.mapmessage.addClass("countryout");
+
+		setTimeout(function(){
+			app.education.mapmessage.removeClass("countryout");			
+			app.education.mapmessage.addClass("countryin");
+			app.education.mapmessage[0].innerHTML = country + ": "+count+ res;
+
+			setTimeout(function(){
+				app.education.mapmessage.removeClass("countryin");			
+			},150)
+		},150)
 
 		if(app.education.makeClear){
 			clearTimeout(app.education.makeClear);
 		}
 		app.education.makeClear = setTimeout(function(){ 
-			$("#map")[0].className="";
-			app.education.mapmessage[0].innerHTML = app.education.mapmessage_default
+			app.education.mapmessage.addClass("countryout");
+			setTimeout(function(){
+				app.education.mapmessage.removeClass("countryout");	
+				$("#map")[0].className="";
+				app.education.mapmessage[0].innerHTML = app.education.mapmessage_default
+			},150);
 		}, 5000);
 
 

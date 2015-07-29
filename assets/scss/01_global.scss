@@ -143,10 +143,10 @@ p{
 	margin-bottom: R2P(5);
 	margin-bottom: 5rem;
 
-	@include at-query ($max, $large) {
+	// @include at-query ($max, $large) {
 		height: 70vh;
 		margin-bottom: 0;
-	}
+	// }
 
 	.sectiontitle{
 		position: absolute;
@@ -162,17 +162,19 @@ p{
 		min-height: 400px;
 		height: 85vh;
 		position: fixed;
+		// position: absolute;
 		top: 72px;
+		// top: 0;
 		left: -2.5%;
 		bottom: 2.5%;
 		margin-top: 0;
 		padding: 0;
-		@include at-query ($max, $large) {
+		// @include at-query ($max, $large) {
 			position: absolute;
 			height: 100%;
 			margin: 0;
 			top: 0;
-		}
+		// }
 	}
 }
 
@@ -272,8 +274,10 @@ p.tightmid{
 	text-align: center;
 	margin-top: R2P(9);
 	margin-top: 9rem;
+	width: 80%;
 	@include at-query ($max, $medium) {
 		margin-top: 5rem;
+		width: 100%;
 	}
 	> span{
 		width: 50%;

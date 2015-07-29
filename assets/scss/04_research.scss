@@ -125,6 +125,24 @@
 				padding: 0.9rem 0;
 			}
 		}
+		table{
+			padding-top: 1rem;
+			width: 100%;
+			tr{
+				border-bottom: solid 1px $black;
+				font-size: .9rem;
+				padding: 3px 0;
+				td:first-child{
+					font-weight: bolder;
+					text-transform: capitalize;
+				}
+			}
+			h3{
+				padding: 1rem 0 0 0;
+				text-align: left;
+				margin-bottom: 0;
+			}
+		}
 	}
 	.pink-backgorund{
 		background-color: $lightpink;
@@ -246,8 +264,15 @@
 		tr{
 			color: $white;
 			text-align: center;
+			border-bottom: solid 1px $white;
 			&.active{
-				background-color: $grey;
+				// background-color: $grey;
+				color: $pink;
+				// font-weight: bolder;
+			}
+			td{
+				font-weight: normal;
+				text-align: left;
 			}
 		}
 	}
@@ -274,11 +299,12 @@
 	@mixin incomeTypes($income) {
 		&.#{$income}{
 			##{$income}_svg{
-				fill: $grey;
-				stroke: $grey;
+				fill: $darkpink80;
+				stroke: $darkpink80;
 			}
 			tr##{$income}{
-				background-color: $grey;
+				// background-color: $red;
+				color: $darkpink80;
 			}
 		}
 	}
@@ -299,10 +325,13 @@
 	@mixin telmedtypes($location) {
 		&.#{$location}{
 			##{$location}_svg{
-				fill: $grey;
+				fill: $darkpink80;
+				stroke-width: 35px;
+				stroke: $darkpink80;
 			}
 			tr##{$location}{
-				background-color: $grey;
+				// background-color: $grey;
+				color: $darkpink80;
 			}
 		}
 	}

@@ -16,6 +16,9 @@ $pink60: #e362a9;
 $pink40: #eb8fc2;
 $pink20: #f3bbda;
 
+$darkpink80:#992565;
+$red: #de4561;
+
 
 $lightpink: #F2C7DF;
 $grey: #818A8F;
@@ -104,3 +107,20 @@ $fs: 1.1rem; //font size
 		@content;
 	}
 }
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}
+	@keyframes $animation-name {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+}
+
