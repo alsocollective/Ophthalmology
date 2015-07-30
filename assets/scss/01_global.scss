@@ -109,6 +109,12 @@ p{
 	font-size: R2P(0.8);
 	font-size: 0.8rem;
 	color: $grey;
+
+	text-align: center;
+	padding: 1rem 0 2rem 0;
+	margin: 0 auto;
+	display: block;	
+	
 	@include at-query ($max, $medium) {
 		padding-bottom: 1.5rem;
 	}
@@ -130,6 +136,7 @@ p{
 	position: relative;
 	padding-top: R2P(4);	
 	padding-top: 4rem;
+	z-index: 4;
 }
 
 
@@ -142,11 +149,12 @@ p{
 	position: relative;
 	margin-bottom: R2P(5);
 	margin-bottom: 5rem;
+	z-index: -1;
 
-	// @include at-query ($max, $large) {
+	@include at-query ($max, $large) {
 		height: 70vh;
 		margin-bottom: 0;
-	// }
+	}
 
 	.sectiontitle{
 		position: absolute;
@@ -155,6 +163,17 @@ p{
 		min-height: 400px;
 		height: 80vh;
 		top: 0;
+		@include at-query ($max, $large) {
+			background-color: $black;
+			background-color: rgba(0,0,0,0.7);
+			height: 100%;
+			h1 {
+				color: $white;
+				span::before{
+					border-bottom-color: $white;
+				}
+			}
+		}
 	}
 	.backgroundimage{
 		width: 105%;
@@ -169,12 +188,12 @@ p{
 		bottom: 2.5%;
 		margin-top: 0;
 		padding: 0;
-		// @include at-query ($max, $large) {
+		@include at-query ($max, $large) {
 			position: absolute;
 			height: 100%;
 			margin: 0;
 			top: 0;
-		// }
+		}
 	}
 }
 
@@ -241,6 +260,10 @@ p.tightmid{
 			bottom: 0;
 			right: 0;
 			font-weight: bolder;
+			@include at-query ($max, $medium) {
+				bottom: inherit;
+				top: 102%;
+			}
 		}
 
 		&::after,&::before{
@@ -278,6 +301,7 @@ p.tightmid{
 	@include at-query ($max, $medium) {
 		margin-top: 5rem;
 		width: 100%;
+		font-size: 0.9rem;
 	}
 	> span{
 		width: 50%;
@@ -304,9 +328,9 @@ p.tightmid{
 		// display: inline-block;
 		display: inline-table;
 		width:R2P(12);
-		width:12em;
+		width:12rem;
 		height:R2P(12);
-		height:12em;
+		height:12rem;
 		@include vendorize(border-radius, 100%);
 		background-color: $white;
 		vertical-align: top;
@@ -330,6 +354,10 @@ p.tightmid{
 				font-size: R2P(0.8);
 				font-size: 0.8rem;
 				display: block;
+				@include at-query ($max, $medium) {
+				    width: 80%;
+	    			margin: 0 auto;
+	    		}
 			}
 		}
 	}
@@ -410,6 +438,20 @@ span.readmore a{
 .nodashafter::after{
 	content: none;
 }
+
+
+@include at-query ($max, $medium) {
+	.nomobile{
+		display: none;
+	}
+}
+.mobileonly{
+	display: none;
+	@include at-query ($max, $medium) {
+		display: block;
+	}
+}
+
 // ul.selectionlist{
 // 	text-align: center;
 // 	padding: 0;

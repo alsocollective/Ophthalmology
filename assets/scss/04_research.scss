@@ -79,7 +79,7 @@
 	}
 	svg{
 		max-width: 100%;
-		height: auto;
+		height: 100%;
 	}
 	
 	#telemedicine{
@@ -135,6 +135,9 @@
 				td:first-child{
 					font-weight: bolder;
 					text-transform: capitalize;
+				}
+				th{
+					white-space: normal;
 				}
 			}
 			h3{
@@ -266,9 +269,11 @@
 			text-align: center;
 			border-bottom: solid 1px $white;
 			&.active{
-				// background-color: $grey;
-				color: $pink;
-				// font-weight: bolder;
+				td{
+					// background-color: $grey;
+					color: $pink60;
+					font-weight: bolder;
+				}
 			}
 			td{
 				font-weight: normal;
@@ -342,7 +347,7 @@
 		// background-image: url(../img/clinical.jpg);
 		background-size: cover;
 		max-width: 100%;
-		height: auto;
+		height: 100%;
 	}
 
 	line,circle,path,polyline{
