@@ -1,9 +1,38 @@
 </div>
+
+<div id="loadingscreen">
+
+</div>
+
 <script type="text/javascript" src="/assets/js/main.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
+<script src="//use.typekit.net/whd6btz.js"></script>
+<script>
+	try{
+		Typekit.load({ 
+			async: true,
+			active: function() {
+				app.init();
+			} 
+		});
+	}catch(e){
 		app.init();
-	})
+	}</script>
+<script type="text/javascript">
+
+	// $(document).ready(function() {
+	// 	try {
+	// 		Typekit.load({
+	// 			active: function() {
+	// 				console.log("down here");
+	// 				app.init();
+	// 			}
+	// 		})
+	// 	} catch(e) {
+	// 		console.log("try failed");
+	// 		// app.init();
+	// 	}
+		
+	// })
 
 </script>
 

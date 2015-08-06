@@ -327,10 +327,13 @@ p.tightmid{
 	span > a {
 		// display: inline-block;
 		display: inline-table;
-		width:R2P(12);
-		width:12rem;
-		height:R2P(12);
-		height:12rem;
+		width:R2P(14);
+		width:14rem;
+		height:R2P(14);
+		height:14rem;
+		@include at-query ($max, $medium) {
+
+		}
 		@include vendorize(border-radius, 100%);
 		background-color: $white;
 		vertical-align: top;
@@ -354,9 +357,10 @@ p.tightmid{
 				font-size: R2P(0.8);
 				font-size: 0.8rem;
 				display: block;
+				margin: 0 auto;
+				width: 85%;
 				@include at-query ($max, $medium) {
 				    width: 80%;
-	    			margin: 0 auto;
 	    		}
 			}
 		}
@@ -433,6 +437,9 @@ span.readmore a{
 		padding-right: R2P(0.5);
 		padding-right: 0.5rem;
 	}
+	&:hover{
+		color: $pink;
+	}
 }
 
 .nodashafter::after{
@@ -452,6 +459,39 @@ span.readmore a{
 	}
 }
 
+
+.wf-loading{
+	div{
+		display: none;
+	}
+
+	#loadingscreen{
+		display: table;
+	}
+}
+#loadingscreen{
+	display: none;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	max-height: 100%;
+	background-color: $white;
+}
+
+@include keyframes(fadein) {
+	100% { 
+		opacity: 1; 
+	}
+	0% { 
+		opacity: 0;
+	}
+}
+
+
+.wf-active{
+	@include animation('fadein 0.5s');
+	@include vendorize(transition-timing-function, ease-in-out);
+}
 // ul.selectionlist{
 // 	text-align: center;
 // 	padding: 0;

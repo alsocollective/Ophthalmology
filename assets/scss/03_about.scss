@@ -1,39 +1,21 @@
 @import "settings";
 #image_portrait{
-	background-image:url(/assets/pic/1_about_1-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/1_about_1-large-r@2x.jpg);
-	}
+	@include imageizer(1_about_1);
 }
 #image_mission_statment{
-	background-image:url(/assets/pic/1_about_3-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/1_about_3-large-r@2x.jpg);
-	}
+	@include imageizer(1_about_3);
 }
 #image_who_we_are{
-	background-image:url(/assets/pic/1_about_7-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/1_about_7-large-r@2x.jpg);
-	}
+	@include imageizer(1_about_7);
 }
 #image_eyeexam{
-	background-image:url(/assets/pic/1_about_4-small-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/1_about_4-small-r@2x.jpg);
-	}
+	@include imageizerSmall(1_about_4);
 }
 #image_pipeing{
-	background-image:url(/assets/pic/1_about_5_cropped.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/1_about_5_cropped.jpg);
-	}
+	@include imageizerSmall(1_about_5);
 }
 #image_teaching{
-	background-image:url(/assets/pic/1_about_6_cropped.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/1_about_6_cropped.jpg);
-	}
+	@include imageizerSmall(1_about_6);
 }
 #about{
 
@@ -46,6 +28,7 @@
 	.half:nth-child(2){
 		text-align: center;	
 	}
+
 	.portait{
 		border-radius: 100%;
 		width: R2P(25);
@@ -55,6 +38,7 @@
 		background-size: cover;
 		background-position: center;
 		margin: 0 auto;
+
 		@include at-query ($max, $medium) {
 			width: 200px;
 			height: 200px;
@@ -62,6 +46,9 @@
 		// &.mod-mobile{
 		// 	margin-bottom: 2rem;
 		// }
+	}
+	.center .portait{
+		@include imageizerSmall(1_about_2);
 	}
 
 	// .mobileonly{

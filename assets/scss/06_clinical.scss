@@ -1,17 +1,11 @@
 #image_opperation{
-	background-image:url(/assets/pic/4_clinical_1-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/4_clinical_1-large-r@2x.jpg);
-	}
+	@include imageizer(4_clinical_1);
 }
 #image_eyeexam2{
 	padding: 0;
 	height: 500px;
 	height: 60vh;
-	background-image:url(/assets/pic/4_clinical_2-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/4_clinical_2-large-r@2x.jpg);
-	}
+	@include imageizer(4_clinical_2);
 }
 
 .casestudy{
@@ -128,6 +122,9 @@
 		// }
 	}
 
+	#abby_readmore:hover a{
+		color: $black;
+	}
 	#abby_readmore_text{
 		display: none;
 		padding-top: 2rem;

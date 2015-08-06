@@ -30,6 +30,9 @@
 	.whitebackground{
 		@extend .gradient;
 	}
+	.titlepage{
+		z-index: 1;
+	}
 	#whatcomesnext {
 		max-width: $indsideWidth*.9;
 		width: 75%;

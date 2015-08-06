@@ -1,20 +1,14 @@
 @import "settings";
 
 #image_classroom{
-	background-image:url(/assets/pic/3_education_1-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/3_education_1-large-r@2x.jpg);
-	}
+	@include imageizer(3_education_1);
 }
 #image_education2{
-	background-image:url(/assets/pic/3_education_2-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/3_education_2-large-r@2x.jpg);
-	}
+	@include imageizer(3_education_2);
 }	
 
 
-$countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signapor newzeland australia southkorea philippines malaysia switerland netherlands india pakistan kuwait oman saudiarabia canada colombia guyana germany iran israel;
+$countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signapore newzeland australia southkorea philippines malaysia switerland netherlands india pakistan kuwait oman saudiarabia canada colombia guyana germany iran israel;
 
 @mixin country($country, $text, $fill) {
 	&.#{$country}{
@@ -24,6 +18,7 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 		p.#{$country}{
 			// font-weight: bolder;
 			color: $text;
+			background-color: #fff;
 		}
 	}
 }
@@ -64,6 +59,7 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 }
 
 .halflist{
+	display: none !important;
 	li{
 		width: 30%;
 		margin: 0 10%;
@@ -71,6 +67,7 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 		display: inline-block;
 		padding: R2P(2) 0;
 		padding: 2rem 0;
+		vertical-align: top;
 		@include at-query ($max, $medium) {
 			&:first-child{
 				padding-top: 0;
@@ -146,6 +143,9 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 				position: static;
 				width: 100%;
 			}
+			span{
+				display: block;
+			}
 		}
 		svg{
 			background-image:url(/assets/img/map.png);
@@ -200,6 +200,7 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 		}			
 	}
 	.halfs{
+
 		@extend .center;
 		>div{
 			display: inline-block;
@@ -243,26 +244,110 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 	#maptable{
 		display: none;
 	}
+	#fellowshiptitle{
+		text-align: center;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	table{
+		max-width: 800px;
+		width: 75%;
+		display: table;
+		margin: 0 auto;
+
+		// font-size: .9rem;
+		@include at-query ($max, $medium) {
+			width: 90%;
+			max-width: 100%;
+		}
+		th{
+			padding: R2P(2) 0 0 0;
+			padding: 2rem 0 0 0;
+			text-align: left;
+			text-transform: uppercase;
+			// border-bottom: solid 1px $black;
+			white-space: normal;
+			// text-align: center;
+			span{
+				display: block;
+				color: $darkgrey;
+				font-size: 0.9rem;
+				text-transform: none;
+			}
+		}
+		tr{
+			vertical-align: top;
+			// border-bottom: solid 1px $black;
+			td{
+				vertical-align: bottom;
+				padding: 3px;
+			}
+		}
+		p:first-child{
+			margin-top: 1rem;
+		}
+		p{
+			margin-bottom: 1rem;
+			a{
+				margin-top: 0.5rem;
+			}
+		}
+		a{
+			display: block;
+			// text-transform: uppercase;
+			text-align: left;
+			text-transform: uppercase;
+			font-weight: bolder;
+			font-size: 0.9rem;
+			margin-top: -0.5rem;
+
+			&:hover{
+				color: $pink;
+			}
+			&:before{
+			    content: ">";
+			    display: inline-block;
+			    padding-right: .5rem;
+			}
+		}
+		span{
+			display: none;
+		}
+		.show{
+			a{
+				display: none;
+			}
+			span{
+				display: inline;
+				&.block{
+					display: block;
+				}
+			}
+		}
+			
+	}	
 }
 
 @include keyframes(countryout) {
 	100% { 
 		opacity: 0; 
-	  	transform: translate3d(0, 25px, 0);
+	  	@include vendorize(transform, translate3d(0, 25px, 0));
 	}
 	0% { 
 		opacity: 1;
-		transform: none;
+		@include vendorize(transform, none);
 	}
 }
 @include keyframes(countryin) {
 	100% { 
 		opacity: 1; 
-		transform: none;
+		@include vendorize(transform, none);
 	}
 	0% { 
 		opacity: 0;
-	  	transform: translate3d(0, -25px, 0);
+	  	@include vendorize(transform,translate3d(0, -25px, 0));
 	}
 }
 

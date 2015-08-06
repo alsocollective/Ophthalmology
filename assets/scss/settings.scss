@@ -124,3 +124,35 @@ $fs: 1.1rem; //font size
 	-webkit-animation: #{$str};
 }
 
+@mixin imageizer($name) {
+	background-image:url(/assets/pic/#{$name}-small-o@1x.jpg);
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		background-image:url(/assets/pic/#{$name}-small-r@2x.jpg);
+	}
+
+	@media only screen and (min-width:640px){
+		background-image:url(/assets/pic/#{$name}-medium-o@1x.jpg);
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+			background-image:url(/assets/pic/#{$name}-medium-r@2x.jpg);
+		}
+	}
+	@media only screen and (min-width:1024px){
+		background-image:url(/assets/pic/#{$name}-large-o@1x.jpg);
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+			background-image:url(/assets/pic/#{$name}-large-r@2x.jpg);
+		}
+	}
+}
+@mixin imageizerSmall($name){
+	background-image:url(/assets/pic/#{$name}-small-o@1x.jpg);
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		background-image:url(/assets/pic/#{$name}-small-r@2x.jpg);
+	}
+	@media only screen and (min-width:640px){
+		background-image:url(/assets/pic/#{$name}-medium-o@1x.jpg);
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+			background-image:url(/assets/pic/#{$name}-medium-r@2x.jpg);
+		}
+	}	
+}
+
