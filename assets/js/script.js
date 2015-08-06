@@ -19,12 +19,24 @@ var app = {
 		} else if ($("#education").length) {
 			app.education.init();
 		}
-
-
 		app.scroll.init();
-
-
-
+	},
+	makeActive: function() {
+		if ($(".no-cssfilters").length > 0) {
+			$(".titlepage .backgroundimage div").attr("data-0-top", "opacity:0.2;").attr("data--300-top", "opacity:1;")
+		}
+		var el = $(".titlepage .backgroundimage div");
+		if (el.length) {
+			var css = el.attr("data-0-top").split(";")[0].split(":"),
+				out = {};
+			out["-webkit-" + css[0]] = css[1];
+			out["-moz-" + css[0]] = css[1];
+			out["-ms-" + css[0]] = css[1];
+			out[css[0]] = css[1];
+			el.css(out);
+		}
+		$("html").removeClass("active-loading").addClass("makeactive");
+		app.init();
 	},
 	detectMobile: function() {
 		// check the useragent this is a bit problematic... but hey...

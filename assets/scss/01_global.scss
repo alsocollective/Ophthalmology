@@ -487,14 +487,14 @@ span.readmore a{
 		// display: table;
 	}
 }
-#loadingscreen{
-	display: none;
-	width: 100%;
-	height: 100%;
-	height: 100vh;
-	max-height: 100%;
-	background-color: $white;
-}
+// #loadingscreen{
+// 	display: none;
+// 	width: 100%;
+// 	height: 100%;
+// 	height: 100vh;
+// 	max-height: 100%;
+// 	background-color: $white;
+// }
 
 @include keyframes(fadein) {
 	100% { 
@@ -504,9 +504,7 @@ span.readmore a{
 		opacity: 0;
 	}
 }
-
-
-.wf-active{
+.makeactive{
 	@include animation('fadein 0.5s');
 	@include vendorize(transition-timing-function, ease-in-out);
 }

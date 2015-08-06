@@ -1,9 +1,5 @@
 </div>
 
-<div id="loadingscreen">
-
-</div>
-
 <script type="text/javascript" src="/assets/js/main.min.js"></script>
 <script src="//use.typekit.net/whd6btz.js"></script>
 <script>
@@ -12,30 +8,29 @@
 		Typekit.load({ 
 			async: true,
 			active: function() {
-				app.init();
+				if(window.getComputedStyle){
+					var styles = $(".titlepage .backgroundimage div");
+
+					if(styles.length){
+						var styles = window.getComputedStyle(styles[0])
+						if(styles.getPropertyValue){
+							var img = new Image();
+	  						img.onload = app.makeActive;
+	  						img.src = styles.getPropertyValue("background-image").match(/url\(([^)]+)\)/i)[1];
+						} else {
+							app.makeActive();
+						}
+					} else {
+						app.makeActive();
+					}
+				} else {
+					app.makeActive();
+				}	
 			} 
 		});
 	}catch(e){
-		app.init();
+		makeActive();
 	}</script>
-<script type="text/javascript">
-
-	// $(document).ready(function() {
-	// 	try {
-	// 		Typekit.load({
-	// 			active: function() {
-	// 				console.log("down here");
-	// 				app.init();
-	// 			}
-	// 		})
-	// 	} catch(e) {
-	// 		console.log("try failed");
-	// 		// app.init();
-	// 	}
-		
-	// })
-
-</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
