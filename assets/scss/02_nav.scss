@@ -1,4 +1,4 @@
-@import "settings";
+ @import "settings";
 
 #nav{
 	position: fixed;
@@ -104,6 +104,9 @@
 		}
 	}
 	@include at-query ($max, $large) {
+		#logo{
+			display: none;
+		}
 		#navleft{
 			height: 100%;
 			overflow: scroll;
@@ -132,6 +135,10 @@
 		}
 	}
 	@include at-query ($max, $medium) {
+		#navleft{
+			height: 100%;
+			overflow: scroll;
+		}
 		h4{
 			font-size: R2P(1.75);
 			font-size: 1.75rem;
