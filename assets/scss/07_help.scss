@@ -26,6 +26,7 @@
 
 	.whitebackground{
 		@extend .gradient;
+		margin-top: 0 !important;
 	}
 	.titlepage{
 		z-index: 1;
