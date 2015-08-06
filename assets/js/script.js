@@ -234,7 +234,7 @@ app.education = {
 	init: function() {
 		var para = "p.sirlanka,p.mexico,p.usa,p.chile,p.saudiarabia,p.oman,p.kuwait,p.pakistan,p.india,p.netherlands,p.switerland,p.malaysia,p.philippines,p.southkorea,p.australia,p.newzeland,p.signapore,p.sirlanka,p.nigeria,p.egypt,p.ireland,p.unitedkingdom",
 			map = "#mexico_svg,#unitedkingdom_svg,#ireland_svg,#egypt_svg,#nigeria_svg,#usa_svg,#chile_svg,#sirlanka_svg,#signapore_svg,#newzeland_svg,#australia_svg,#southkorea_svg,#philippines_svg,#malaysia_svg,#switerland_svg,#netherlands_svg,#india_svg,#pakistan_svg,#kuwait_svg,#oman_svg,#saudiarabia_svg,#canada_svg,#colombia_svg,#guyana_svg,#germany_svg,#iran_svg,#israel_svg";
-		app.education.mapmessage = $("#mapmessage h3 span");
+		app.education.mapmessage = $("#mapmessage h3 span.mappink");
 		app.education.mapmessage_default = app.education.mapmessage.html();
 		$(map).click(app.education.countryclick).mouseover(app.education.countryclick); //.mouseout(app.map.nocountry)
 		// $(para).click(app.map.countryclick).mouseover(app.map.countryclick);

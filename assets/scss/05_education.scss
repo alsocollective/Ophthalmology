@@ -154,6 +154,9 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 				width: 100%;
 			}
 			span{
+				display: inline-block;
+			}
+			span.mappink{
 				display: block;
 			}
 		}
@@ -175,7 +178,7 @@ $countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signap
 			font-size: R2P(2);
 			font-size: 2rem;
 			text-align: right;
-			span{
+			span.mappink{
 				color: $darkpink80;
 			}
 			@include at-query ($max, $medium) {
