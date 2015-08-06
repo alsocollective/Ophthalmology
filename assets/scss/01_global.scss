@@ -46,6 +46,9 @@ h1{
 		}
 	}
 }
+.touch h1{
+	@include vendorize(text-shadow, none);
+}
 .sectiontitle .center{
 	display: table;
 	height: 100%;
@@ -87,15 +90,16 @@ p{
 
 #wrapper{
 	overflow-x: hidden;
-	section > h3, section .whitebackground > h3{
+	.section > h3, .section .whitebackground > h3{
 		text-align: center;
 	}
-	section > h2, section .whitebackground > h2{
+	.section > h2, .section .whitebackground > h2{
 		margin: 0 auto R2P(1) auto;
 		margin: 0 auto 1rem auto;
 	}
-	section{
+	.section{
 		overflow: hidden;
+		display: block;
 		> div{
 			margin-top: 80px;
 			@include at-query ($max, $large) {
@@ -147,13 +151,14 @@ p{
 	height: 130vh;
 	overflow: hidden;
 	position: relative;
-	margin-bottom: R2P(5);
-	margin-bottom: 5rem;
+	padding-bottom: R2P(5);
+	padding-bottom: 5rem;
 	z-index: -1;
+	background-color: $black;
 
 	@include at-query ($max, $large) {
 		height: 70vh;
-		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.sectiontitle{
@@ -197,6 +202,11 @@ p{
 	}
 }
 
+.lt-ie9 .titlepage .sectiontitle{
+	top: initial;
+	bottom: 0;
+}
+
 .backgroundimage{
 	background-size: cover;
 	background-position: center;
@@ -215,10 +225,12 @@ p{
 		margin-bottom: 0;
 	}
 	>div{
+		background-color: #000;
 		background-color: rgba(0,0,0,0.5);
 		padding: R2P(9) 0;
 		padding: 9rem 0;
 		@include at-query ($max, $medium) {
+			padding: R2P(3) 0;
 			padding: 3rem 0;
 		}
 	}
@@ -492,6 +504,48 @@ span.readmore a{
 	@include animation('fadein 0.5s');
 	@include vendorize(transition-timing-function, ease-in-out);
 }
+
+.onlyie{
+	display: none;
+}
+.lt-ie9 {
+	.onlyie{
+		display: block;
+		max-width: 100%;
+	}
+	.onlyiehide{
+		display: none;
+	}
+}
+
+.small,.large{
+	display: none;
+}
+@include at-query ($max, $medium) {
+	.medium,.large{
+		display: none;
+	}
+	.small{
+		display: block;
+	}
+}
+// @include at-query ($min, $medium) {
+// 	.small,.large{
+// 		display: none;
+// 	}
+// 	.medium{
+// 		display: block;
+// 	}
+// }
+@include at-query ($min, $medium) {
+	.small,.medium{
+		display: none;
+	}
+	.large{
+		display: block;
+	}
+}
+
 // ul.selectionlist{
 // 	text-align: center;
 // 	padding: 0;

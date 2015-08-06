@@ -125,9 +125,13 @@ $fs: 1.1rem; //font size
 }
 
 @mixin imageizer($name) {
-	background-image:url(/assets/pic/#{$name}-small-o@1x.jpg);
-	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-		background-image:url(/assets/pic/#{$name}-small-r@2x.jpg);
+
+	background-image:url(/assets/pic/#{$name}-large-o@1x.jpg);
+	@media only screen and (max-width:640px){
+		background-image:url(/assets/pic/#{$name}-small-o@1x.jpg);
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+			background-image:url(/assets/pic/#{$name}-small-r@2x.jpg);
+		}
 	}
 
 	@media only screen and (min-width:640px){
@@ -142,6 +146,9 @@ $fs: 1.1rem; //font size
 			background-image:url(/assets/pic/#{$name}-large-r@2x.jpg);
 		}
 	}
+}
+@mixin imageie($name){
+	background-image:url(/assets/pic/#{$name}-ie.jpg);
 }
 @mixin imageizerSmall($name){
 	background-image:url(/assets/pic/#{$name}-small-o@1x.jpg);

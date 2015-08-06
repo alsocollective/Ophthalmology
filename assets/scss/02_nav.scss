@@ -81,6 +81,7 @@
 				padding: R2P(1) 0 0 0;
 				padding: 1em 0 0 0;
 				text-align: left;
+				font-size: R2P(1.1);
 				font-size: 1.1rem;
 			}
 			a{
@@ -108,29 +109,37 @@
 			overflow: scroll;
 		}
 		h4{
+			font-size: R2P(3);
 			font-size: 3rem;
 			max-width: 75%;
 			margin: 0 auto;
+			padding: R2P(1) 0;
 			padding: 1rem 0;
 		}
 		ul{
+			padding-bottom: R2P(2);
 			padding-bottom: 2rem;
 		}
 		li{
 			text-align: center;
 			margin-right:1px;
 			a{
+				padding: R2P(1);
 				padding: 1rem;
+				font-size: R2P(3);
 				font-size: 3rem;
 			}
 		}
 	}
 	@include at-query ($max, $medium) {
 		h4{
+			font-size: R2P(1.75);
 			font-size: 1.75rem;
 		}
 		li a{
+			font-size: R2P(1.75);
 			font-size: 1.75rem;
+			padding: R2P(0.5);
 			padding: 0.5rem;
 		}
 	}
@@ -148,6 +157,7 @@
 			right: 100%;
 			top: 75px;
 			background-color: #fff;
+			font-size: R2P(4);
 			font-size: 4rem;
 			text-align: center;
 			> a {
@@ -161,5 +171,16 @@
 				}
 			}
 		}
+	}
+}
+
+.lt-ie9 #nav{
+	h4{
+		text-align: left;
+		padding: 1em;
+	}
+	li {
+		display: inline;
+		padding: 0.5em 1em;
 	}
 }

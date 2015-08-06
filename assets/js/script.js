@@ -1,6 +1,6 @@
 var app = {
 	init: function() {
-		app.nav.init();
+
 		// app.map.init();
 		// app.blur.init();
 
@@ -20,9 +20,9 @@ var app = {
 			app.education.init();
 		}
 
-		if (!$(".touch").length) {
-			app.scroll.init();
-		}
+
+		app.scroll.init();
+
 
 
 	},

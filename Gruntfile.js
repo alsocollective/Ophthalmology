@@ -15,6 +15,12 @@ module.exports = function(grunt) {
 			}
 		},
 		cssmin: {
+			options: {
+				// aggressiveMerging: false,
+				// advanced: false,
+				noAdvanced: true,
+				compatibility: "ie8"
+			},
 			combine: {
 				files: {
 					'public_html/assets/css/style.min.css': [
@@ -162,7 +168,7 @@ module.exports = function(grunt) {
 			},
 			img: {
 				files: 'assets/pic/**/*.jpg',
-				tasks: ['responsive_images:first', 'responsive_images:second']//, 'imagemin']
+				tasks: ['responsive_images:first', 'responsive_images:second'] //, 'imagemin']
 			}
 		}
 	});

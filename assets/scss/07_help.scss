@@ -1,27 +1,24 @@
 #image_child_mother{ 
-	background-image:url(/assets/pic/5_howtohelp_1-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/5_howtohelp_1-large-r@2x.jpg);
-	}
+	@include imageizer(5_howtohelp_1);
 }
 
 #image_help_machine{
 	padding: 0;
 	height: 500px;
 	height: 60vh;
-	background-image:url(/assets/pic/5_howtohelp_2-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/5_howtohelp_2-large-r@2x.jpg);
-	}
+	@include imageizer(5_howtohelp_2);
 }
 
 #image_child_mother_nurse{
 	padding: 0;
 	height: 500px;
 	height: 90vh;
-	background-image:url(/assets/pic/5_howtohelp_3-large-o@1x.jpg);
-	@include retina() {
-		background-image:url(/assets/pic/5_howtohelp_3-large-o@1x.jpg);
+	@include imageizer(5_howtohelp_3);
+}
+
+.lt-ie9 {
+	#image_child_mother{
+		@include imageie(5_howtohelp_1);
 	}
 }
 
