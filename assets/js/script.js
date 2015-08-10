@@ -22,6 +22,11 @@ var app = {
 		app.scroll.init();
 	},
 	makeActive: function() {
+		if ($(".touch").length) {
+			$("html").removeClass("active-loading").addClass("makeactive");
+			app.init();
+			return false;
+		};
 		if ($(".no-cssfilters").length > 0) {
 			$(".titlepage .backgroundimage div").attr("data-0-top", "opacity:0.2;").attr("data--300-top", "opacity:1;")
 		}
@@ -121,8 +126,8 @@ app.research = {
 				autoplaySpeed: 15000,
 				pauseOnHover: false
 			});
+			app.research.slides.on('beforeChange', app.research.afterChange)
 		}
-		app.research.slides.on('beforeChange', app.research.afterChange)
 	},
 	researchClick: function(event) {
 		event.preventDefault();
