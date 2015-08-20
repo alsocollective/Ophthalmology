@@ -34,6 +34,7 @@
 		}
 	}
 
+
 	.half:nth-child(2){
 		text-align: center;	
 	}
@@ -240,7 +241,7 @@
 				span{
 					font-weight: normal;
 					max-width: 100%;
-					&:before{
+					&::before{
 						width: 10%;
 						height: 5px;
 						background-color: $white;
@@ -249,7 +250,13 @@
 						padding: 0;
 					}
 				}
-			}	
+				.firstsubclass::before{
+					content: initial;
+				}
+			}
+			.firstsubclass::before{
+				content: initial;
+			}
 		}
 		#titlepage-image{
 			position: absolute;
@@ -312,6 +319,10 @@
 	h1{
 		font-size: R2P(2);
 		font-size: 2rem;
+		
+		.firstsubclass::before{
+			content: initial;
+		}
 	}
 	#titlepage-text{
 		height: 100%;

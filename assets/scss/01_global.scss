@@ -342,6 +342,11 @@ p.tightmid{
 			text-decoration: underline;
 		}
 	}
+	b{
+		// font-weight: inherit;
+		font-weight: bold;
+		// color: $black;
+	}
 	span > a {
 		// display: inline-block;
 		display: inline-table;
@@ -358,7 +363,11 @@ p.tightmid{
 		@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.2));
 		&:hover{
 			@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.8));
+			b{
+				color: $black;
+			}
 		}
+
 		h2{
 			width: 100%;
 			text-align: center;

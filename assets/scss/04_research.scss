@@ -182,10 +182,18 @@
 			height: 100%;
 			background: transparent;
 			border: none;
-			color: transparent;
+			// color: transparent;
+			font-size: 5em;
+			color: #fff;
+			color: rgba(255,255,255,0.45);
 			padding: 0;
+			font-weight: lighter;
 			&:focus{
 				outline:none;
+			}
+			&:hover{
+				color: #fff;
+				color: rgba(255,255,255,0.85);
 			}
 		}
 		.slick-prev{
@@ -227,7 +235,7 @@
 		h4{
 			font-size: R2P(0.9);
 			font-size: 0.9rem;
-			text-transform: capitalize;
+			text-transform: initial;
 			font-weight: normal;
 			a:hover{
 				color: $pink;

@@ -102,16 +102,24 @@ app.research = {
 		app.research.nurovision.init();
 		app.research.piegraph.init();
 		app.research.telemed.init();
+
+		app.research.animateGraphs.init();
+
 		if ($(document.body).outerWidth() > 768) {
 			$("#research_programs a").click(app.research.researchClick);
 			$('.slideshow').slick({
 				dots: false,
-				infinite: false,
+				infinite: true,
 				arrows: true,
 				speed: 300,
 				centerMode: true,
 				centerPadding: '10%',
-				slidesToShow: 1
+				slidesToShow: 1,
+				autoplay: true,
+				autoplaySpeed: 10000,
+				pauseOnHover: false,
+				nextArrow: '<button type="button" class="slick-next">❯</button>',
+				prevArrow: '<button type="button" class="slick-prev">❮</button>'
 			});
 			app.research.slides = $('.slides').slick({
 				dots: false,
@@ -122,7 +130,7 @@ app.research = {
 				centerPadding: '0%',
 				slidesToShow: 1,
 				adaptiveHeight: true,
-				autoplay: true,
+				autoplay: false,
 				autoplaySpeed: 15000,
 				pauseOnHover: false
 			});
@@ -190,10 +198,14 @@ app.research = {
 	piegraph: {
 		makeClear: null,
 		pie: null,
+		count: 1,
+		timeout: null,
+		targets: $("#piegraph tr"),
 		init: function() {
 			app.research.piegraph.pie = $("#piegraph");
-			$("#piegraph tr").mouseover(app.research.piegraph.mouseOver);
-			$("#piegraph path").mouseover(app.research.piegraph.mouseOver);
+			$("#piegraph tr").mouseover(app.research.piegraph.mouseOver).click(app.research.piegraph.mouseOver);
+			$("#piegraph path").mouseover(app.research.piegraph.mouseOver).click(app.research.piegraph.mouseOver);
+			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 1000);
 		},
 		mouseOver: function(event) {
 			event.preventDefault();
@@ -207,16 +219,46 @@ app.research = {
 			} else {
 				app.research.piegraph.pie[0].className = "";
 			}
+
+			clearTimeout(app.research.piegraph.timeout);
+			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 5000);
+
 			return false;
+		},
+		called: function(event) {
+			// console.log(app.research.piegraph.count);
+
+			var target = app.research.piegraph.targets;
+			target[app.research.piegraph.count].click();
+
+			if (target.length > app.research.piegraph.count + 1) {
+				app.research.piegraph.count += 1
+			} else {
+				app.research.piegraph.count = 1;
+			}
+			if ($(target[app.research.piegraph.count]).children().length == 1) {
+				if (target.length > app.research.piegraph.count + 1) {
+					app.research.piegraph.count += 1
+				} else {
+					app.research.piegraph.count = 1;
+				}
+			}
+
+			clearTimeout(app.research.piegraph.timeout);
+			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 1000);
 		}
 	},
 
 	telemed: {
 		main: null,
+		count: 1,
+		targets: $("#telemedicine tr"),
+		timeout: null,
 		init: function() {
 			app.research.telemed.main = $("#telemedicine");
-			$("#telemedicine tr").mouseover(app.research.telemed.mouseOver);
-			$("#telemedicine path").mouseover(app.research.telemed.mouseOver);
+			$("#telemedicine tr").mouseover(app.research.telemed.mouseOver).click(app.research.telemed.mouseOver);
+			$("#telemedicine path").mouseover(app.research.telemed.mouseOver).click(app.research.telemed.mouseOver);
+			app.research.telemed.timeout = setTimeout(app.research.telemed.called, 2500);
 		},
 		mouseOver: function(event) {
 			event.preventDefault();
@@ -230,7 +272,19 @@ app.research = {
 			} else {
 				app.research.telemed.main[0].className = "";
 			}
+			app.research.telemed.timeout = setTimeout(app.research.telemed.called, 5000);
 			return false;
+		},
+		call: function() {
+			var target = app.research.telemed.targets;
+			target[app.research.telemed.count].click();
+			if (target.length > app.research.telemed.count + 1) {
+				app.research.telemed.count += 1
+			} else {
+				app.research.telemed.count = 1;
+			}
+			clearTimeout(app.research.telemed.timeout);
+			app.research.telemed.timeout = setTimeout(app.research.telemed.called, 1000);
 		}
 	}
 
