@@ -34,9 +34,9 @@ module.exports = function(grunt) {
 		uglify: {
 			js: {
 				options: {
-					mangle: false,
-					compress: false,
-					beautify: true
+					// mangle: false,
+					// compress: false,
+					// beautify: true
 				},
 				files: {
 					'public_html/assets/js/main.min.js': [
