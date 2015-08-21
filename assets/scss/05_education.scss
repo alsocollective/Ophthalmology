@@ -16,7 +16,7 @@
 }
 
 
-$countries: mexico unitedkingdom ireland egypt nigeria usa chile sirlanka signapore newzeland australia southkorea philippines malaysia switerland netherlands india pakistan kuwait oman saudiarabia canada colombia guyana germany iran israel;
+$countries: mexico united-kingdom ireland egypt nigeria usa chile sirlanka signapore new-zealand australia south-korea philippines malaysia switerland netherlands india pakistan kuwait oman saudi-arabia canada colombia guyana germany iran israel;
 
 @mixin country($country, $text, $fill) {
 	&.#{$country}{

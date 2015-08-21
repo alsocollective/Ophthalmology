@@ -103,8 +103,6 @@ app.research = {
 		app.research.piegraph.init();
 		app.research.telemed.init();
 
-		app.research.animateGraphs.init();
-
 		if ($(document.body).outerWidth() > 768) {
 			$("#research_programs a").click(app.research.researchClick);
 			$('.slideshow').slick({
@@ -124,7 +122,7 @@ app.research = {
 			app.research.slides = $('.slides').slick({
 				dots: false,
 				infinite: true,
-				arrows: false,
+				arrows: true,
 				speed: 300,
 				centerMode: true,
 				centerPadding: '0%',
@@ -132,7 +130,9 @@ app.research = {
 				adaptiveHeight: true,
 				autoplay: false,
 				autoplaySpeed: 15000,
-				pauseOnHover: false
+				pauseOnHover: false,
+				nextArrow: '<button type="button" class="slick-next">❯</button>',
+				prevArrow: '<button type="button" class="slick-prev">❮</button>'
 			});
 			app.research.slides.on('beforeChange', app.research.afterChange)
 		}
@@ -149,13 +149,17 @@ app.research = {
 	},
 
 	nurovision: {
+		count: 1,
+		timeout: null,
+		targets: $("#neurovision_text tr"),
 		init: function() {
 			// app.research.nurovision.pie = $("#neurovision");
 			app.research.nurovision.span = $("#neurovision span");
 			app.research.nurovision.text = $("#neurovision_text tr");
 
-			app.research.nurovision.span.mouseover(app.research.nurovision.mouseOver);
-			app.research.nurovision.text.mouseover(app.research.nurovision.mouseOver);
+			app.research.nurovision.span.mouseover(app.research.nurovision.mouseOver).click(app.research.nurovision.mouseOver);
+			app.research.nurovision.text.mouseover(app.research.nurovision.mouseOver).click(app.research.nurovision.mouseOver);
+			app.research.nurovision.timeout = setTimeout(app.research.nurovision.called, 2500);
 		},
 		mouseOver: function(event) {
 			event.preventDefault();
@@ -171,28 +175,22 @@ app.research = {
 				$("#neurovision #" + id + "").addClass("active");
 				$("#neurovision_text #" + id + "_text").addClass("active");
 			}
-			// if(this.id){
-			// 	var id = this.id
-			// 	if (id.substring(id.length-4, id.length) == "_svg"){
-			// 		id=id.substring(0,id.length-4);
-			// 	}
-			// 	app.research.nurovision.pie[0].className = "";
-			// 	app.research.nurovision.pie.addClass(id);
-			// } else {
-			// 	app.research.nurovision.pie[0].className = "";
-			// }
+
+			clearTimeout(app.research.nurovision.timeout);
+			app.research.nurovision.timeout = setTimeout(app.research.nurovision.called, 5000);
 			return false;
+		},
+		called: function(event) {
+			var target = app.research.nurovision.targets;
+			target[app.research.nurovision.count].click();
+			if (target.length > app.research.nurovision.count + 1) {
+				app.research.nurovision.count += 1
+			} else {
+				app.research.nurovision.count = 1;
+			}
+			clearTimeout(app.research.nurovision.timeout);
+			app.research.nurovision.timeout = setTimeout(app.research.nurovision.called, 2500);
 		}
-		// init:function(){
-		// 	app.research.nurovision.targets = $("#neurovision span");
-		// 	app.research.nurovision.targets.mouseover(app.research.nurovision.mouseOver).click(app.research.nurovision.mouseOver);			
-		// },
-		// mouseOver: function(){
-		// 	app.research.nurovision.targets.removeClass("active");
-		// 	$("#neurovision_text span").removeClass("active");
-		// 	$(this).toggleClass("active");
-		// 	$("#"+this.id+"_text").addClass("active");
-		// }
 	},
 
 	piegraph: {
@@ -205,7 +203,7 @@ app.research = {
 			app.research.piegraph.pie = $("#piegraph");
 			$("#piegraph tr").mouseover(app.research.piegraph.mouseOver).click(app.research.piegraph.mouseOver);
 			$("#piegraph path").mouseover(app.research.piegraph.mouseOver).click(app.research.piegraph.mouseOver);
-			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 1000);
+			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 2500);
 		},
 		mouseOver: function(event) {
 			event.preventDefault();
@@ -245,7 +243,7 @@ app.research = {
 			}
 
 			clearTimeout(app.research.piegraph.timeout);
-			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 1000);
+			app.research.piegraph.timeout = setTimeout(app.research.piegraph.called, 2500);
 		}
 	},
 
@@ -258,7 +256,7 @@ app.research = {
 			app.research.telemed.main = $("#telemedicine");
 			$("#telemedicine tr").mouseover(app.research.telemed.mouseOver).click(app.research.telemed.mouseOver);
 			$("#telemedicine path").mouseover(app.research.telemed.mouseOver).click(app.research.telemed.mouseOver);
-			app.research.telemed.timeout = setTimeout(app.research.telemed.called, 2500);
+			app.research.telemed.timeout = setTimeout(app.research.telemed.call, 2500);
 		},
 		mouseOver: function(event) {
 			event.preventDefault();
@@ -272,7 +270,8 @@ app.research = {
 			} else {
 				app.research.telemed.main[0].className = "";
 			}
-			app.research.telemed.timeout = setTimeout(app.research.telemed.called, 5000);
+			clearTimeout(app.research.telemed.timeout);
+			app.research.telemed.timeout = setTimeout(app.research.telemed.call, 5000);
 			return false;
 		},
 		call: function() {
@@ -284,7 +283,7 @@ app.research = {
 				app.research.telemed.count = 1;
 			}
 			clearTimeout(app.research.telemed.timeout);
-			app.research.telemed.timeout = setTimeout(app.research.telemed.called, 1000);
+			app.research.telemed.timeout = setTimeout(app.research.telemed.call, 2500);
 		}
 	}
 
@@ -302,17 +301,25 @@ app.clinical = {
 }
 
 app.education = {
+
 	init: function() {
-		var para = "p.sirlanka,p.mexico,p.usa,p.chile,p.saudiarabia,p.oman,p.kuwait,p.pakistan,p.india,p.netherlands,p.switerland,p.malaysia,p.philippines,p.southkorea,p.australia,p.newzeland,p.signapore,p.sirlanka,p.nigeria,p.egypt,p.ireland,p.unitedkingdom",
-			map = "#mexico_svg,#unitedkingdom_svg,#ireland_svg,#egypt_svg,#nigeria_svg,#usa_svg,#chile_svg,#sirlanka_svg,#signapore_svg,#newzeland_svg,#australia_svg,#southkorea_svg,#philippines_svg,#malaysia_svg,#switerland_svg,#netherlands_svg,#india_svg,#pakistan_svg,#kuwait_svg,#oman_svg,#saudiarabia_svg,#canada_svg,#colombia_svg,#guyana_svg,#germany_svg,#iran_svg,#israel_svg";
+		var para = "p.sirlanka,p.mexico,p.usa,p.chile,p.saudi-arabia,p.oman,p.kuwait,p.pakistan,p.india,p.netherlands,p.switerland,p.malaysia,p.philippines,p.south-korea,p.australia,p.new-zealand,p.signapore,p.sirlanka,p.nigeria,p.egypt,p.ireland,p.united-kingdom",
+			map = "#mexico_svg,#united-kingdom_svg,#ireland_svg,#egypt_svg,#nigeria_svg,#usa_svg,#chile_svg,#sirlanka_svg,#signapore_svg,#new-zealand_svg,#australia_svg,#south-korea_svg,#philippines_svg,#malaysia_svg,#switerland_svg,#netherlands_svg,#india_svg,#pakistan_svg,#kuwait_svg,#oman_svg,#saudi-arabia_svg,#canada_svg,#colombia_svg,#guyana_svg,#germany_svg,#iran_svg,#israel_svg";
 		app.education.mapmessage = $("#mapmessage h3 span.mappink");
 		app.education.mapmessage_default = app.education.mapmessage.html();
-		$(map).click(app.education.countryclick).mouseover(app.education.countryclick); //.mouseout(app.map.nocountry)
+
+		app.education.targets = $(map)
+		app.education.targets.click(app.education.countryclick).mouseover(app.education.countryclick); //.mouseout(app.map.nocountry)
 		// $(para).click(app.map.countryclick).mouseover(app.map.countryclick);
 		$("table a").click(app.education.readmore);
+		clearTimeout(app.education.timeout);
+		app.education.timeout = setTimeout(app.education.called, 2500);
 	},
 	current: "",
 	makeClear: null,
+	count: 0,
+	timeout: null,
+
 	readmore: function(event) {
 		event.preventDefault()
 		// $("table .show").removeClass("show");
@@ -331,13 +338,17 @@ app.education = {
 		} else {
 			country = this.className
 		}
+		var stringCountry = country.split("-");
+		if (stringCountry.length > 1) {
+			stringCountry = stringCountry[0] + " " + stringCountry[1]
+		}
 
 		var count = parseInt($(this).data("students"));
 		var res = " Alumnus"
 		if (count > 1) {
 			res = " Alumni";
 		}
-		var fullString = country + ": " + count + res;
+		var fullString = stringCountry + ": " + count + res;
 
 		if (app.education.mapmessage[0].innerHTML != fullString) {
 
@@ -370,13 +381,20 @@ app.education = {
 			app.map.current = country;
 			parent.addClass(app.map.current);
 		}
-
-
-	} //,
-	// nocountry: function(event) {
-	// 	$("#map").removeClass(app.map.current);
-	// 	app.map.current = "";
-	// }
+		clearTimeout(app.education.timeout);
+		app.education.timeout = setTimeout(app.education.called, 5000);
+	},
+	called: function(event) {
+		var target = app.education.targets;
+		$(target[app.education.count]).click();
+		if (target.length > app.education.count + 1) {
+			app.education.count += 1
+		} else {
+			app.education.count = 1;
+		}
+		clearTimeout(app.education.timeout);
+		app.education.timeout = setTimeout(app.education.called, 2500);
+	}
 }
 
 app.analytics = {

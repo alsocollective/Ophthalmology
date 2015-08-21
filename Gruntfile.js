@@ -35,7 +35,8 @@ module.exports = function(grunt) {
 			js: {
 				options: {
 					mangle: false,
-					compress: false
+					compress: false,
+					beautify: true
 				},
 				files: {
 					'public_html/assets/js/main.min.js': [

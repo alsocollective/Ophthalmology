@@ -101,9 +101,38 @@
 		margin-top: 1rem;
 	}
 	.slides{
+		position: relative;
 		margin-bottom: R2P(5);
 		margin-bottom: 5rem;
 		background-color: #eee;
+
+		button {
+			position: absolute;		
+			top: 0;		
+			width: 14%;
+			height: 100%;
+			background: transparent;
+			border: none;
+			// color: transparent;
+			font-size: 5em;
+			color: #fff;
+			color: rgba(255,255,255,0.45);
+			padding: 0;
+			font-weight: lighter;
+			&:focus{
+				outline:none;
+			}
+			&:hover{
+				color: #fff;
+				color: rgba(255,255,255,0.85);
+			}
+		}
+		.slick-prev{
+			left: 0;
+		}
+		.slick-next{
+			right: 0;
+		}		
 	}
 	.slide {
 		>div{
