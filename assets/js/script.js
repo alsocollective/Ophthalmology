@@ -103,6 +103,10 @@ app.research = {
 		app.research.piegraph.init();
 		app.research.telemed.init();
 
+		var rightArrow = '<button type="button" class="slick-next"><svg version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="38.236px" height="81.932px" viewBox="0 0 38.236 81.932" xml:space="preserve"><defs></defs><polyline stroke-width="10" stroke-miterlimit="10" points="4.025,2.966 32.025,40.966 4.025,78.966 "/></svg></button>';
+		var leftArrrow = '<button type="button" class="slick-prev"><svg version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="38.236px" height="81.932px" viewBox="0 0 38.236 81.932" xml:space="preserve"><defs></defs><polyline fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" points="34.211,78.966 6.211,40.966 34.211,2.966 "/></svg></button>';
+
+
 		if ($(document.body).outerWidth() > 768) {
 			$("#research_programs a").click(app.research.researchClick);
 			$('.slideshow').slick({
@@ -116,8 +120,8 @@ app.research = {
 				autoplay: true,
 				autoplaySpeed: 10000,
 				pauseOnHover: false,
-				nextArrow: '<button type="button" class="slick-next">❯</button>',
-				prevArrow: '<button type="button" class="slick-prev">❮</button>'
+				nextArrow: rightArrow, //'<button type="button" class="slick-next">❯</button>',
+				prevArrow: leftArrrow //'<button type="button" class="slick-prev">❮</button>'
 			});
 			app.research.slides = $('.slides').slick({
 				dots: false,
@@ -131,8 +135,8 @@ app.research = {
 				autoplay: false,
 				autoplaySpeed: 15000,
 				pauseOnHover: false,
-				nextArrow: '<button type="button" class="slick-next">❯</button>',
-				prevArrow: '<button type="button" class="slick-prev">❮</button>'
+				nextArrow: rightArrow, //'<button type="button" class="slick-next">❯</button>',
+				prevArrow: leftArrrow //'<button type="button" class="slick-prev">❮</button>'
 			});
 			app.research.slides.on('beforeChange', app.research.afterChange)
 		}
