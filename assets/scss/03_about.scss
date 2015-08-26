@@ -190,6 +190,11 @@
 					padding: 0;
 				}
 			}
+			&:hover{
+				td{
+					color: $pink;
+				}
+			}
 		}
 	}
 	#doctorimages{
