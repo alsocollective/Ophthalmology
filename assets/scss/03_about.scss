@@ -158,9 +158,10 @@
 	}
 	table{
 		max-width: 60%;
-		display: inline-table;
+		display: table;
 		font-size: R2P(0.9);
 		font-size: .9rem;
+		margin: 0 auto;
 		@include at-query ($max, $medium) {
 			width: 100%;
 			max-width: 100%;
@@ -191,9 +192,9 @@
 				}
 			}
 			&:hover{
-				td{
-					color: $pink;
-				}
+				// td{
+				// 	color: $pink;
+				// }
 			}
 		}
 	}

@@ -70,22 +70,22 @@ app.setLocation = function(location) {
 
 app.about = {
 	init: function() {
-		app.about.docPics.init();
+		// app.about.docPics.init();
 		app.about.readmore();
 	},
-	docPics: {
-		init: function() {
-			app.about.docPics.target = $("#doctorimages > div");
-			$("#doc_image_table tr").mouseover(app.about.docPics.mouseOver);
-		},
-		mouseOver: function(event) {
-			var el = $(this).find(".changeport")
-			if (el.length) {
-				el = el[0].id;
-				app.about.docPics.target.css("background-image", "url(/assets/img/port/" + el + ".jpg)");
-			}
-		}
-	},
+	// docPics: {
+	// 	init: function() {
+	// 		app.about.docPics.target = $("#doctorimages > div");
+	// 		$("#doc_image_table tr").mouseover(app.about.docPics.mouseOver);
+	// 	},
+	// 	mouseOver: function(event) {
+	// 		var el = $(this).find(".changeport")
+	// 		if (el.length) {
+	// 			el = el[0].id;
+	// 			app.about.docPics.target.css("background-image", "url(/assets/img/port/" + el + ".jpg)");
+	// 		}
+	// 	}
+	// },
 	readmore: function() {
 		$("#readmore_agnes").click(app.about.readmoreClick);
 	},
