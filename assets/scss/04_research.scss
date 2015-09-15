@@ -204,6 +204,10 @@
 
 	.slideshow{
 		position: relative;
+		// width: 80%;
+		width: 100%;
+		// margin: 0 auto;
+		// max-width: 1000px;
 		p{
 			padding-top: R2P(1);
 			padding-top: 1rem;
@@ -258,8 +262,10 @@
 			}
 		}
 		.center{
-			margin: 0px;
-			max-width: 100%;
+			margin: 0 auto;
+			width: 80%;
+			max-width: 1000px;
+
 			@include at-query ($max, $medium) {
 				margin: 0 auto;
 			}

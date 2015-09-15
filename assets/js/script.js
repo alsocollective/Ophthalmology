@@ -115,10 +115,10 @@ app.research = {
 				arrows: true,
 				speed: 300,
 				centerMode: true,
-				centerPadding: '10%',
+				centerPadding: '0',
 				slidesToShow: 1,
 				autoplay: true,
-				autoplaySpeed: 10000,
+				autoplaySpeed: 20000,
 				pauseOnHover: false,
 				nextArrow: rightArrow, //'<button type="button" class="slick-next">❯</button>',
 				prevArrow: leftArrrow //'<button type="button" class="slick-prev">❮</button>'
@@ -133,7 +133,7 @@ app.research = {
 				slidesToShow: 1,
 				adaptiveHeight: true,
 				autoplay: false,
-				autoplaySpeed: 15000,
+				autoplaySpeed: 20000,
 				pauseOnHover: false,
 				nextArrow: rightArrow, //'<button type="button" class="slick-next">❯</button>',
 				prevArrow: leftArrrow //'<button type="button" class="slick-prev">❮</button>'

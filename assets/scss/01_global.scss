@@ -254,6 +254,17 @@ p.tightmid{
 	margin-bottom: R2P(2);
 	margin-bottom: 2rem;
 }
+ol.tightmid{
+	margin-bottom: R2P(2);
+	margin-bottom: 2rem;	
+	padding-left: R2P(4);
+	padding-left: 4rem;
+	li{
+		padding-bottom: R2P(1);
+		padding-bottom: 1rem;
+		list-style: inherit;
+	}
+}
 
 // blockQuotes
 	blockquote{
