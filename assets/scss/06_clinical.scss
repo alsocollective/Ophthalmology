@@ -86,6 +86,7 @@
 		img{
 			max-width: 90%;
 			@include vendorize(border-radius, 100%);
+			behavior: url(assets/PIE.htc);
 			@include at-query ($max, $medium) {
 				@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.2));
 				&:hover{
@@ -97,10 +98,14 @@
 	}
 
 	.whitebackground > div{
-		background-color: $pink;
-		color: $white;
-		p{
-			color: $white;
+		// background-color: $pink;
+		@extend .gradient;
+		color: $black;
+		h2,blockquote,p{
+			color: $black !important;
+		}
+		h2{
+			margin-left: 0 !important;
 		}
 	}
 

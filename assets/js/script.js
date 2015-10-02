@@ -27,6 +27,7 @@ var app = {
 			app.init();
 			return false;
 		};
+		clearTimeout(app.startTime);
 		if ($(".no-cssfilters").length > 0) {
 			$(".titlepage .backgroundimage div").attr("data-0-top", "opacity:0.2;").attr("data--300-top", "opacity:1;")
 		}
@@ -144,6 +145,7 @@ app.research = {
 	researchClick: function(event) {
 		event.preventDefault();
 		var page = parseInt(this.href.split("_")[1]);
+		console.log(page);
 		app.research.slides.slick("goTo", page)
 		return false;
 	},
@@ -307,8 +309,8 @@ app.clinical = {
 app.education = {
 
 	init: function() {
-		var para = "p.sirlanka,p.mexico,p.usa,p.chile,p.saudi-arabia,p.oman,p.kuwait,p.pakistan,p.india,p.netherlands,p.switerland,p.malaysia,p.philippines,p.south-korea,p.australia,p.new-zealand,p.signapore,p.sirlanka,p.nigeria,p.egypt,p.ireland,p.united-kingdom",
-			map = "#mexico_svg,#united-kingdom_svg,#ireland_svg,#egypt_svg,#nigeria_svg,#usa_svg,#chile_svg,#sirlanka_svg,#signapore_svg,#new-zealand_svg,#australia_svg,#south-korea_svg,#philippines_svg,#malaysia_svg,#switerland_svg,#netherlands_svg,#india_svg,#pakistan_svg,#kuwait_svg,#oman_svg,#saudi-arabia_svg,#canada_svg,#colombia_svg,#guyana_svg,#germany_svg,#iran_svg,#israel_svg";
+		var para = "p.sri-lanka,p.mexico,p.usa,p.chile,p.saudi-arabia,p.oman,p.kuwait,p.pakistan,p.india,p.netherlands,p.switerland,p.malaysia,p.philippines,p.south-korea,p.australia,p.new-zealand,p.singapore,p.sirlanka,p.nigeria,p.egypt,p.ireland,p.united-kingdom",
+			map = "#mexico_svg,#united-kingdom_svg,#ireland_svg,#egypt_svg,#nigeria_svg,#usa_svg,#chile_svg,#sri-lanka_svg,#singapore_svg,#new-zealand_svg,#australia_svg,#south-korea_svg,#philippines_svg,#malaysia_svg,#switerland_svg,#netherlands_svg,#india_svg,#pakistan_svg,#kuwait_svg,#oman_svg,#saudi-arabia_svg,#canada_svg,#colombia_svg,#guyana_svg,#germany_svg,#iran_svg,#israel_svg";
 		app.education.mapmessage = $("#mapmessage h3 span.mappink");
 		app.education.mapmessage_default = app.education.mapmessage.html();
 

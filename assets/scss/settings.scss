@@ -163,3 +163,8 @@ $fs: 1.1rem; //font size
 	}	
 }
 
+@mixin ie_full_screen($name){
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.#{$name}', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$name}', sizingMethod='scale')";
+}
+

@@ -13,10 +13,13 @@
 	#image_education2{
 		@include imageie(3_education_2);
 	}
+	svg{
+		display: none;
+	}
 }
 
 
-$countries: mexico united-kingdom ireland egypt nigeria usa chile sirlanka signapore new-zealand australia south-korea philippines malaysia switerland netherlands india pakistan kuwait oman saudi-arabia canada colombia guyana germany iran israel;
+$countries: mexico united-kingdom ireland egypt nigeria usa chile sri-lanka singapore new-zealand australia south-korea philippines malaysia switerland netherlands india pakistan kuwait oman saudi-arabia canada colombia guyana germany iran israel;
 
 @mixin country($country, $text, $fill) {
 	&.#{$country}{
@@ -28,9 +31,48 @@ $countries: mexico united-kingdom ireland egypt nigeria usa chile sirlanka signa
 			color: $text;
 			background-color: #fff;
 		}
+		##{$country}_div{
+
+			background-image: url(/assets/ie/#{$country}.png);
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/#{$country}.png', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/#{$country}.png', sizingMethod='scale')";
+			display: block !important;
+		}
 	}
 }
+#map_for_ie{
+	display: none;
+	background-image: url(/assets/ie/singapore.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;	
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/singapore.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/singapore.png', sizingMethod='scale')";
+}
+.lt-ie9 #map_for_ie{
+	display: block;
+	width: 100%;
+	min-height: 350px;
+	height: 80%;
+	height: 650px;
+	width: 1000px;
+	margin-top: 0 auto;
+	// height: 80vh;
+	position: relative;
 
+	>div{
+		display: none;
+		position: absolute;
+		top: 0;
+		// left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		// background-color: $lightpink;
+		background-size: contain;
+		background-position: center;
+	}
+}
 
 
 .presentpeople{
@@ -98,6 +140,8 @@ $countries: mexico united-kingdom ireland egypt nigeria usa chile sirlanka signa
 		font-size: 0.9rem;
 	}
 }
+
+
 
 
 

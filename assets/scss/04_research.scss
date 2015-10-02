@@ -453,6 +453,146 @@
 .slick-list{
 	overflow: hidden;
 }
+
+#ie_pie {
+	width: 400px;
+	height: 400px;
+	background-image: url(/assets/ie/pie-chart-plain.png);
+	background-size: contain;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/pie-chart-plain.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/pie-chart-plain.png', sizingMethod='scale')";
+	position: relative;
+	> div{
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+.high_income_death{
+	img{
+		display: none;
+	}
+	#high_income_death_ie{
+		background-image: url(/assets/ie/high-income-deaths.png);
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/high-income-deaths.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/high-income-deaths.png', sizingMethod='scale')";
+		display: block;
+	}
+}
+.low_income_death{
+	img{
+		display: none;
+	}
+	#low_income_death_ie{
+		background-image: url(/assets/ie/low-income-survivors.png);
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/low-income-survivors.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/low-income-survivors.png', sizingMethod='scale')";
+		display: block;
+	}
+}
+.high_income_survivors{
+	img{
+		display: none;
+	}
+	#high_income_survivors_ie{
+		background-image: url(/assets/ie/high-income-survivors.png);
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/high-income-survivors.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/high-income-survivors.png', sizingMethod='scale')";
+		display: block;
+	}
+}
+.low_income_survivors{
+	img{
+		display: none;
+	}
+	#low_income_survivors_ie{
+		background-image: url(/assets/ie/low-income-deaths.png);
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/low-income-deaths.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/low-income-deaths.png', sizingMethod='scale')";
+		display: block;
+	}
+}
+
+
+
+#telemend_ie {
+	width: 400px;
+	height: 400px;
+	background-image: url(/assets/ie/plain-map.png);
+	background-size: contain;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/plain-map.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/plain-map.png', sizingMethod='scale')";
+	position: relative;
+	> div{
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.toronto{
+	#toronto_ie{
+		display: block;
+		background-image: url("/assets/ie/toronto.png");
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/toronto.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/toronto.png', sizingMethod='scale')";
+	}
+}
+.hamilton{
+	#hamilton_ie{
+		display: block;
+		background-image: url("/assets/ie/hamilton.png");
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/hamilton.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/hamilton.png', sizingMethod='scale')";
+	}
+}
+.kitchener{
+	#kitchener_ie{
+		display: block;
+		background-image: url("/assets/ie/kitchener.png");
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/kitchener.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/kitchener.png', sizingMethod='scale')";
+	}
+}
+.barrie{
+	#barrie_ie{
+		display: block;
+		background-image: url("/assets/ie/barrie.png");
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/barrie.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/barrie.png', sizingMethod='scale')";
+	}
+}
+.sudbury{
+	#sudbury_ie{
+		display: block;
+		background-image: url("/assets/ie/sudbury.png");
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/sudbury.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/sudbury.png', sizingMethod='scale')";
+	}
+}
+.timmins{
+	#timmins_ie{
+		display: block;
+		background-image: url("/assets/ie/timmins.png");
+		background-size: contain;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/ie/timmins.png', sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/ie/timmins.png', sizingMethod='scale')";
+	}
+}
+
 // 	.title{
 // 		h4{
 // 			color: $pink;

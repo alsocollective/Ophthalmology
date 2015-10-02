@@ -10,12 +10,18 @@
 }
 #image_eyeexam{
 	@include imageizerSmall(1_about_4);
+	@include ie_full_screen("/assets/pic/1_about_4-small-o@1x.jpg");
+	behavior: url(assets/PIE.htc);
 }
 #image_pipeing{
 	@include imageizerSmall(1_about_5);
+	@include ie_full_screen("/assets/pic/1_about_5-small-o@1x.jpg");
+	behavior: url(assets/PIE.htc);
 }
 #image_teaching{
 	@include imageizerSmall(1_about_6);
+	@include ie_full_screen("/assets/pic/1_about_6-small-o@1x.jpg");
+	behavior: url(assets/PIE.htc);
 }
 .lt-ie9 {
 	#image_mission_statment{
@@ -48,7 +54,7 @@
 		background-size: cover;
 		background-position: center;
 		margin: 0 auto;
-
+		behavior: url(assets/PIE.htc);
 		@include at-query ($max, $medium) {
 			width: 200px;
 			height: 200px;
@@ -92,10 +98,12 @@
 			background-size: cover;
 			background-position: center;
 			margin: 0 auto;
+
 			@include at-query ($max, $medium) {
 				width: 200px;
 				height: 200px;
 			}
+			behavior: url(assets/PIE.htc);
 
 		}
 		li{
@@ -227,8 +235,10 @@
 		min-height: 520px;
 		position: relative;
 
+		color: $white;
 		@include vendorize(text-shadow, 0px 30px 5px #000);
 		@include vendorize(text-shadow, 0px 0px 35px rgba(0,0,0,0.5));
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=#000,direction=45);
 
 		margin-bottom: R2P(5);
 		margin-bottom: 5rem;
@@ -273,14 +283,24 @@
 			text-align: right;
 
 			// http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%2845deg\%2C\%20rgba\%28255\%2C255\%2C255\%2C1\%29\%200\%25\%2C\%20rgba\%28241\%2C156\%2C203\%2C1\%29\%2049\%25\%2C\%20rgba\%28237\%2C130\%2C189\%2C1\%29\%2062\%25\%29\%3B'
-			background: rgba(255,255,255,1);
-			background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
-			background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(49%, rgba(241,156,203,1)), color-stop(62%, rgba(237,130,189,1)));
-			background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
-			background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
-			background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
-			background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ed82bd', GradientType=1 );
+			
+			// background: rgba(255,255,255,1); // to bottom left
+			// background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
+			// background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(49%, rgba(241,156,203,1)), color-stop(62%, rgba(237,130,189,1)));
+			// background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
+			// background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
+			// background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
+			// background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(241,156,203,1) 49%, rgba(237,130,189,1) 62%);
+			// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ed82bd', GradientType=1 );
+
+			background: rgba(237,130,189,1); //to bottom right
+			background: -moz-linear-gradient(-45deg, rgba(237,130,189,1) 0%, rgba(237,130,189,1) 38%, rgba(241,156,203,1) 51%, rgba(255,255,255,1) 100%);
+			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(237,130,189,1)), color-stop(38%, rgba(237,130,189,1)), color-stop(51%, rgba(241,156,203,1)), color-stop(100%, rgba(255,255,255,1)));
+			background: -webkit-linear-gradient(-45deg, rgba(237,130,189,1) 0%, rgba(237,130,189,1) 38%, rgba(241,156,203,1) 51%, rgba(255,255,255,1) 100%);
+			background: -o-linear-gradient(-45deg, rgba(237,130,189,1) 0%, rgba(237,130,189,1) 38%, rgba(241,156,203,1) 51%, rgba(255,255,255,1) 100%);
+			background: -ms-linear-gradient(-45deg, rgba(237,130,189,1) 0%, rgba(237,130,189,1) 38%, rgba(241,156,203,1) 51%, rgba(255,255,255,1) 100%);
+			background: linear-gradient(135deg, rgba(237,130,189,1) 0%, rgba(237,130,189,1) 38%, rgba(241,156,203,1) 51%, rgba(255,255,255,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed82bd', endColorstr='#ffffff', GradientType=1 );
 
 			> div{
 				position: relative;
@@ -306,6 +326,7 @@
 					// @include retina() {
 					// 	background-image:url(/assets/pic/child-original-r@2x.jpg);
 					// }
+					behavior: url(/assets/PIE.htc);
 					@include at-query ($max, $large) {
 						background-position-y: -418px;
 						// background-position-x: 150px;

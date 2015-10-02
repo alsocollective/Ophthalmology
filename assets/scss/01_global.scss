@@ -372,6 +372,8 @@ ol.tightmid{
 		background-color: $white;
 		vertical-align: top;
 		@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.2));
+		overflow: hidden;
+		// behavior: url(/assets/PIE.htc);
 		&:hover{
 			@include vendorize(box-shadow, 5px 5px 5px rgba(136, 136, 136, 0.8));
 			b{
@@ -389,6 +391,7 @@ ol.tightmid{
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+			// background-color: $white;
 
 			> span{
 				color: $darkgrey;
@@ -411,7 +414,10 @@ ol.tightmid{
 	}
 }
 
-
+.lt-ie9 .donate_container span > a, .lt-ie9 .donate_container #secondbutton > a{
+	@include ie_full_screen("/assets/ie/circle.png");
+	background-color: transparent;
+}
 
 .left,.right,.half{
 	width: 45%;
@@ -539,6 +545,9 @@ span.readmore a{
 	}
 	.onlyiehide{
 		display: none;
+	}
+	.backgroundimage >div{
+		background-color: transparent;
 	}
 }
 
