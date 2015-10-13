@@ -92,7 +92,8 @@ app.about = {
 	},
 	readmoreClick: function(event) {
 		event.preventDefault();
-		$("#readmore_agnes_text").toggleClass("show");
+		$(this.parentNode).remove();
+		$("#readmore_agnes_text").addClass("show");
 		return false;
 	}
 }

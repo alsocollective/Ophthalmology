@@ -551,7 +551,8 @@ span.readmore a{
 	}
 }
 
-.small,.large{
+// .small,.large{
+.large{
 	display: none;
 }
 @include at-query ($max, $medium) {
