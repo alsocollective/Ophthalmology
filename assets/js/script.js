@@ -302,7 +302,8 @@ app.clinical = {
 	},
 	readmoreClick: function(event) {
 		event.preventDefault();
-		$("#abby_readmore_text").toggleClass("show");
+		$("#abby_readmore_text").addClass("show");
+		$(this.parentNode).remove();
 		return false;
 	}
 }
